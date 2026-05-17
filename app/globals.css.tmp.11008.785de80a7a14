@@ -20,27 +20,17 @@
   /* Layout */
   --navbar-height: 80px;
   --container-max-width: 80rem;
-  --radius-card: 8px;
 
   /* Effects */
   --navbar-blur: blur(12px);
 
-  /* Transitions */
-  --duration-fast: 0.15s;
-  --duration-medium: 0.2s;
-  --duration-base: 0.3s;
-  --duration-image: 0.5s;
-  --duration-scroll: 0.6s;
-
   /* Typography */
-  --font-size-nav: .9rem;
+  --font-size-nav: 0.875rem;
   --font-size-brand: 1.5rem;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
   --letter-spacing-wide: 0.025em;
   --letter-spacing-tight: -0.025em;
-  --line-height-tight: 1;
-  --line-height-relaxed: 1.75;
 
   /* Icons */
   --icon-size-sm: 16px;
@@ -79,13 +69,6 @@
   /* Section headings */
   --font-size-section-heading-xs: 2.25rem;
   --font-size-section-heading-sm: 3rem;
-  --font-size-body-lg: 1.125rem;
-
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
   /* About */
   --about-grid-gap: 4rem;
@@ -96,47 +79,12 @@
   --about-deco-size: 8rem;
   --about-deco-offset: -1.5rem;
 
-  /* Carousel */
-  --carousel-gap: 1.5rem;
-  --carousel-nav-btn-size: 3rem;
-  --carousel-nav-btn-offset: -1.5rem;
-  --color-nav-btn-hover: #F9FAFB;
-
-  /* Products */
-  --products-card-width: 480px;
-  --products-card-image-height: 20rem;
-  --products-card-title-size: 1.5rem;
-  --products-card-p: 2rem;
-  --products-card-icon-size: 3rem;
-  --products-card-icon-offset: 1.5rem;
-  --products-subtitle-max-width: 42rem;
-  --products-overlay: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
-
-  /* Portfolio */
-  --portfolio-grid-gap: 1.5rem;
-  --portfolio-card-height: 24rem;
-  --portfolio-card-radius: 12px;
-  --portfolio-card-p: 1.5rem;
-  --portfolio-card-title-size: 1.5rem;
-  --portfolio-subtitle-max-width: 42rem;
-  --portfolio-location-icon-size: 1rem;
-  --portfolio-location-color: rgb(209, 213, 219);
-  --portfolio-overlay: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
-
-  /* Why Choose Us */
-  --why-grid-gap: 2rem;
-  --why-card-p: 2rem;
-  --why-card-icon-box-size: 56px;
-  --why-card-icon-size: 1.75rem;
-  --why-card-hover-bg: #F5F0EB;
-  --why-card-title-size: 1.25rem;
-
   /* Hero */
   --hero-overlay: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
   --color-hero-subtitle: rgb(209, 213, 219);
   --color-scroll-indicator: rgba(255, 255, 255, 0.6);
   --font-size-hero-xs: 3rem;
-  --font-size-hero-sm: 4.5rem;
+  --font-size-hero-md: 4.5rem;
   --font-size-hero-lg: 6rem;
   --font-size-subtitle-xs: 1.25rem;
   --font-size-subtitle-md: 1.5rem;
@@ -148,49 +96,6 @@
   --hero-btn-gap: 1rem;
   --hero-scroll-bottom: 3rem;
   --hero-scroll-icon-size: 2rem;
-
-  /* Footer */
-  --footer-text-color: #9CA3AF;
-  --footer-muted-color: #6B7280;
-  --footer-divider-color: #374151;
-  --footer-logo-dot-bg: #1A1A1A;
-  --footer-logo-text-size: 1.875rem;
-
-  /* CTA */
-  --cta-contact-card-p: 1.2rem;
-  --cta-contact-card-radius: 12px;
-  --cta-contact-value-color: rgb(209, 213, 219);
-  --cta-contact-card-bg: rgba(255, 255, 255, 0.05);
-  --cta-contact-card-border: rgba(255, 255, 255, 0.1);
-  --cta-contact-icon-size: 1.5rem;
-  --cta-subtitle-max-width: 42rem;
-  --cta-btn-gap: 1rem;
-  --cta-contact-max-width: 36rem;
-
-  /* Certifications */
-  --cert-grid-gap: 1.5rem;
-  --cert-card-p: 2rem;
-  --cert-card-radius: 12px;
-  --cert-icon-circle-size: 80px;
-  --cert-icon-size: 2.5rem;
-  --cert-title-size: 1.25rem;
-  --cert-subtitle-max-width: 42rem;
-  --cert-footer-max-width: 48rem;
-
-  /* Clients */
-  --clients-card-width: 16rem;
-  --clients-card-p: 2rem;
-  --clients-card-radius: 12px;
-  --clients-logo-height: 5rem;
-  --clients-logo-opacity: 0.6;
-  --clients-scroll-duration: 30s;
-  --clients-subtitle-max-width: 42rem;
-  --clients-footer-max-width: 48rem;
-}
-
-@keyframes clients-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
 }
 
 @keyframes hero-fade-in {
@@ -204,8 +109,9 @@
 }
 
 body {
-  background: var(--color-section-bg-off-white);
+  background: var(--background);
   color: var(--color-text-primary);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Button size classes — bypasses MUI sx padding limitations with CSS variables */
