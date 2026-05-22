@@ -17,44 +17,29 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { nav } from "@/content/shared";
 import AppButton from "@/components/AppButton";
+import Image from 'next/image';
 
 function Logo() {
   return (
     <Box
       component={Link}
       href="/"
-      sx={{ display: "flex", alignItems: "center", gap: 1.5, textDecoration: "none" }}
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        gap: 1.5,
+        textDecoration: "none",
+      }}
     >
-      <Box
-        sx={{
-          width: "var(--logo-circle-size)",
-          height: "var(--logo-circle-size)",
-          background: "var(--gradient-brand-diagonal)",
-          borderRadius: "50%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Box
-          sx={{
-            width: "var(--logo-dot-size)",
-            height: "var(--logo-dot-size)",
-            bgcolor: "white",
-            borderRadius: "50%",
-          }}
+      <Box sx={{ position: "relative", width: "200px", height: "50px", flexShrink: 0 }}>
+        <Image
+          src="/images/logo-avante.avif"
+          alt="Avante Logo"
+          fill
+          style={{ objectFit: "contain", objectPosition: "left center" }}
+          priority
         />
       </Box>
-      <Typography
-        sx={{
-          fontSize: "var(--font-size-brand)",
-          fontWeight: "var(--font-weight-bold)",
-          color: "var(--color-text-primary)",
-          letterSpacing: "var(--letter-spacing-tight)",
-        }}
-      >
-        AVANTE
-      </Typography>
     </Box>
   );
 }
@@ -70,7 +55,8 @@ export default function Navbar() {
     fontWeight: "var(--font-weight-medium)",
     letterSpacing: "var(--letter-spacing-wide)",
     textDecoration: "none",
-    color: pathname === href ? "var(--color-primary)" : "var(--color-text-muted)",
+    color:
+      pathname === href ? "var(--color-primary)" : "var(--color-text-muted)",
     transition: "color var(--duration-fast)",
     "&:hover": { color: "var(--color-text-primary)" },
   });
@@ -93,7 +79,9 @@ export default function Navbar() {
           aria-label="close drawer"
           sx={{ color: "var(--color-text-primary)" }}
         >
-          <CloseIcon sx={{ width: "var(--icon-size-lg)", height: "var(--icon-size-lg)" }} />
+          <CloseIcon
+            sx={{ width: "var(--icon-size-lg)", height: "var(--icon-size-lg)" }}
+          />
         </IconButton>
       </Box>
 
@@ -110,11 +98,16 @@ export default function Navbar() {
             </ListItemButton>
           </ListItem>
         ))}
-        <ListItem sx={{ px: 3, pt: 2 }}>
-          <AppButton href={nav.cta.href} size="md" fullWidth onClick={handleDrawerToggle}>
+        {/* <ListItem sx={{ px: 3, pt: 2 }}>
+          <AppButton
+            href={nav.cta.href}
+            size="md"
+            fullWidth
+            onClick={handleDrawerToggle}
+          >
             {nav.cta.label}
           </AppButton>
-        </ListItem>
+        </ListItem> */}
       </List>
     </Box>
   );
@@ -122,6 +115,7 @@ export default function Navbar() {
   return (
     <>
       <AppBar
+        position="sticky"
         component="nav"
         sx={{
           bgcolor: "var(--color-nav-bg)",
@@ -131,6 +125,7 @@ export default function Navbar() {
           color: "var(--color-text-primary)",
         }}
       >
+
         <Toolbar
           sx={{
             maxWidth: "var(--container-max-width)",
@@ -143,15 +138,26 @@ export default function Navbar() {
         >
           <Logo />
 
-          <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 4 }}>
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+              alignItems: "center",
+              gap: 4,
+            }}
+          >
             {nav.items.map((item) => (
-              <Box key={item.label} component={Link} href={item.href} sx={linkSx(item.href)}>
+              <Box
+                key={item.label}
+                component={Link}
+                href={item.href}
+                sx={linkSx(item.href)}
+              >
                 {item.label}
               </Box>
             ))}
-            <AppButton href={nav.cta.href} size="sm">
+            {/* <AppButton href={nav.cta.href} size="sm">
               {nav.cta.label}
-            </AppButton>
+            </AppButton> */}
           </Box>
 
           <IconButton
@@ -159,7 +165,12 @@ export default function Navbar() {
             aria-label="open drawer"
             sx={{ display: { md: "none" }, color: "var(--color-text-primary)" }}
           >
-            <MenuIcon sx={{ width: "var(--icon-size-lg)", height: "var(--icon-size-lg)" }} />
+            <MenuIcon
+              sx={{
+                width: "var(--icon-size-lg)",
+                height: "var(--icon-size-lg)",
+              }}
+            />
           </IconButton>
         </Toolbar>
       </AppBar>

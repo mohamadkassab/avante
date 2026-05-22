@@ -5,6 +5,12 @@
   --color-primary: #14B8A6;
   --color-secondary: #0EA5E9;
 
+  /* Header Caption */
+  --color-header-caption-bg: #F9F9F9;
+  --height-header-caption: 55px;
+  --font-size-header-caption: 14px;
+  --color-text-header-caption: #00000099;
+
   /* Text colors */
   --color-text-primary: #1A1A1A;
   --color-text-muted: #6B7280;
@@ -23,7 +29,7 @@
   --radius-card: 8px;
 
   /* Effects */
-  --navbar-blur: blur(12px);
+  --navbar-blur: blur(2px);
 
   /* Transitions */
   --duration-fast: 0.15s;
@@ -135,7 +141,7 @@
   --hero-overlay: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
   --color-hero-subtitle: rgb(209, 213, 219);
   --color-scroll-indicator: rgba(255, 255, 255, 0.6);
-  --font-size-hero-xs: 3rem;
+  --font-size-hero-xs: 2.2rem;
   --font-size-hero-sm: 4.5rem;
   --font-size-hero-lg: 6rem;
   --font-size-subtitle-xs: 1.25rem;

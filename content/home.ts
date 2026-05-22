@@ -1,9 +1,9 @@
 export const home = {
   hero: {
-    heading: "Experience the next",
-    headingGradient: "level of ventilation",
+    heading: "Advanced Kitchen Ventilation",
+    headingGradient: "& Environmental Solutions",
     subtitle:
-      "Industry-leading commercial kitchen solutions engineered for excellence",
+      "Performance. Safety. Sustainability. ",
     image: {
       src: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1600&q=80",
       alt: "Commercial Kitchen",
@@ -18,13 +18,15 @@ export const home = {
     headingLine1: "Tailored solutions for",
     headingLine2: "commercial excellence",
     paragraphs: [
-      "Avante stands as one of the industry-leading suppliers of tailored and integrated solutions in commercial kitchens including kitchen canopies, HVAC systems, demand-control ventilation systems, and fire suppression systems.",
-      "Backed by a team of engineers with over 50 years of collective experience across the UK, the Gulf region, and India, we bring unparalleled expertise to every project.",
+      "Avante is a leading provider of custom-engineered commercial kitchen ventilation and HVAC solutions across food service industries. We deliver fully integrated systems including kitchen canopies, demand control ventilation, fire suppression, ecology units and complete HVAC solutions.",
+      "Our solutions are meticulously designed to address the specific operational requirements of every project, that ensure seamless operation and sustained performance throughout the system Lifecycle.",
+      "Supported by a team of highly experienced engineers with over 50 years of combined expertise across the UK, the Middle East, and India, Avante brings technical knowledge and industry insight to every project we undertake."
     ],
     stats: [
-      { icon: "award", value: "50+", label: "Years Combined Experience" },
-      { icon: "location", value: "UAE", label: "Designed & Manufactured" },
-      { icon: "people", value: "1000+", label: "Projects Completed" },
+      { icon: "people", value: "250+", label: "Projects Successfully Delivered" },
+      { icon: "award", value: "20+", label: "Years Engineering Experience" },
+      { icon: "location", value: "10+", label: "Countries Project Presence" },
+      { icon: "custom", value: "100%", label: "Custom Engineered Solutions" },
     ],
     cta: { label: "LEARN MORE ABOUT US", href: "/about" },
     image: {
@@ -73,8 +75,8 @@ export const home = {
   clients: {
     badge: "OUR CLIENTS",
     heading: "Trusted by industry leaders",
-    subtitle: "Proud to serve leading hospitality and restaurant brands across the region",
-    footerText: "From luxury hotels to fine dining restaurants, our solutions power the commercial kitchens of the region's most prestigious establishments.",
+    subtitle: "Proud to serve leading hospitality and restaurant brands around the world",
+    footerText: "Avante ventilation systems are trusted across a wide range of hospitality and commercial foodservice environments.",
     items: [
       { name: "Marriott", image: { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200&q=80", alt: "Marriott" } },
       { name: "Hilton", image: { src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=200&q=80", alt: "Hilton" } },

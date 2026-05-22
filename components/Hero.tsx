@@ -38,14 +38,16 @@ export default function Hero() {
       </Box>
 
       {/* Content */}
+      <div className="w-full flex sm:p-[50px]">
+
+
       <Box
         sx={{
           position: "relative",
           zIndex: 2,
-          maxWidth: "var(--hero-content-max-width)",
-          mx: "auto",
+          // maxWidth: "var(--hero-content-max-width)",
           px: "var(--hero-content-px)",
-          textAlign: "center",
+          textAlign: "left",
           animation: "hero-fade-in 0.8s ease-out forwards",
         }}
       >
@@ -87,7 +89,7 @@ export default function Hero() {
             color: "var(--color-hero-subtitle)",
             mb: "var(--hero-subtitle-mb)",
             maxWidth: "var(--hero-subtitle-max-width)",
-            mx: "auto",
+            textAlign: "left",
           }}
         >
           {hero.subtitle}
@@ -98,7 +100,7 @@ export default function Hero() {
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
             gap: "var(--hero-btn-gap)",
-            justifyContent: "center",
+            justifyContent: "start",
           }}
         >
           <AppButton
@@ -119,7 +121,7 @@ export default function Hero() {
           </AppButton>
         </Box>
       </Box>
-
+      </div>
       {/* Scroll indicator */}
       <Box
         sx={{
