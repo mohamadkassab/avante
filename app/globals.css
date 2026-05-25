@@ -141,9 +141,8 @@
   --hero-overlay: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
   --color-hero-subtitle: rgb(209, 213, 219);
   --color-scroll-indicator: rgba(255, 255, 255, 0.6);
-  --font-size-hero-xs: 2.2rem;
-  --font-size-hero-sm: 4.5rem;
-  --font-size-hero-lg: 6rem;
+  --font-size-hero-xs: 2.5rem;
+  --font-size-hero-md: 4rem;
   --font-size-subtitle-xs: 1.25rem;
   --font-size-subtitle-md: 1.5rem;
   --hero-content-max-width: 64rem;

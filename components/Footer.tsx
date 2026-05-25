@@ -4,48 +4,8 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { footer } from "@/content/shared";
+import Logo from "./Logo";
 
-function FooterLogo() {
-  return (
-    <Box
-      component={Link}
-      href="/"
-      sx={{ display: "inline-flex", alignItems: "center", gap: 1.5, textDecoration: "none", mb: 3 }}
-    >
-      <Box
-        sx={{
-          width: "var(--logo-circle-size)",
-          height: "var(--logo-circle-size)",
-          background: "var(--gradient-brand-diagonal)",
-          borderRadius: "50%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexShrink: 0,
-        }}
-      >
-        <Box
-          sx={{
-            width: "var(--logo-dot-size)",
-            height: "var(--logo-dot-size)",
-            bgcolor: "var(--footer-logo-dot-bg)",
-            borderRadius: "50%",
-          }}
-        />
-      </Box>
-      <Typography
-        sx={{
-          fontSize: "var(--footer-logo-text-size)",
-          fontWeight: "var(--font-weight-bold)",
-          color: "white",
-          letterSpacing: "var(--letter-spacing-tight)",
-        }}
-      >
-        AVANTE
-      </Typography>
-    </Box>
-  );
-}
 
 function FooterLinkList({ items }: { items: { label: string; href: string }[] }) {
   return (
@@ -111,7 +71,7 @@ export default function Footer() {
         >
           {/* Brand column */}
           <Box>
-            <FooterLogo />
+            <Logo />
             <Typography
               sx={{
                 fontSize: "var(--font-size-nav)",
@@ -126,7 +86,7 @@ export default function Footer() {
             <Typography
               sx={{ fontSize: "var(--font-size-nav)", color: "var(--footer-muted-color)" }}
             >
-              Dubai Investment Park, UAE
+                Dubai Investment Park – 2, UAE
             </Typography>
           </Box>
 

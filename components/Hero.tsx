@@ -38,15 +38,14 @@ export default function Hero() {
       </Box>
 
       {/* Content */}
-      <div className="w-full flex sm:p-[50px]">
-
-
       <Box
         sx={{
           position: "relative",
           zIndex: 2,
-          // maxWidth: "var(--hero-content-max-width)",
-          px: "var(--hero-content-px)",
+          width: "100%",
+          maxWidth: "var(--container-max-width)",
+          mx: "auto",
+          px: { xs: "var(--section-px)", lg: "var(--section-px-lg)" },
           textAlign: "left",
           animation: "hero-fade-in 0.8s ease-out forwards",
         }}
@@ -56,8 +55,7 @@ export default function Hero() {
           sx={{
             fontSize: {
               xs: "var(--font-size-hero-xs)",
-              sm: "var(--font-size-hero-sm)",
-              lg: "var(--font-size-hero-lg)",
+              md: "var(--font-size-hero-md)",
             },
             fontWeight: "var(--font-weight-bold)",
             color: "white",
@@ -121,7 +119,6 @@ export default function Hero() {
           </AppButton>
         </Box>
       </Box>
-      </div>
       {/* Scroll indicator */}
       <Box
         sx={{

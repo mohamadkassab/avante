@@ -1,6 +1,6 @@
 export const footer = {
   description:
-    "Industry-leading supplier of tailored and integrated solutions for commercial kitchens including kitchen canopies, HVAC systems, and fire suppression systems.",
+    "Advanced Kitchen Ventilation & Environmental Solutions",
   quickLinks: [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },

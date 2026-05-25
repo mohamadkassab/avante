@@ -10,39 +10,12 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { nav } from "@/content/shared";
-import AppButton from "@/components/AppButton";
-import Image from 'next/image';
-
-function Logo() {
-  return (
-    <Box
-      component={Link}
-      href="/"
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        gap: 1.5,
-        textDecoration: "none",
-      }}
-    >
-      <Box sx={{ position: "relative", width: "200px", height: "50px", flexShrink: 0 }}>
-        <Image
-          src="/images/logo-avante.avif"
-          alt="Avante Logo"
-          fill
-          style={{ objectFit: "contain", objectPosition: "left center" }}
-          priority
-        />
-      </Box>
-    </Box>
-  );
-}
+import Logo from "./Logo";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
