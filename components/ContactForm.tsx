@@ -235,8 +235,8 @@ export default function ContactForm() {
           sx={{ borderRadius: "var(--radius-card)" }}
         >
           {status === "success"
-            ? "Message sent! We'll get back to you shortly."
-            : "Something went wrong. Please try again or email us directly."}
+            ? "Message sent!"
+            : "Please try again or email us directly."}
         </Alert>
       </Snackbar>
     </>

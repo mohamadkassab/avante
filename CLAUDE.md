@@ -1,5 +1,3 @@
-# Project Rules
-
 ## 1. Design Tokens — Single Source of Truth
 
 - All design values (colors, gradients, typography, spacing, sizes, effects) are defined as CSS custom properties in `app/globals.css` under `:root`
