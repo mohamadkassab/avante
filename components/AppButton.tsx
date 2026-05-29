@@ -16,6 +16,7 @@ interface AppButtonProps {
   fullWidth?: boolean;
   children: ReactNode;
   position?: "right" | "left";
+  type?: "button" | "submit" | "reset";
 }
 
 const sizeClass: Record<Size, string> = {
@@ -63,7 +64,8 @@ export default function AppButton({
   icon,
   fullWidth = false,
   children,
-  position = "right"
+  position = "right",
+  type = "button",
 }: AppButtonProps) {
   const sx = {
     display: fullWidth ? "flex" : "inline-flex",
@@ -86,7 +88,7 @@ export default function AppButton({
   }
 
   return (
-    <Box component="button" type="button" onClick={onClick} sx={sx} className={className}>
+    <Box component="button" type={type} onClick={onClick} sx={sx} className={className}>
         {position === "left" && icon}
         {children}
         {position === "right" && icon}

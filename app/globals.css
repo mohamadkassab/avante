@@ -74,6 +74,7 @@
   --section-px-lg: 2rem;
   --color-section-bg-white: #FFFFFF;
   --color-section-bg-off-white: #FAFAFA;
+  --color-section-bg-dark: #1A1A1A;
 
   /* Badge */
   --color-badge-bg: linear-gradient(to right, #F0FDFA, #F0F9FF);
@@ -94,6 +95,7 @@
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
   /* About */
+  --about-story-max-width: 56rem;
   --about-grid-gap: 4rem;
   --about-stat-icon-size: 2rem;
   --about-stat-value-size: 1.5rem;
@@ -177,10 +179,20 @@
   --cert-card-p: 2rem;
   --cert-card-radius: 12px;
   --cert-icon-circle-size: 80px;
+  --values-icon-circle-size: 4rem;
   --cert-icon-size: 2.5rem;
   --cert-title-size: 1.25rem;
   --cert-subtitle-max-width: 42rem;
   --cert-footer-max-width: 48rem;
+
+  /* Contact */
+  --contact-heading-size: 1.875rem;
+  --contact-card-p: 1.5rem;
+  --contact-icon-box-size: 3rem;
+  --contact-card-gap: 1.5rem;
+  --contact-grid-gap: 3rem;
+  --contact-form-p: 2rem;
+  --contact-label-size: 0.875rem;
 
   /* Clients */
   --clients-card-width: 16rem;

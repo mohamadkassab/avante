@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Providers from "./providers";
 import "./globals.css";
-import HeaderCaption from "@/components/HeaderCaption";
 
 export const metadata: Metadata = {
   title: "Avante",
@@ -20,9 +19,6 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased">
       <body className="min-h-screen flex flex-col">
         <Providers>
-        
-        <HeaderCaption/>
-
           <Navbar />
           <div >
             {children}

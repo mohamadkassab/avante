@@ -5,15 +5,49 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import AppButton from "@/components/AppButton";
 import { home } from "@/content/home";
 
-const { hero } = home;
+const { hero: homeHero } = home;
 
-export default function Hero() {
+interface HeroCta {
+  primary: { label: string; href: string };
+  secondary: { label: string; href: string };
+}
+
+interface HeroProps {
+  heading?: string;
+  headingGradient?: string | null;
+  subtitle?: string;
+  image?: { src: string; alt: string };
+  align?: "left" | "center";
+  cta?: HeroCta | null;
+  showScrollIndicator?: boolean;
+  height?: string;
+  inlineGradient?: boolean;
+}
+
+export default function Hero({
+  heading,
+  headingGradient,
+  subtitle,
+  image,
+  align = "left",
+  cta,
+  showScrollIndicator = true,
+  height = "100vh",
+  inlineGradient = false,
+}: HeroProps) {
+  const resolvedHeading = heading ?? homeHero.heading;
+  const resolvedHeadingGradient = headingGradient === undefined ? homeHero.headingGradient : headingGradient;
+  const resolvedSubtitle = subtitle ?? homeHero.subtitle;
+  const resolvedImage = image ?? homeHero.image;
+  const resolvedCta = cta === undefined ? homeHero.cta : cta;
+  const isCenter = align === "center";
+
   return (
     <Box
       component="section"
       sx={{
         position: "relative",
-        height: "100vh",
+        height,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -24,8 +58,8 @@ export default function Hero() {
       <Box sx={{ position: "absolute", inset: 0, zIndex: 0 }}>
         <Box
           component="img"
-          src={hero.image.src}
-          alt={hero.image.alt}
+          src={resolvedImage.src}
+          alt={resolvedImage.alt}
           sx={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
         />
         <Box
@@ -46,7 +80,7 @@ export default function Hero() {
           maxWidth: "var(--container-max-width)",
           mx: "auto",
           px: { xs: "var(--section-px)", lg: "var(--section-px-lg)" },
-          textAlign: "left",
+          textAlign: isCenter ? "center" : "left",
           animation: "hero-fade-in 0.8s ease-out forwards",
         }}
       >
@@ -63,19 +97,23 @@ export default function Hero() {
             lineHeight: "var(--line-height-tight)",
           }}
         >
-          {hero.heading}
-          <br />
-          <Box
-            component="span"
-            sx={{
-              background: "var(--gradient-brand)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            {hero.headingGradient}
-          </Box>
+          {resolvedHeading}
+          {resolvedHeadingGradient && (
+            <>
+              {inlineGradient ? " " : <br />}
+              <Box
+                component="span"
+                sx={{
+                  background: "var(--gradient-brand)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                {resolvedHeadingGradient}
+              </Box>
+            </>
+          )}
         </Typography>
 
         <Typography
@@ -85,59 +123,64 @@ export default function Hero() {
               sm: "var(--font-size-subtitle-md)",
             },
             color: "var(--color-hero-subtitle)",
-            mb: "var(--hero-subtitle-mb)",
+            mb: resolvedCta ? "var(--hero-subtitle-mb)" : 0,
             maxWidth: "var(--hero-subtitle-max-width)",
-            textAlign: "left",
+            textAlign: isCenter ? "center" : "left",
+            mx: isCenter ? "auto" : undefined,
           }}
         >
-          {hero.subtitle}
+          {resolvedSubtitle}
         </Typography>
 
+        {resolvedCta && (
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", sm: "row" },
+              gap: "var(--hero-btn-gap)",
+              justifyContent: isCenter ? "center" : "start",
+            }}
+          >
+            <AppButton
+              variant="primary"
+              size="md"
+              href={resolvedCta.primary.href}
+              icon={<ArrowForwardIcon />}
+            >
+              {resolvedCta.primary.label}
+            </AppButton>
+
+            <AppButton
+              variant="glass"
+              size="md"
+              href={resolvedCta.secondary.href}
+            >
+              {resolvedCta.secondary.label}
+            </AppButton>
+          </Box>
+        )}
+      </Box>
+
+      {showScrollIndicator && (
         <Box
           sx={{
-            display: "flex",
-            flexDirection: { xs: "column", sm: "row" },
-            gap: "var(--hero-btn-gap)",
-            justifyContent: "start",
+            position: "absolute",
+            bottom: "var(--hero-scroll-bottom)",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 2,
           }}
         >
-          <AppButton
-            variant="primary"
-            size="md"
-            href={hero.cta.primary.href}
-            icon={<ArrowForwardIcon />}
-          >
-            {hero.cta.primary.label}
-          </AppButton>
-
-          <AppButton
-            variant="glass"
-            size="md"
-            href={hero.cta.secondary.href}
-          >
-            {hero.cta.secondary.label}
-          </AppButton>
+          <Box sx={{ animation: "hero-scroll-bounce 2s ease-in-out infinite" }}>
+            <KeyboardArrowDownIcon
+              sx={{
+                fontSize: "var(--hero-scroll-icon-size)",
+                color: "var(--color-scroll-indicator)",
+              }}
+            />
+          </Box>
         </Box>
-      </Box>
-      {/* Scroll indicator */}
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: "var(--hero-scroll-bottom)",
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: 2,
-        }}
-      >
-        <Box sx={{ animation: "hero-scroll-bounce 2s ease-in-out infinite" }}>
-          <KeyboardArrowDownIcon
-            sx={{
-              fontSize: "var(--hero-scroll-icon-size)",
-              color: "var(--color-scroll-indicator)",
-            }}
-          />
-        </Box>
-      </Box>
+      )}
     </Box>
   );
 }
