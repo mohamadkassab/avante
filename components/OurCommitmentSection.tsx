@@ -34,6 +34,8 @@ function Column({
           fontWeight: "var(--font-weight-bold)",
           color: "var(--color-section-bg-white)",
           mb: 3,
+          display: "flex",
+          justifyContent: "center",
         }}
       >
         {title}
@@ -52,6 +54,7 @@ export default function OurCommitmentSection() {
           mx: "auto",
           display: "grid",
           gridTemplateColumns: { xs: "1fr", md: "1fr auto 1fr" },
+          gap: { xs: 4, md: "var(--commitment-col-gap)" },
           alignItems: "start",
         }}
       >
@@ -88,6 +91,7 @@ export default function OurCommitmentSection() {
                   fontSize: "var(--font-size-body-lg)",
                   color: "var(--color-text-muted)",
                   lineHeight: "var(--line-height-relaxed)",
+                  textAlign: "center",
                   mb: i < ourCommitment.right.descriptions.length - 1 ? 2 : 0,
                 }}
               >
@@ -96,6 +100,7 @@ export default function OurCommitmentSection() {
             ))}
           </Column>
         </Box>
+
       </Box>
     </SectionShell>
   );

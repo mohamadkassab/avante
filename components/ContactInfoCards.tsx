@@ -60,7 +60,6 @@ function ContactInfoCard({ item }: { item: InfoItem }) {
             fontSize: "var(--font-size-nav)",
             fontWeight: "var(--font-weight-bold)",
             color: "var(--color-text-primary)",
-            mb: 0.5,
           }}
         >
           {item.title}
