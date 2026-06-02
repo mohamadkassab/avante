@@ -42,7 +42,7 @@ export default function Hero({
   const resolvedHeadingGradient = headingGradient === undefined ? homeHero.headingGradient : headingGradient;
   const resolvedSubtitle = subtitle ?? homeHero.subtitle;
   const resolvedImage = image ?? homeHero.image;
-  const resolvedVideo = video === undefined ? homeHero.video : video;
+  const resolvedVideo = video !== undefined ? video : (image === undefined ? homeHero.video : null);
   const resolvedCta = cta === undefined ? homeHero.cta : cta;
   const isCenter = align === "center";
 
