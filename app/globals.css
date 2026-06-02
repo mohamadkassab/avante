@@ -86,6 +86,7 @@
   /* Section headings */
   --font-size-section-heading-xs: 2.25rem;
   --font-size-section-heading-sm: 3rem;
+  --font-size-body-md: 1rem;
   --font-size-body-lg: 1.125rem;
 
   /* Shadows */
@@ -96,6 +97,9 @@
 
   /* About */
   --about-story-max-width: 56rem;
+  --commitment-divider-color: rgba(255, 255, 255, 0.2);
+  --commitment-col-gap: 4rem;
+  --commitment-col-py: 3rem;
   --about-grid-gap: 4rem;
   --about-stat-icon-size: 2rem;
   --about-stat-value-size: 1.5rem;

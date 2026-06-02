@@ -8,43 +8,94 @@ import SectionShell from "@/components/SectionShell";
 
 const { ourCommitment } = about;
 
-export default function OurCommitmentSection() {
+function Column({
+  title,
+  children,
+  index,
+}: {
+  title: string;
+  children: React.ReactNode;
+  index: number;
+}) {
   const { ref, visible } = useInView();
+  return (
+    <Box
+      ref={ref}
+      sx={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "none" : "translateY(30px)",
+        transition: `opacity var(--duration-scroll) ease-out ${index * 0.15}s, transform var(--duration-scroll) ease-out ${index * 0.15}s`,
+      }}
+    >
+      <Typography
+        variant="h3"
+        sx={{
+          fontSize: { xs: "var(--font-size-section-heading-xs)", sm: "var(--font-size-section-heading-sm)" },
+          fontWeight: "var(--font-weight-bold)",
+          color: "var(--color-section-bg-white)",
+          mb: 3,
+        }}
+      >
+        {title}
+      </Typography>
+      {children}
+    </Box>
+  );
+}
 
+export default function OurCommitmentSection() {
   return (
     <SectionShell variant="dark">
       <Box
-        ref={ref}
         sx={{
-          maxWidth: "var(--about-story-max-width)",
+          maxWidth: "var(--container-max-width)",
           mx: "auto",
-          textAlign: "center",
-          opacity: visible ? 1 : 0,
-          transform: visible ? "none" : "translateY(30px)",
-          transition: "opacity var(--duration-scroll) ease-out, transform var(--duration-scroll) ease-out",
+          display: "grid",
+          gridTemplateColumns: { xs: "1fr", md: "1fr auto 1fr" },
+          alignItems: "start",
         }}
       >
-        <Typography
-          variant="h2"
-          sx={{
-            fontSize: "var(--font-size-section-heading-xs)",
-            fontWeight: "var(--font-weight-bold)",
-            color: "var(--color-section-bg-white)",
-            mb: 3,
-          }}
-        >
-          {ourCommitment.heading}
-        </Typography>
+        <Box sx={{ py: { md: "var(--commitment-col-py)" } }}>
+          <Column title={ourCommitment.left.title} index={0}>
+            <Typography
+              sx={{
+                fontSize: "var(--font-size-body-lg)",
+                color: "var(--color-text-muted)",
+                lineHeight: "var(--line-height-relaxed)",
+              }}
+            >
+              {ourCommitment.left.description}
+            </Typography>
+          </Column>
+        </Box>
 
-        <Typography
+        <Box
           sx={{
-            fontSize: "var(--font-size-body-lg)",
-            color: "var(--color-text-muted)",
-            lineHeight: "var(--line-height-relaxed)",
+            display: { xs: "none", md: "block" },
+            width: "1px",
+            alignSelf: "stretch",
+            bgcolor: "var(--commitment-divider-color)",
+            mx: "var(--commitment-col-gap)",
           }}
-        >
-          {ourCommitment.body}
-        </Typography>
+        />
+
+        <Box sx={{ py: { md: "var(--commitment-col-py)" } }}>
+          <Column title={ourCommitment.right.title} index={1}>
+            {ourCommitment.right.descriptions.map((para, i) => (
+              <Typography
+                key={i}
+                sx={{
+                  fontSize: "var(--font-size-body-lg)",
+                  color: "var(--color-text-muted)",
+                  lineHeight: "var(--line-height-relaxed)",
+                  mb: i < ourCommitment.right.descriptions.length - 1 ? 2 : 0,
+                }}
+              >
+                {para}
+              </Typography>
+            ))}
+          </Column>
+        </Box>
       </Box>
     </SectionShell>
   );

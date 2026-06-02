@@ -30,7 +30,7 @@ function ContactInfoCard({ item }: { item: InfoItem }) {
     <Box
       sx={{
         display: "flex",
-        alignItems: "flex-start",
+        alignItems: "center",
         gap: 2,
         p: "var(--contact-card-p)",
         bgcolor: "var(--color-section-bg-white)",

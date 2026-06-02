@@ -8,6 +8,10 @@ export const home = {
       src: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1600&q=80",
       alt: "Commercial Kitchen",
     },
+    video: {
+      webm: "/Videos/Home Page Small Video.webm",
+      mp4: "/Videos/Home Page Small Video.mp4",
+    },
     cta: {
       primary: { label: "EXPLORE PRODUCTS", href: "/products" },
       secondary: { label: "GET IN TOUCH", href: "/contact" },
@@ -122,31 +126,6 @@ export const home = {
     contact: [
       { icon: "phone", value: "+971 4 2392882" },
       { icon: "email", value: "sales@avanteuae.com" },
-    ],
-  },
-  certifications: {
-    badge: "CERTIFICATIONS",
-    heading: "Industry-recognized excellence",
-    subtitle: "Our commitment to quality and safety is validated by international certifications",
-    footerText: "All our products meet and exceed international safety and quality standards. We continuously invest in maintaining our certifications and ensuring our systems deliver the highest levels of performance and reliability.",
-    items: [
-      { icon: "shield", title: "ISO 9001:2015", subtitle: "Quality Management System" },
-      { icon: "award", title: "CE Certified", subtitle: "European Conformity Standards" },
-      { icon: "check", title: "NFPA Compliant", subtitle: "Fire Safety Standards" },
-      { icon: "star", title: "UL Listed", subtitle: "Safety Certification" },
-    ],
-  },
-  whyChooseUs: {
-    badge: "WHY CHOOSE US",
-    headingLine1: "Innovative solutions for",
-    headingLine2: "productivity and comfort",
-    items: [
-      { icon: "factory", title: "UAE Manufacturing", description: "All systems designed and manufactured locally in Dubai Investment Park" },
-      { icon: "target", title: "Cost-Effective Solutions", description: "Competitive pricing with highest levels of productivity and comfort" },
-      { icon: "wrench", title: "Tailored Approach", description: "Every project treated individually with custom solutions" },
-      { icon: "award", title: "50+ Years Experience", description: "Collective expertise across UK, India, and Gulf countries" },
-      { icon: "cpu", title: "Advanced Manufacturing", description: "Cutting-edge equipment and computer-aided processes" },
-      { icon: "location", title: "Strategic Location", description: "Based in Dubai Investment Park industrial hub" },
     ],
   },
 };

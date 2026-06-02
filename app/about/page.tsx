@@ -4,6 +4,7 @@ import OurValuesSection from "@/components/OurValuesSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import OurCommitmentSection from "@/components/OurCommitmentSection";
+import SectionShell from "@/components/SectionShell";
 
 export default function AboutUs() {
   return (
@@ -20,7 +21,6 @@ export default function AboutUs() {
         height="60vh"
       />
       <OurStorySection />
-      <OurValuesSection />
       <WhyChooseUsSection />
       <CertificationsSection />
       <OurCommitmentSection />

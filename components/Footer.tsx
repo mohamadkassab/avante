@@ -71,10 +71,12 @@ export default function Footer() {
         >
           {/* Brand column */}
           <Box>
-            <Logo />
+            <Box sx={{ mb: 3 }}>
+              <Logo />
+            </Box>
             <Typography
               sx={{
-                fontSize: "var(--font-size-nav)",
+                fontSize: "var(--font-size-body-md)",
                 color: "var(--footer-text-color)",
                 lineHeight: "var(--line-height-relaxed)",
                 maxWidth: "36rem",

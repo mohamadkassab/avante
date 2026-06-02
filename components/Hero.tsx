@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import AppButton from "@/components/AppButton";
+import HeroVideo from "@/components/HeroVideo";
 import { home } from "@/content/home";
 
 const { hero: homeHero } = home;
@@ -17,6 +18,7 @@ interface HeroProps {
   headingGradient?: string | null;
   subtitle?: string;
   image?: { src: string; alt: string };
+  video?: { webm: string; mp4: string } | null;
   align?: "left" | "center";
   cta?: HeroCta | null;
   showScrollIndicator?: boolean;
@@ -29,6 +31,7 @@ export default function Hero({
   headingGradient,
   subtitle,
   image,
+  video,
   align = "left",
   cta,
   showScrollIndicator = true,
@@ -39,6 +42,7 @@ export default function Hero({
   const resolvedHeadingGradient = headingGradient === undefined ? homeHero.headingGradient : headingGradient;
   const resolvedSubtitle = subtitle ?? homeHero.subtitle;
   const resolvedImage = image ?? homeHero.image;
+  const resolvedVideo = video === undefined ? homeHero.video : video;
   const resolvedCta = cta === undefined ? homeHero.cta : cta;
   const isCenter = align === "center";
 
@@ -56,12 +60,20 @@ export default function Hero({
     >
       {/* Background */}
       <Box sx={{ position: "absolute", inset: 0, zIndex: 0 }}>
-        <Box
-          component="img"
-          src={resolvedImage.src}
-          alt={resolvedImage.alt}
-          sx={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-        />
+        {resolvedVideo ? (
+          <HeroVideo
+            webm={resolvedVideo.webm}
+            mp4={resolvedVideo.mp4}
+            poster={resolvedImage.src}
+          />
+        ) : (
+          <Box
+            component="img"
+            src={resolvedImage.src}
+            alt={resolvedImage.alt}
+            sx={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        )}
         <Box
           sx={{
             position: "absolute",
