@@ -65,6 +65,7 @@ export default function OurCommitmentSection() {
                 fontSize: "var(--font-size-body-lg)",
                 color: "var(--color-text-muted)",
                 lineHeight: "var(--line-height-relaxed)",
+                textAlign: "center",
               }}
             >
               {ourCommitment.left.description}

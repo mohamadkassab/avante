@@ -53,18 +53,19 @@ function ContactInfoCard({ item }: { item: InfoItem }) {
       >
         {contactIcons[item.icon]}
       </Box>
-      <Box>
+      <Box sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", gap: 0.2}}>
         <Typography
           variant="h3"
           sx={{
             fontSize: "var(--font-size-nav)",
             fontWeight: "var(--font-weight-bold)",
             color: "var(--color-text-primary)",
+            lineHeight: 1,
           }}
         >
           {item.title}
         </Typography>
-        <Typography sx={{ fontSize: "var(--font-size-nav)", color: "var(--color-text-muted)" }}>
+        <Typography sx={{ fontSize: "var(--font-size-nav)", color: "var(--color-text-muted)", lineHeight: 1 }}>
           {item.value}
         </Typography>
       </Box>
