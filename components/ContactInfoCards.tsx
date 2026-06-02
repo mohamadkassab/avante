@@ -53,7 +53,7 @@ function ContactInfoCard({ item }: { item: InfoItem }) {
       >
         {contactIcons[item.icon]}
       </Box>
-      <Box sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", gap: 0.2}}>
+      <Box sx={{height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", gap: 0.5}}>
         <Typography
           variant="h3"
           sx={{
