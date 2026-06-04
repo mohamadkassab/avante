@@ -184,7 +184,7 @@ export default function AboutSection() {
               component="img"
               src={about.image.src}
               alt={about.image.alt}
-              sx={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              sx={{ width: "100%", height: "100%", objectFit: "cover",objectPosition: "top", display: "block" }}
             />
           </Box>
 

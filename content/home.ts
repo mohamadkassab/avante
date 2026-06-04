@@ -34,7 +34,7 @@ export const home = {
     ],
     cta: { label: "LEARN MORE ABOUT US", href: "/about" },
     image: {
-      src: "https://images.unsplash.com/photo-1577308856961-8e9ec50d0c67?w=800&q=80",
+      src: "/images/about-avante-section.webp",
       alt: "Commercial Kitchen",
     },
   },

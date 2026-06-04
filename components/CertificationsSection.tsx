@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Tooltip from "@mui/material/Tooltip";
 import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
@@ -26,9 +27,18 @@ type CertItem = (typeof certifications.items)[number];
 function CertCard({ item, index }: { item: CertItem; index: number }) {
   const { ref, visible } = useInView();
   return (
+    <Tooltip title="Download Certificate" arrow>
     <Box
       ref={ref}
+      component="a"
+      href={encodeURI(item.pdf)}
+      target="_blank"
+      rel="noopener noreferrer"
+      download
       sx={{
+        display: "block",
+        textDecoration: "none",
+        cursor: "pointer",
         position: "relative",
         overflow: "hidden",
         p: "var(--cert-card-p)",
@@ -85,6 +95,7 @@ function CertCard({ item, index }: { item: CertItem; index: number }) {
         {item.subtitle}
       </Typography>
     </Box>
+    </Tooltip>
   );
 }
 

@@ -64,10 +64,10 @@ export const about = {
     subtitle: "Avante ventilation systems are engineered to meet international performance and safety standards used across the hospitality and commercial kitchen industries. Our products are designed and tested in accordance with recognized engineering guidelines including:",
     footerText: "These certifications ensure that our ventilation systems provide: Superior grease extraction performance, improved indoor air quality, reduced energy consumption, reliable long-term operation.",
     items: [
-      { icon: "shield", title: "UL Certified Grease Filters", subtitle: "Quality Management System" },
-      { icon: "award", title: "VDI 2052 Part 1:1999 Capture Efficiency Certification (DMT Germany)", subtitle: "European Conformity Standards" },
-      { icon: "check", title: "Demand Control Ventilation Energy Optimization", subtitle: "Fire Safety Standards" },
-      { icon: "star", title: "Compliance with global kitchen ventilation engineering practices", subtitle: "Safety Certification" },
+      { icon: "shield", title: "UL Certified Grease Filters", subtitle: "Quality Management System", pdf: "/Certificates/AVANTE - UL - R40750-20220429-CertificateofCompliance.pdf" },
+      { icon: "award", title: "VDI 2052 Part 1:1999 Capture Efficiency Certification (DMT Germany)", subtitle: "European Conformity Standards", pdf: "/Certificates/AVANTE - DMT Test Certificate.pdf" },
+      { icon: "check", title: "Demand Control Ventilation Energy Optimization", subtitle: "Fire Safety Standards", pdf: "/Certificates/AVANTE - ICV Certificate 85007-2.pdf" },
+      { icon: "star", title: "Compliance with global kitchen ventilation engineering practices", subtitle: "Safety Certification", pdf: "/Certificates/Avante_ISO_Certificate.pdf" },
     ],
   },
   ourStory: {

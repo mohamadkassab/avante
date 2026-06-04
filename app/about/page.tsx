@@ -13,7 +13,7 @@ export default function AboutUs() {
         heading="About"
         headingGradient="Avante"
         subtitle="Setting new standards of excellence in commercial kitchen solutions"
-        image={{ src: "/images/aboutus-banner.avif", alt: "About Avante" }}
+        image={{ src: "/images/about-us-cover.webp", alt: "About Avante" }}
         align="center"
         inlineGradient
         cta={null}
