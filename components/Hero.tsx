@@ -20,6 +20,9 @@ interface HeroProps {
   image?: { src: string; alt: string };
   video?: { webm: string; mp4: string } | null;
   align?: "left" | "center";
+  imagePosition?: "center" | "top";
+  imageFit?: "cover" | "contain";
+  imageOffsetTop?: string;
   cta?: HeroCta | null;
   showScrollIndicator?: boolean;
   height?: string;
@@ -33,6 +36,9 @@ export default function Hero({
   image,
   video,
   align = "left",
+  imagePosition = "center",
+  imageFit = "cover",
+  imageOffsetTop = "0",
   cta,
   showScrollIndicator = true,
   height = "100vh",
@@ -71,7 +77,26 @@ export default function Hero({
             component="img"
             src={resolvedImage.src}
             alt={resolvedImage.alt}
-            sx={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+            sx={
+              imageFit === "contain"
+                ? {
+                    position: "absolute",
+                    top: imageOffsetTop,
+                    left: 0,
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "contain",
+                    objectPosition: imagePosition,
+                  }
+                : {
+                    position: "absolute",
+                    inset: 0,
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: imagePosition,
+                  }
+            }
           />
         )}
         <Box

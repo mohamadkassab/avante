@@ -15,10 +15,13 @@ export default function AboutUs() {
         subtitle="Setting new standards of excellence in commercial kitchen solutions"
         image={{ src: "/images/about-us-cover.webp", alt: "About Avante" }}
         align="center"
+        imagePosition="top"
+        imageFit="contain"
+        imageOffsetTop="-30%"
         inlineGradient
         cta={null}
         showScrollIndicator={false}
-        height="60vh"
+        height="78vh"
       />
       <OurStorySection />
       <WhyChooseUsSection />

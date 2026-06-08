@@ -19,6 +19,7 @@ export default function OurStorySection() {
         sx={{
           maxWidth: "var(--about-story-max-width)",
           mx: "auto",
+          textAlign: "center",
           opacity: visible ? 1 : 0,
           transform: visible ? "none" : "translateY(30px)",
           transition: "opacity var(--duration-scroll) ease-out, transform var(--duration-scroll) ease-out",
