@@ -17,11 +17,11 @@ export default function AboutUs() {
         align="center"
         imagePosition="top"
         imageFit="contain"
-        imageOffsetTop="-30%"
+        imageOffsetTop="-10%"
         inlineGradient
         cta={null}
         showScrollIndicator={false}
-        height="78vh"
+        height="60vh"
       />
       <OurStorySection />
       <WhyChooseUsSection />
