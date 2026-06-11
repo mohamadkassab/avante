@@ -17,7 +17,7 @@ export default function AboutUs() {
         align="center"
         imagePosition="top"
         imageFit="contain"
-        imageOffsetTop="-20%"
+        imageOffsetTop="-30%"
         inlineGradient
         cta={null}
         showScrollIndicator={false}
