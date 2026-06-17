@@ -39,6 +39,7 @@
   --duration-scroll: 0.6s;
 
   /* Typography */
+  --font-family-base: var(--font-arimo), ui-sans-serif, system-ui, sans-serif;
   --font-size-nav: .9rem;
   --font-size-brand: 1.5rem;
   --font-weight-medium: 500;
@@ -225,6 +226,7 @@
 }
 
 body {
+  font-family: var(--font-family-base);
   background: var(--color-section-bg-off-white);
   color: var(--color-text-primary);
 }
