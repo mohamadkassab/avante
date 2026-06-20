@@ -12,6 +12,8 @@ import { useInView } from "@/hooks/useInView";
 import { home } from "@/content/home";
 import SectionBadge from "@/components/SectionBadge";
 import SectionShell from "@/components/SectionShell";
+import SectionHeading from "@/components/SectionHeading";
+import ImageSlider from "@/components/ImageSlider";
 
 const { about } = home;
 
@@ -56,23 +58,11 @@ export default function AboutSection() {
         >
           <SectionBadge>{about.badge}</SectionBadge>
 
-          <Typography
-            variant="h2"
-            sx={{
-              fontSize: {
-                xs: "var(--font-size-section-heading-xs)",
-                sm: "var(--font-size-section-heading-sm)",
-              },
-              fontWeight: "var(--font-weight-bold)",
-              color: "var(--color-text-primary)",
-              mb: 3,
-              lineHeight: "var(--line-height-tight)",
-            }}
-          >
+          <SectionHeading>
             {about.headingLine1}
             <br />
             {about.headingLine2}
-          </Typography>
+          </SectionHeading>
 
           <Typography
             sx={{
@@ -180,12 +170,7 @@ export default function AboutSection() {
               boxShadow: "var(--shadow-2xl)",
             }}
           >
-            <Box
-              component="img"
-              src={about.image.src}
-              alt={about.image.alt}
-              sx={{ width: "100%", height: "100%", objectFit: "cover",objectPosition: "top", display: "block" }}
-            />
+            <ImageSlider images={about.images} />
           </Box>
 
           <Box

@@ -14,6 +14,7 @@
   /* Text colors */
   --color-text-primary: #1A1A1A;
   --color-text-muted: #6B7280;
+  --color-text-white: #FFFFFF;
 
   /* UI colors */
   --color-border: #E5E7EB;
@@ -22,6 +23,7 @@
   /* Gradients */
   --gradient-brand: linear-gradient(to right, #14B8A6, #0EA5E9);
   --gradient-brand-diagonal: linear-gradient(135deg, #14B8A6, #0EA5E9);
+  --gradient-caption: linear-gradient(to right, #459e92f2, #4e8aa4fe);
 
   /* Layout */
   --navbar-height: 80px;
@@ -43,6 +45,7 @@
   --font-size-nav: .9rem;
   --font-size-brand: 1.5rem;
   --font-weight-medium: 500;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --letter-spacing-wide: 0.025em;
   --letter-spacing-tight: -0.025em;
@@ -81,7 +84,7 @@
   --color-badge-bg: linear-gradient(to right, #F0FDFA, #F0F9FF);
   --badge-px: 1rem;
   --badge-py: 0.25rem;
-  --badge-font-size: 0.75rem;
+  --badge-font-size: 0.85rem;
   --badge-letter-spacing: 0.1em;
 
   /* Section headings */
@@ -101,6 +104,7 @@
   --commitment-divider-color: rgba(255, 255, 255, 0.2);
   --commitment-col-gap: 4rem;
   --commitment-col-py: 3rem;
+  --commitment-statement-max-width: 32rem;
   --about-grid-gap: 4rem;
   --about-stat-icon-size: 2rem;
   --about-stat-value-size: 1.5rem;
@@ -108,6 +112,19 @@
   --about-stat-gap: 1.5rem;
   --about-deco-size: 8rem;
   --about-deco-offset: -1.5rem;
+
+  /* About image slider */
+  --about-slider-fade-duration: 0.5s;
+  --about-slider-arrow-size: 2.5rem;
+  --about-slider-arrow-offset: 0.75rem;
+  --about-slider-arrow-bg: rgba(0, 0, 0, 0.35);
+  --about-slider-arrow-bg-hover: rgba(0, 0, 0, 0.55);
+  --about-slider-arrow-color: var(--color-text-white);
+  --about-slider-dot-size: 0.5rem;
+  --about-slider-dot-gap: 0.5rem;
+  --about-slider-dot-bottom: 1rem;
+  --about-slider-dot-color: rgba(255, 255, 255, 0.5);
+  --about-slider-dot-active-color: var(--color-text-white);
 
   /* Carousel */
   --carousel-gap: 1.5rem;
@@ -167,6 +184,10 @@
   --footer-divider-color: #374151;
   --footer-logo-dot-bg: #1A1A1A;
   --footer-logo-text-size: 1.875rem;
+  --footer-social-size: 2.75rem;
+  --footer-social-icon-size: 1.35rem;
+  --footer-social-gap: 0.75rem;
+  --footer-social-border-width: 1px;
 
   /* CTA */
   --cta-contact-card-p: 1.2rem;

@@ -103,6 +103,21 @@ export default function OurCommitmentSection() {
         </Box>
 
       </Box>
+
+      <Box sx={{ maxWidth: "var(--container-max-width)", mx: "auto", mt: { xs: 4, md: 6 } }}>
+        <Typography
+          sx={{
+            fontSize: "var(--font-size-body-lg)",
+            color: "var(--color-text-muted)",
+            lineHeight: "var(--line-height-relaxed)",
+            textAlign: "center",
+            maxWidth: "var(--commitment-statement-max-width)",
+            mx: "auto",
+          }}
+        >
+          {ourCommitment.statement}
+        </Typography>
+      </Box>
     </SectionShell>
   );
 }

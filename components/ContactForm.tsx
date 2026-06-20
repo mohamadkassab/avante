@@ -12,6 +12,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { useInView } from "@/hooks/useInView";
 import { contact } from "@/content/contact";
 import AppButton from "@/components/AppButton";
+import SectionHeading from "@/components/SectionHeading";
 
 const { form } = contact;
 
@@ -99,17 +100,7 @@ export default function ContactForm() {
           transition: "opacity var(--duration-scroll) ease-out 0.1s, transform var(--duration-scroll) ease-out 0.1s",
         }}
       >
-        <Typography
-          variant="h2"
-          sx={{
-            fontSize: "var(--contact-heading-size)",
-            fontWeight: "var(--font-weight-bold)",
-            color: "var(--color-text-primary)",
-            mb: 3,
-          }}
-        >
-          {form.heading}
-        </Typography>
+        <SectionHeading size="contact">{form.heading}</SectionHeading>
 
         <Box
           ref={formRef}

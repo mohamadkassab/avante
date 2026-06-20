@@ -1,6 +1,6 @@
 export const footer = {
   description:
-    "Advanced Kitchen Ventilation & Environmental Solutions",
+    "Avante Ventilation Equipment Manufacturing L.L.C.",
   quickLinks: [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
@@ -14,6 +14,12 @@ export const footer = {
     { label: "Fire Suppression", href: "/products" },
     { label: "Ventilated Ceiling", href: "/products" },
     { label: "Demand Control Ventilation", href: "/products" },
+  ],
+  social: [
+    { label: "Phone", icon: "phone", href: "tel:+97142392882" },
+    { label: "Email", icon: "email", href: "mailto:sales@avanteuae.com" },
+    { label: "Instagram", icon: "instagram", href: "https://www.instagram.com/" },
+    { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/" },
   ],
   copyright: "Avante UAE. All rights reserved.",
 };

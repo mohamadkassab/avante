@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import { useInView } from "@/hooks/useInView";
 import SectionShell from "@/components/SectionShell";
+import SectionHeading from "@/components/SectionHeading";
 import { about } from "@/content/about";
 
 const { ourStory } = about;
@@ -25,17 +26,9 @@ export default function OurStorySection() {
           transition: "opacity var(--duration-scroll) ease-out, transform var(--duration-scroll) ease-out",
         }}
       >
-        <Typography
-          variant="h2"
-          sx={{
-            fontSize: "var(--font-size-section-heading-xs)",
-            fontWeight: "var(--font-weight-bold)",
-            color: "var(--color-text-primary)",
-            mb: 4,
-          }}
-        >
+        <SectionHeading size="sectionCompact" mb={4}>
           {ourStory.heading}
-        </Typography>
+        </SectionHeading>
 
         <Stack spacing={3}>
           {ourStory.paragraphs.map((paragraph, i) => (

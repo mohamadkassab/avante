@@ -27,6 +27,8 @@ interface HeroProps {
   showScrollIndicator?: boolean;
   height?: string;
   inlineGradient?: boolean;
+  headingWeight?: "bold" | "semibold";
+  solidHeading?: boolean;
 }
 
 export default function Hero({
@@ -43,7 +45,11 @@ export default function Hero({
   showScrollIndicator = true,
   height = "100vh",
   inlineGradient = false,
+  headingWeight = "bold",
+  solidHeading = false,
 }: HeroProps) {
+  const headingWeightVar =
+    headingWeight === "semibold" ? "var(--font-weight-semibold)" : "var(--font-weight-bold)";
   const resolvedHeading = heading ?? homeHero.heading;
   const resolvedHeadingGradient = headingGradient === undefined ? homeHero.headingGradient : headingGradient;
   const resolvedSubtitle = subtitle ?? homeHero.subtitle;
@@ -128,8 +134,8 @@ export default function Hero({
               xs: "var(--font-size-hero-xs)",
               md: "var(--font-size-hero-md)",
             },
-            fontWeight: "var(--font-weight-bold)",
-            color: "white",
+            fontWeight: headingWeightVar,
+            color: "var(--color-text-white)",
             mb: "var(--hero-heading-mb)",
             lineHeight: "var(--line-height-tight)",
           }}
@@ -140,12 +146,16 @@ export default function Hero({
               {inlineGradient ? " " : <br />}
               <Box
                 component="span"
-                sx={{
-                  background: "var(--gradient-brand)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
+                sx={
+                  solidHeading
+                    ? { color: "var(--color-text-white)" }
+                    : {
+                        background: "var(--gradient-brand)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                      }
+                }
               >
                 {resolvedHeadingGradient}
               </Box>

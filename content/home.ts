@@ -33,10 +33,10 @@ export const home = {
       { icon: "custom", value: "100%", label: "Custom Engineered Solutions" },
     ],
     cta: { label: "LEARN MORE ABOUT US", href: "/about" },
-    image: {
-      src: "/images/about-avante-section.webp",
-      alt: "Commercial Kitchen",
-    },
+    images: [
+      { src: "/images/about-avante-section.webp", alt: "Commercial Kitchen" },
+      { src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200&q=80", alt: "Ventilation system installation" },
+    ],
   },
   products: {
     badge: "OUR PRODUCTS",
@@ -120,7 +120,6 @@ export const home = {
     headingLine2: "commercial kitchen?",
     subtitle: "Contact our team of experts and get a customised solution tailored to your project needs.",
     buttons: [
-      { label: "REQUEST A QUOTE", href: "/contact", variant: "primary" },
       { label: "CALL US NOW", href: "tel:+97142345678", variant: "glass" },
     ],
     contact: [

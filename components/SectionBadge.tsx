@@ -8,7 +8,6 @@ export default function SectionBadge({ children }: { children: ReactNode }) {
         display: "inline-block",
         px: "var(--badge-px)",
         py: "var(--badge-py)",
-        background: "var(--color-badge-bg)",
         color: "var(--color-primary)",
         fontSize: "var(--badge-font-size)",
         fontWeight: "var(--font-weight-bold)",

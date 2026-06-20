@@ -6,6 +6,7 @@ import { useInView } from "@/hooks/useInView";
 import { home } from "@/content/home";
 import SectionBadge from "@/components/SectionBadge";
 import SectionShell from "@/components/SectionShell";
+import SectionHeading from "@/components/SectionHeading";
 
 const { clients } = home;
 
@@ -28,20 +29,7 @@ export default function ClientsSection() {
       >
         <SectionBadge>{clients.badge}</SectionBadge>
 
-        <Typography
-          variant="h2"
-          sx={{
-            fontSize: {
-              xs: "var(--font-size-section-heading-xs)",
-              sm: "var(--font-size-section-heading-sm)",
-            },
-            fontWeight: "var(--font-weight-bold)",
-            color: "var(--color-text-primary)",
-            mb: 3,
-          }}
-        >
-          {clients.heading}
-        </Typography>
+        <SectionHeading>{clients.heading}</SectionHeading>
 
         <Typography
           sx={{

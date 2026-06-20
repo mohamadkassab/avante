@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useInView } from "@/hooks/useInView";
 import { contact } from "@/content/contact";
+import SectionHeading from "@/components/SectionHeading";
 
 const { info } = contact;
 
@@ -85,17 +86,7 @@ export default function ContactInfoCards() {
         transition: "opacity var(--duration-scroll) ease-out, transform var(--duration-scroll) ease-out",
       }}
     >
-      <Typography
-        variant="h2"
-        sx={{
-          fontSize: "var(--contact-heading-size)",
-          fontWeight: "var(--font-weight-bold)",
-          color: "var(--color-text-primary)",
-          mb: 3,
-        }}
-      >
-        {info.heading}
-      </Typography>
+      <SectionHeading size="contact">{info.heading}</SectionHeading>
 
       <Typography
         sx={{

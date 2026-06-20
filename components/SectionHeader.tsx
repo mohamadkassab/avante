@@ -3,6 +3,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useInView } from "@/hooks/useInView";
+import SectionHeading from "@/components/SectionHeading";
 
 type Props = {
   heading: string;
@@ -22,21 +23,7 @@ export default function SectionHeader({ heading, subtitle }: Props) {
         transition: "opacity var(--duration-scroll) ease-out, transform var(--duration-scroll) ease-out",
       }}
     >
-      <Typography
-        variant="h2"
-        sx={{
-          fontSize: {
-            xs: "var(--font-size-section-heading-xs)",
-            sm: "var(--font-size-section-heading-sm)",
-          },
-          fontWeight: "var(--font-weight-bold)",
-          color: "var(--color-text-primary)",
-          lineHeight: "var(--line-height-tight)",
-          mb: subtitle ? 3 : 0,
-        }}
-      >
-        {heading}
-      </Typography>
+      <SectionHeading mb={subtitle ? 3 : 0}>{heading}</SectionHeading>
 
       {subtitle && (
         <Typography

@@ -11,6 +11,7 @@ import { useInView } from "@/hooks/useInView";
 import { about } from "@/content/about";
 import SectionBadge from "@/components/SectionBadge";
 import SectionShell from "@/components/SectionShell";
+import SectionHeading from "@/components/SectionHeading";
 
 const { certifications } = about;
 
@@ -88,9 +89,9 @@ function CertCard({ item, index }: { item: CertItem; index: number }) {
         {item.title}
       </Typography>
 
-      <Typography sx={{ fontSize: "var(--font-size-nav)", color: "var(--color-text-muted)" }}>
+      {/* <Typography sx={{ fontSize: "var(--font-size-nav)", color: "var(--color-text-muted)" }}>
         {item.subtitle}
-      </Typography>
+      </Typography> */}
     </Box>
   );
 }
@@ -111,22 +112,8 @@ export default function CertificationsSection() {
           transition: "opacity var(--duration-scroll) ease-out, transform var(--duration-scroll) ease-out",
         }}
       >
-        <SectionBadge>{certifications.badge}</SectionBadge>
 
-        <Typography
-          variant="h2"
-          sx={{
-            fontSize: {
-              xs: "var(--font-size-section-heading-xs)",
-              sm: "var(--font-size-section-heading-sm)",
-            },
-            fontWeight: "var(--font-weight-bold)",
-            color: "var(--color-text-primary)",
-            mb: 3,
-          }}
-        >
-          {certifications.heading}
-        </Typography>
+        <SectionHeading>{certifications.heading}</SectionHeading>
 
         <Typography
           sx={{

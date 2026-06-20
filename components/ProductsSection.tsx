@@ -14,6 +14,7 @@ import { home } from "@/content/home";
 import AppButton from "@/components/AppButton";
 import SectionBadge from "@/components/SectionBadge";
 import SectionShell from "@/components/SectionShell";
+import SectionHeading from "@/components/SectionHeading";
 import Carousel from "@/components/Carousel";
 
 const { products } = home;
@@ -114,20 +115,7 @@ export default function ProductsSection() {
       >
         <SectionBadge>{products.badge}</SectionBadge>
 
-        <Typography
-          variant="h2"
-          sx={{
-            fontSize: {
-              xs: "var(--font-size-section-heading-xs)",
-              sm: "var(--font-size-section-heading-sm)",
-            },
-            fontWeight: "var(--font-weight-bold)",
-            color: "var(--color-text-primary)",
-            mb: 3,
-          }}
-        >
-          {products.heading}
-        </Typography>
+        <SectionHeading>{products.heading}</SectionHeading>
 
         <Typography
           sx={{

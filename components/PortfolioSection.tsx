@@ -9,6 +9,7 @@ import { home } from "@/content/home";
 import AppButton from "@/components/AppButton";
 import SectionBadge from "@/components/SectionBadge";
 import SectionShell from "@/components/SectionShell";
+import SectionHeading from "@/components/SectionHeading";
 
 const { portfolio } = home;
 
@@ -78,20 +79,7 @@ export default function PortfolioSection() {
       >
         <SectionBadge>{portfolio.badge}</SectionBadge>
 
-        <Typography
-          variant="h2"
-          sx={{
-            fontSize: {
-              xs: "var(--font-size-section-heading-xs)",
-              sm: "var(--font-size-section-heading-sm)",
-            },
-            fontWeight: "var(--font-weight-bold)",
-            color: "var(--color-text-primary)",
-            mb: 3,
-          }}
-        >
-          {portfolio.heading}
-        </Typography>
+        <SectionHeading>{portfolio.heading}</SectionHeading>
 
         <Typography
           sx={{

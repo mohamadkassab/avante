@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Hero headingWeight="semibold" solidHeading />
       <AboutSection />
       <ProductsSection />
       <PortfolioSection />

@@ -48,15 +48,16 @@ export const about = {
   ourCommitment: {
     left: {
       title: "Mission",
-      description: "Our mission is to deliver energy-efficient, cost-effective ventilation solutions that combine engineering expertise with advanced technology to meet the evolving needs of the HORECA industry.",
+      description: "To deliver energy-efficient, cost-effective ventilation solutions that combine engineering expertise with advanced technology to meet the evolving needs of the HORECA industry.",
     },
     right: {
       title: "Vision",
       descriptions: [
-        "Our vision is to become a globally recognized presence in the commercial kitchen ventilation space, driven by continuous innovation and strong partnerships with our esteemed clients.",
-        "Through close client collaboration and high employee commitment, we strive to deliver exceptional value to our customers and partners.",
+        "To become a globally recognized presence in the commercial kitchen ventilation space, driven by continuous innovation and strong partnerships with our esteemed clients.",
       ],
     },
+    statement:
+      "Through close client collaboration and high employee commitment, we strive to deliver exceptional value to our customers and partners.",
   },
   certifications: {
     badge: "CERTIFICATIONS",
@@ -65,9 +66,9 @@ export const about = {
     footerText: "These certifications ensure that our ventilation systems provide: Superior grease extraction performance, improved indoor air quality, reduced energy consumption, reliable long-term operation.",
     items: [
       { icon: "shield", title: "UL Certified Grease Filters", subtitle: "Quality Management System", pdf: "/Certificates/AVANTE - UL - R40750-20220429-CertificateofCompliance.pdf" },
-      { icon: "award", title: "VDI 2052 Part 1:1999 Capture Efficiency Certification (DMT Germany)", subtitle: "European Conformity Standards", pdf: "/Certificates/AVANTE - DMT Test Certificate.pdf" },
-      { icon: "check", title: "Demand Control Ventilation Energy Optimization", subtitle: "Fire Safety Standards", pdf: "/Certificates/AVANTE - ICV Certificate 85007-2.pdf" },
-      { icon: "star", title: "Compliance with global kitchen ventilation engineering practices", subtitle: "Safety Certification", pdf: "/Certificates/Avante_ISO_Certificate.pdf" },
+      { icon: "award", title: "DMT Certification", subtitle: "European Conformity Standards", pdf: "/Certificates/AVANTE - DMT Test Certificate.pdf" },
+      { icon: "check", title: "In-Country Value Certificate", subtitle: "Fire Safety Standards", pdf: "/Certificates/AVANTE - ICV Certificate 85007-2.pdf" },
+      { icon: "star", title: "ISO Certificate", subtitle: "Safety Certification", pdf: "/Certificates/Avante_ISO_Certificate.pdf" },
     ],
   },
   ourStory: {
