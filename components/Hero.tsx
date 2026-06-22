@@ -18,7 +18,7 @@ interface HeroProps {
   headingGradient?: string | null;
   subtitle?: string;
   image?: { src: string; alt: string };
-  video?: { webm: string; mp4: string } | null;
+  video?: { webm?: string; mp4: string } | null;
   align?: "left" | "center";
   imagePosition?: "center" | "top";
   imageFit?: "cover" | "contain";
@@ -54,7 +54,8 @@ export default function Hero({
   const resolvedHeadingGradient = headingGradient === undefined ? homeHero.headingGradient : headingGradient;
   const resolvedSubtitle = subtitle ?? homeHero.subtitle;
   const resolvedImage = image ?? homeHero.image;
-  const resolvedVideo = video !== undefined ? video : (image === undefined ? homeHero.video : null);
+  const resolvedVideo: { webm?: string; mp4: string } | null =
+    video !== undefined ? video : (image === undefined ? homeHero.video : null);
   const resolvedCta = cta === undefined ? homeHero.cta : cta;
   const isCenter = align === "center";
 

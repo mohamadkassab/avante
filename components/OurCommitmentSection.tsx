@@ -32,7 +32,7 @@ function Column({
         sx={{
           fontSize: { xs: "var(--font-size-section-heading-xs)", sm: "var(--font-size-section-heading-sm)" },
           fontWeight: "var(--font-weight-bold)",
-          color: "var(--color-section-bg-white)",
+          color: "var(--color-text-primary)",
           mb: 3,
           display: "flex",
           justifyContent: "center",
@@ -47,7 +47,7 @@ function Column({
 
 export default function OurCommitmentSection() {
   return (
-    <SectionShell variant="dark">
+    <SectionShell variant="offWhite">
       <Box
         sx={{
           maxWidth: "var(--container-max-width)",
@@ -102,21 +102,6 @@ export default function OurCommitmentSection() {
           </Column>
         </Box>
 
-      </Box>
-
-      <Box sx={{ maxWidth: "var(--container-max-width)", mx: "auto", mt: { xs: 4, md: 6 } }}>
-        <Typography
-          sx={{
-            fontSize: "var(--font-size-body-lg)",
-            color: "var(--color-text-muted)",
-            lineHeight: "var(--line-height-relaxed)",
-            textAlign: "center",
-            maxWidth: "var(--commitment-statement-max-width)",
-            mx: "auto",
-          }}
-        >
-          {ourCommitment.statement}
-        </Typography>
       </Box>
     </SectionShell>
   );

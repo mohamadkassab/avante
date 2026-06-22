@@ -56,8 +56,6 @@ export const about = {
         "To become a globally recognized presence in the commercial kitchen ventilation space, driven by continuous innovation and strong partnerships with our esteemed clients.",
       ],
     },
-    statement:
-      "Through close client collaboration and high employee commitment, we strive to deliver exceptional value to our customers and partners.",
   },
   certifications: {
     badge: "CERTIFICATIONS",

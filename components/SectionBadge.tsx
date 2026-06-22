@@ -6,7 +6,6 @@ export default function SectionBadge({ children }: { children: ReactNode }) {
     <Box
       sx={{
         display: "inline-block",
-        px: "var(--badge-px)",
         py: "var(--badge-py)",
         color: "var(--color-primary)",
         fontSize: "var(--badge-font-size)",

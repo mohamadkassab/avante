@@ -3,16 +3,12 @@
 import type { ReactNode } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import PhoneIcon from "@mui/icons-material/Phone";
-import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Link from "next/link";
 import { footer } from "@/content/shared";
 import Logo from "./Logo";
 
 const socialIcons: Record<string, ReactNode> = {
-  phone: <PhoneIcon sx={{ fontSize: "var(--footer-social-icon-size)" }} />,
-  email: <EmailIcon sx={{ fontSize: "var(--footer-social-icon-size)" }} />,
   instagram: <InstagramIcon sx={{ fontSize: "var(--footer-social-icon-size)" }} />,
   linkedin: (
     <Box
@@ -27,39 +23,74 @@ const socialIcons: Record<string, ReactNode> = {
   ),
 };
 
-function FooterSocial() {
+function FooterContactRow({ item }: { item: { display?: string; href: string } }) {
+  const text = item.display ?? item.href.replace(/^tel:|^mailto:/, "");
   return (
-    <Box sx={{ display: "flex", gap: "var(--footer-social-gap)", mt: 3 }}>
-      {footer.social.map((item) => {
-        const isExternal = item.href.startsWith("http");
-        return (
-          <Box
-            key={item.label}
-            component={Link}
-            href={item.href}
-            aria-label={item.label}
-            target={isExternal ? "_blank" : undefined}
-            rel={isExternal ? "noopener noreferrer" : undefined}
-            sx={{
-              width: "var(--footer-social-size)",
-              height: "var(--footer-social-size)",
-              borderRadius: "50%",
-              border: "var(--footer-social-border-width) solid transparent",
-              background:
-                "linear-gradient(var(--color-section-bg-dark), var(--color-section-bg-dark)) padding-box, var(--gradient-caption) border-box",
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "var(--color-text-white)",
-              cursor: "pointer",
-              transition: "background var(--duration-medium)",
-              "&:hover": { background: "var(--gradient-caption)" },
-            }}
-          >
-            {socialIcons[item.icon]}
-          </Box>
-        );
-      })}
+    <Box
+      component={Link}
+      href={item.href}
+      sx={{
+        display: "block",
+        fontSize: "var(--font-size-nav)",
+        color: "var(--footer-muted-color)",
+        textDecoration: "none",
+        transition: "color var(--duration-fast)",
+        "&:hover": { color: "var(--color-text-white)" },
+      }}
+    >
+      {text}
+    </Box>
+  );
+}
+
+function FooterSocial() {
+  const contacts = footer.social.filter((item) => item.icon === "phone" || item.icon === "email");
+  const socials = footer.social.filter((item) => item.icon === "instagram" || item.icon === "linkedin");
+
+  return (
+    <Box sx={{ mt: 3 }}>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5, mb: 3 }}>
+        <Typography
+          sx={{ fontSize: "var(--font-size-nav)", color: "var(--footer-muted-color)" }}
+        >
+          Dubai Investment Park – 2, UAE
+        </Typography>
+        {contacts.map((item) => (
+          <FooterContactRow key={item.label} item={item} />
+        ))}
+      </Box>
+      <Box sx={{ display: "flex", gap: "var(--footer-social-gap)" }}>
+        {socials.map((item) => {
+          const isExternal = item.href.startsWith("http");
+          return (
+            <Box
+              key={item.label}
+              component={Link}
+              href={item.href}
+              aria-label={item.label}
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noopener noreferrer" : undefined}
+              sx={{
+                width: "var(--footer-social-size)",
+                height: "var(--footer-social-size)",
+                borderRadius: "50%",
+                border: "var(--footer-social-border-width) solid transparent",
+                background:
+                  "linear-gradient(var(--color-section-bg-dark), var(--color-section-bg-dark)) padding-box, var(--gradient-caption) border-box",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "var(--color-text-white)",
+                cursor: "pointer",
+                transition: "background var(--duration-medium)",
+                "&:hover": { background: "var(--gradient-caption)" },
+              }}
+            >
+              {socialIcons[item.icon]}
+            </Box>
+          );
+        })}
+      </Box>
     </Box>
   );
 }
@@ -109,7 +140,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <Box component="footer" sx={{ bgcolor: "var(--color-section-bg-dark)", marginTop: 10 }}>
+    <Box component="footer" sx={{ bgcolor: "var(--color-section-bg-dark)"}}>
       <Box
         sx={{
           maxWidth: "var(--container-max-width)",
@@ -142,11 +173,6 @@ export default function Footer() {
               }}
             >
               {footer.description}
-            </Typography>
-            <Typography
-              sx={{ fontSize: "var(--font-size-nav)", color: "var(--footer-muted-color)" }}
-            >
-                Dubai Investment Park – 2, UAE
             </Typography>
             <FooterSocial />
           </Box>

@@ -3,9 +3,6 @@
 import type { ReactNode } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import PhoneIcon from "@mui/icons-material/Phone";
-import EmailIcon from "@mui/icons-material/Email";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useInView } from "@/hooks/useInView";
 import { home } from "@/content/home";
 import AppButton from "@/components/AppButton";
@@ -52,7 +49,7 @@ export default function CTASection() {
   const btns = useInView();
 
   return (
-    <Box component="section" sx={{ py: "var(--section-py)", bgcolor: "#1A1A1A" }}>
+    <Box component="section" sx={{ py: "var(--section-py)", bgcolor: "var(--color-section-bg-off-white)" }}>
       <Box
         sx={{
           maxWidth: "var(--container-max-width)",
@@ -78,7 +75,7 @@ export default function CTASection() {
                 sm: "var(--font-size-section-heading-sm)",
               },
               fontWeight: "var(--font-weight-bold)",
-              color: "white",
+              color: "var(--color-text-primary)",
               mb: 3,
             }}
           >
@@ -90,7 +87,7 @@ export default function CTASection() {
           <Typography
             sx={{
               fontSize: "var(--font-size-body-lg)",
-              color: "rgba(255,255,255,0.6)",
+              color: "var(--color-text-muted)",
               maxWidth: "var(--cta-subtitle-max-width)",
               mx: "auto",
             }}
@@ -112,10 +109,7 @@ export default function CTASection() {
             transition: "opacity var(--duration-scroll) ease-out 0.2s, transform var(--duration-scroll) ease-out 0.2s",
           }}
         >
-          {/* <AppButton variant="primary" size="md" href={cta.buttons[0].href} icon={<ArrowForwardIcon />}>
-            {cta.buttons[0].label}
-          </AppButton> */}
-          <AppButton variant="glass" size="md" href={cta.buttons[0].href} position="left" icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone w-5 h-5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>}>
+          <AppButton variant="primary" size="md" href={cta.buttons[0].href}>
             {cta.buttons[0].label}
           </AppButton>
         </Box>

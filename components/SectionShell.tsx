@@ -16,7 +16,7 @@ interface SectionShellProps {
 
 export default function SectionShell({ children, variant }: SectionShellProps) {
   return (
-    <Box component="section" sx={{ py: "var(--section-py)", bgcolor: bgMap[variant] }}>
+    <Box component="section" sx={{ py: "var(--section-sm-py)", bgcolor: bgMap[variant] }}>
       <Box
         sx={{
           maxWidth: "var(--container-max-width)",

@@ -74,6 +74,7 @@
 
   /* Sections */
   --section-py: 6rem;
+  --section-sm-py: 2rem;
   --section-px: 1.5rem;
   --section-px-lg: 2rem;
   --color-section-bg-white: #FFFFFF;
@@ -101,10 +102,9 @@
 
   /* About */
   --about-story-max-width: 56rem;
-  --commitment-divider-color: rgba(255, 255, 255, 0.2);
+  --commitment-divider-color: var(--color-border);
   --commitment-col-gap: 4rem;
-  --commitment-col-py: 3rem;
-  --commitment-statement-max-width: 32rem;
+  --commitment-col-py: 1.5rem;
   --about-grid-gap: 4rem;
   --about-stat-icon-size: 2rem;
   --about-stat-value-size: 1.5rem;
@@ -144,7 +144,7 @@
 
   /* Portfolio */
   --portfolio-grid-gap: 1.5rem;
-  --portfolio-card-height: 24rem;
+  --portfolio-card-height: 20rem;
   --portfolio-card-radius: 12px;
   --portfolio-card-p: 1.5rem;
   --portfolio-card-title-size: 1.5rem;
@@ -152,6 +152,33 @@
   --portfolio-location-icon-size: 1rem;
   --portfolio-location-color: rgb(209, 213, 219);
   --portfolio-overlay: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
+
+  /* Portfolio page */
+  --portfolio-filter-gap: 0.75rem;
+  --portfolio-filter-px: 1.5rem;
+  --portfolio-filter-py: 0.625rem;
+  --portfolio-filter-radius: 9999px;
+  --color-portfolio-filter-bg: var(--color-section-bg-white);
+  --color-portfolio-filter-text: var(--color-text-muted);
+  --color-portfolio-filter-text-hover: var(--color-text-primary);
+  --portfolio-project-title-size: 1.25rem;
+  --portfolio-stats-gap: 2rem;
+  --portfolio-stats-value-size: 3rem;
+  --portfolio-stats-label-size: 1rem;
+
+  /* Portfolio filter submenu */
+  --portfolio-subrow-indent: 1rem;
+  --portfolio-submenu-offset: 0.5rem;
+  --portfolio-submenu-bg: var(--color-section-bg-white);
+  --portfolio-submenu-radius: var(--portfolio-card-radius);
+  --portfolio-submenu-shadow: var(--shadow-lg);
+  --portfolio-submenu-min-width: 12rem;
+  --portfolio-submenu-p: 0.5rem;
+  --portfolio-submenu-item-gap: 0.25rem;
+  --portfolio-submenu-item-px: 1rem;
+  --portfolio-submenu-item-py: 0.625rem;
+  --portfolio-submenu-item-radius: 8px;
+  --color-portfolio-submenu-item-hover-bg: var(--color-section-bg-off-white);
 
   /* Why Choose Us */
   --why-grid-gap: 2rem;
@@ -162,7 +189,7 @@
   --why-card-title-size: 1.25rem;
 
   /* Hero */
-  --hero-overlay: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  --hero-overlay: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
   --color-hero-subtitle: rgb(209, 213, 219);
   --color-scroll-indicator: rgba(255, 255, 255, 0.6);
   --font-size-hero-xs: 2.5rem;
@@ -192,8 +219,8 @@
   /* CTA */
   --cta-contact-card-p: 1.2rem;
   --cta-contact-card-radius: 12px;
-  --cta-contact-value-color: rgb(209, 213, 219);
-  --cta-contact-card-bg: rgba(255, 255, 255, 0.05);
+  --cta-contact-value-color: var(--color-text-muted);
+  --cta-contact-card-bg: var(--color-section-bg-white);
   --cta-contact-card-border: rgba(255, 255, 255, 0.1);
   --cta-contact-icon-size: 1.5rem;
   --cta-subtitle-max-width: 42rem;

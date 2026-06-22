@@ -5,12 +5,12 @@ export const home = {
     subtitle:
       "Performance. Safety. Sustainability. ",
     image: {
-      src: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1600&q=80",
+      src: "/images/about-us-cover.webp",
       alt: "Commercial Kitchen",
     },
     video: {
-      webm: "/Videos/Home Page Small Video.webm",
-      mp4: "/Videos/Home Page Small Video.mp4",
+      webm: "/Videos/hero-video.webm",
+      mp4: "/Videos/hero-video.mp4",
     },
     cta: {
       primary: { label: "EXPLORE PRODUCTS", href: "/products" },
@@ -34,8 +34,9 @@ export const home = {
     ],
     cta: { label: "LEARN MORE ABOUT US", href: "/about" },
     images: [
-      { src: "/images/about-avante-section.webp", alt: "Commercial Kitchen" },
-      { src: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200&q=80", alt: "Ventilation system installation" },
+      { src: "/images/home-about-1.jpeg", alt: "Avante Kitchen" },
+      { src: "/images/home-about-2.jpeg", alt: "Avante Kitchen" },
+      { src: "/images/home-about-3.jpeg", alt: "Avante Kitchen" },
     ],
   },
   products: {
