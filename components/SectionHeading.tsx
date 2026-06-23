@@ -3,13 +3,17 @@ import type { ReactNode } from "react";
 
 type SectionHeadingSize = "section" | "sectionCompact" | "contact";
 
+type ResponsiveFontSize = string | { xs: string; sm: string };
+
 type Props = {
   children: ReactNode;
   size?: SectionHeadingSize;
   mb?: number;
+  /** One-off literal override; bypasses the token-based `size` mapping. */
+  fontSize?: ResponsiveFontSize;
 };
 
-const fontSizeBySize: Record<SectionHeadingSize, string | { xs: string; sm: string }> = {
+const fontSizeBySize: Record<SectionHeadingSize, ResponsiveFontSize> = {
   section: {
     xs: "var(--font-size-section-heading-xs)",
     sm: "var(--font-size-section-heading-sm)",
@@ -18,12 +22,12 @@ const fontSizeBySize: Record<SectionHeadingSize, string | { xs: string; sm: stri
   contact: "var(--contact-heading-size)",
 };
 
-export default function SectionHeading({ children, size = "section", mb = 3 }: Props) {
+export default function SectionHeading({ children, size = "section", mb = 3, fontSize }: Props) {
   return (
     <Typography
       variant="h2"
       sx={{
-        fontSize: fontSizeBySize[size],
+        fontSize: fontSize ?? fontSizeBySize[size],
         fontWeight: "var(--font-weight-semibold)",
         color: "var(--color-text-primary)",
         lineHeight: "var(--line-height-tight)",

@@ -58,7 +58,7 @@ export default function AboutSection() {
         >
           <SectionBadge>{about.badge}</SectionBadge>
 
-          <SectionHeading>
+          <SectionHeading fontSize={{ xs: "1.75rem", sm: "2.25rem" }}>
             {about.headingLine1}
             <br />
             {about.headingLine2}
@@ -66,8 +66,8 @@ export default function AboutSection() {
 
           <Typography
             sx={{
-              fontSize: "var(--font-size-body-lg)",
-              color: "var(--color-text-muted)",
+              fontSize: "1.25rem",
+              color: "#4B5563",
               lineHeight: "var(--line-height-relaxed)",
               mb: 2,
             }}
@@ -76,8 +76,8 @@ export default function AboutSection() {
           </Typography>
                     <Typography
             sx={{
-              fontSize: "var(--font-size-body-lg)",
-              color: "var(--color-text-muted)",
+              fontSize: "1.25rem",
+              color: "#4B5563",
               lineHeight: "var(--line-height-relaxed)",
               mb: 2,
             }}
@@ -86,8 +86,8 @@ export default function AboutSection() {
           </Typography>
           <Typography
             sx={{
-              fontSize: "var(--font-size-body-lg)",
-              color: "var(--color-text-muted)",
+              fontSize: "1.25rem",
+              color: "#4B5563",
               lineHeight: "var(--line-height-relaxed)",
               mb: 5,
             }}

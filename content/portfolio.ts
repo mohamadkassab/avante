@@ -13,7 +13,6 @@ export const portfolio = {
     heading: "Projects that inspire",
     subtitle: "Explore our portfolio of successful installations across diverse industries",
     filters: [
-      { label: "All Projects" },
       { label: "Restaurants", children: ["Modern", "Premium"] },
       { label: "Cafes" },
       { label: "Hotels & Resorts" },
@@ -96,7 +95,7 @@ export const portfolio = {
       },
       {
         title: "Al Beiruti",
-        location: "DIFC, Dubai Festival City & Nakheel Mall, Dubai, UAE",
+        location: "DIFC, Dubai Festival City & Nakheel Mall, UAE",
         category: "Restaurants",
         subcategory: "Modern",
         description:

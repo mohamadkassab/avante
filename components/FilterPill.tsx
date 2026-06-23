@@ -1,13 +1,29 @@
 import Box from "@mui/material/Box";
 import type { ReactNode } from "react";
 
+type FilterPillSize = "md" | "sm";
+
 interface FilterPillProps {
   active: boolean;
   onClick: () => void;
   children: ReactNode;
+  size?: FilterPillSize;
 }
 
-export default function FilterPill({ active, onClick, children }: FilterPillProps) {
+const pxBySize: Record<FilterPillSize, string> = {
+  md: "var(--portfolio-filter-px)",
+  sm: "var(--portfolio-subfilter-px)",
+};
+const pyBySize: Record<FilterPillSize, string> = {
+  md: "var(--portfolio-filter-py)",
+  sm: "var(--portfolio-subfilter-py)",
+};
+const fontSizeBySize: Record<FilterPillSize, string> = {
+  md: "var(--font-size-body-md)",
+  sm: "var(--portfolio-subfilter-font-size)",
+};
+
+export default function FilterPill({ active, onClick, children, size = "md" }: FilterPillProps) {
   return (
     <Box
       component="button"
@@ -17,8 +33,9 @@ export default function FilterPill({ active, onClick, children }: FilterPillProp
         display: "inline-flex",
         alignItems: "center",
         gap: 0.5,
-        px: "var(--portfolio-filter-px)",
-        py: "var(--portfolio-filter-py)",
+        px: pxBySize[size],
+        py: pyBySize[size],
+        fontSize: fontSizeBySize[size],
         borderRadius: "var(--portfolio-filter-radius)",
         border: "none",
         cursor: "pointer",

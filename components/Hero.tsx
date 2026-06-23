@@ -26,10 +26,19 @@ interface HeroProps {
   cta?: HeroCta | null;
   showScrollIndicator?: boolean;
   height?: string;
+  fillViewport?: boolean;
   inlineGradient?: boolean;
   headingWeight?: "bold" | "semibold";
   solidHeading?: boolean;
+  headingSize?: "default" | "compact";
+  contentShiftDown?: boolean;
+  overlay?: "dark" | "none";
 }
+
+const overlayMap: Record<"dark" | "none", string> = {
+  dark: "var(--hero-overlay)",
+  none: "var(--hero-overlay-none)",
+};
 
 export default function Hero({
   heading,
@@ -44,12 +53,20 @@ export default function Hero({
   cta,
   showScrollIndicator = true,
   height = "100vh",
+  fillViewport = false,
   inlineGradient = false,
   headingWeight = "bold",
   solidHeading = false,
+  headingSize = "default",
+  contentShiftDown = false,
+  overlay = "dark",
 }: HeroProps) {
   const headingWeightVar =
     headingWeight === "semibold" ? "var(--font-weight-semibold)" : "var(--font-weight-bold)";
+  const headingFontSize =
+    headingSize === "compact"
+      ? { xs: "var(--font-size-hero-xs-compact)", md: "var(--font-size-hero-md-compact)" }
+      : { xs: "var(--font-size-hero-xs)", md: "var(--font-size-hero-md)" };
   const resolvedHeading = heading ?? homeHero.heading;
   const resolvedHeadingGradient = headingGradient === undefined ? homeHero.headingGradient : headingGradient;
   const resolvedSubtitle = subtitle ?? homeHero.subtitle;
@@ -64,7 +81,7 @@ export default function Hero({
       component="section"
       sx={{
         position: "relative",
-        height,
+        height: fillViewport ? { xs: height, lg: "var(--hero-fill-height)" } : height,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -110,7 +127,7 @@ export default function Hero({
           sx={{
             position: "absolute",
             inset: 0,
-            background: "var(--hero-overlay)",
+            background: overlayMap[overlay],
           }}
         />
       </Box>
@@ -124,6 +141,7 @@ export default function Hero({
           maxWidth: "var(--container-max-width)",
           mx: "auto",
           px: { xs: "var(--section-px)", lg: "var(--section-px-lg)" },
+          mt: contentShiftDown ? "var(--hero-content-offset-y)" : 0,
           textAlign: isCenter ? "center" : "left",
           animation: "hero-fade-in 0.8s ease-out forwards",
         }}
@@ -131,10 +149,7 @@ export default function Hero({
         <Typography
           variant="h1"
           sx={{
-            fontSize: {
-              xs: "var(--font-size-hero-xs)",
-              md: "var(--font-size-hero-md)",
-            },
+            fontSize: headingFontSize,
             fontWeight: headingWeightVar,
             color: "var(--color-text-white)",
             mb: "var(--hero-heading-mb)",

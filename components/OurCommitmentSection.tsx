@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import { useInView } from "@/hooks/useInView";
 import { about } from "@/content/about";
 import SectionShell from "@/components/SectionShell";
+import Divider from "@/components/Divider";
 
 const { ourCommitment } = about;
 
@@ -47,7 +48,7 @@ function Column({
 
 export default function OurCommitmentSection() {
   return (
-    <SectionShell variant="offWhite">
+    <SectionShell variant="offWhite" padding="sm">
       <Box
         sx={{
           maxWidth: "var(--container-max-width)",
@@ -75,13 +76,13 @@ export default function OurCommitmentSection() {
 
         <Box
           sx={{
-            display: { xs: "none", md: "block" },
-            width: "1px",
+            display: { xs: "none", md: "flex" },
             alignSelf: "stretch",
-            bgcolor: "var(--commitment-divider-color)",
             mx: "var(--commitment-col-gap)",
           }}
-        />
+        >
+          <Divider orientation="vertical" />
+        </Box>
 
         <Box sx={{ py: { md: "var(--commitment-col-py)" } }}>
           <Column title={ourCommitment.right.title} index={1}>

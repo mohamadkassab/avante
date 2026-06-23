@@ -27,8 +27,12 @@
 
   /* Layout */
   --navbar-height: 80px;
+  --hero-fill-height: calc(100vh - var(--height-header-caption) - var(--navbar-height));
   --container-max-width: 80rem;
   --radius-card: 8px;
+  --divider-color: #D1D5DB;
+  --divider-thickness: 1px;
+  --home-divider-width: 52rem;
 
   /* Effects */
   --navbar-blur: blur(2px);
@@ -85,7 +89,7 @@
   --color-badge-bg: linear-gradient(to right, #F0FDFA, #F0F9FF);
   --badge-px: 1rem;
   --badge-py: 0.25rem;
-  --badge-font-size: 0.85rem;
+  --badge-font-size: 1rem;
   --badge-letter-spacing: 0.1em;
 
   /* Section headings */
@@ -102,7 +106,6 @@
 
   /* About */
   --about-story-max-width: 56rem;
-  --commitment-divider-color: var(--color-border);
   --commitment-col-gap: 4rem;
   --commitment-col-py: 1.5rem;
   --about-grid-gap: 4rem;
@@ -158,6 +161,9 @@
   --portfolio-filter-px: 1.5rem;
   --portfolio-filter-py: 0.625rem;
   --portfolio-filter-radius: 9999px;
+  --portfolio-subfilter-px: 1.1rem;
+  --portfolio-subfilter-py: 0.4rem;
+  --portfolio-subfilter-font-size: 0.8rem;
   --color-portfolio-filter-bg: var(--color-section-bg-white);
   --color-portfolio-filter-text: var(--color-text-muted);
   --color-portfolio-filter-text-hover: var(--color-text-primary);
@@ -167,6 +173,8 @@
   --portfolio-stats-label-size: 1rem;
 
   /* Portfolio filter submenu */
+  --portfolio-subrow-pt: 1rem;
+  --portfolio-subrow-gap: 0.5rem;
   --portfolio-subrow-indent: 1rem;
   --portfolio-submenu-offset: 0.5rem;
   --portfolio-submenu-bg: var(--color-section-bg-white);
@@ -189,15 +197,19 @@
   --why-card-title-size: 1.25rem;
 
   /* Hero */
-  --hero-overlay: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  --hero-overlay: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  --hero-overlay-none: transparent;
   --color-hero-subtitle: rgb(209, 213, 219);
   --color-scroll-indicator: rgba(255, 255, 255, 0.6);
   --font-size-hero-xs: 2.5rem;
   --font-size-hero-md: 4rem;
+  --font-size-hero-xs-compact: 2rem;
+  --font-size-hero-md-compact: 3rem;
   --font-size-subtitle-xs: 1.25rem;
   --font-size-subtitle-md: 1.5rem;
   --hero-content-max-width: 64rem;
   --hero-content-px: 1.5rem;
+  --hero-content-offset-y: 12rem;
   --hero-heading-mb: 1.5rem;
   --hero-subtitle-mb: 3rem;
   --hero-subtitle-max-width: 48rem;

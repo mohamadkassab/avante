@@ -13,7 +13,7 @@ export default function Contact() {
         inlineGradient
         cta={null}
         showScrollIndicator={false}
-        height="60vh"
+        height="50vh"
       />
       <ContactSection />
     </>
