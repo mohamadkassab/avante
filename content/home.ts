@@ -1,3 +1,5 @@
+import { clientLogos } from "@/content/clients";
+
 export const home = {
   hero: {
     heading: "Advanced Kitchen Ventilation",
@@ -82,16 +84,7 @@ export const home = {
     heading: "Trusted by industry leaders",
     subtitle: "Proud to serve leading hospitality and restaurant brands around the world",
     footerText: "Avante ventilation systems are trusted across a wide range of hospitality and commercial foodservice environments.",
-    items: [
-      { name: "Marriott", image: { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200&q=80", alt: "Marriott" } },
-      { name: "Hilton", image: { src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=200&q=80", alt: "Hilton" } },
-      { name: "Hyatt", image: { src: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=200&q=80", alt: "Hyatt" } },
-      { name: "Four Seasons", image: { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=200&q=80", alt: "Four Seasons" } },
-      { name: "Sheraton", image: { src: "https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=200&q=80", alt: "Sheraton" } },
-      { name: "Radisson", image: { src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=200&q=80", alt: "Radisson" } },
-      { name: "InterContinental", image: { src: "https://images.unsplash.com/photo-1561501900-3701fa6a0864?w=200&q=80", alt: "InterContinental" } },
-      { name: "Jumeirah", image: { src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=200&q=80", alt: "Jumeirah" } },
-    ],
+    items: clientLogos,
   },
   portfolio: {
     badge: "PORTFOLIO",

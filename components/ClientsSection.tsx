@@ -60,13 +60,14 @@ export default function ClientsSection() {
               sx={{
                 flexShrink: 0,
                 width: "var(--clients-card-width)",
+                height: "var(--clients-card-height)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                p: "var(--clients-card-p)",
-                bgcolor: "var(--color-section-bg-off-white)",
+                py: "var(--clients-card-p)",
+                px: "var(--clients-card-px)",
                 borderRadius: "var(--clients-card-radius)",
-                mx: 2,
+                mx: 1,
                 "& img": {
                   filter: "grayscale(100%)",
                   opacity: "var(--clients-logo-opacity)",

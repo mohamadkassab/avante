@@ -260,8 +260,10 @@
   --contact-label-size: 0.875rem;
 
   /* Clients */
-  --clients-card-width: 16rem;
+  --clients-card-width: 11rem;
+  --clients-card-height: 9rem;
   --clients-card-p: 2rem;
+  --clients-card-px: 1rem;
   --clients-card-radius: 12px;
   --clients-logo-height: 5rem;
   --clients-logo-opacity: 0.6;
