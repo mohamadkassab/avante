@@ -93,10 +93,10 @@
   --badge-letter-spacing: 0.1em;
 
   /* Section headings */
-  --font-size-section-heading-xs: 2.25rem;
-  --font-size-section-heading-sm: 3rem;
+  --font-size-section-heading-xs: 1.75rem;
+  --font-size-section-heading-sm: 2.25rem;
   --font-size-body-md: 1rem;
-  --font-size-body-lg: 1.125rem;
+  --font-size-body-lg: 1.25rem;
 
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -175,7 +175,7 @@
   /* Portfolio filter submenu */
   --portfolio-subrow-pt: 1rem;
   --portfolio-subrow-gap: 0.5rem;
-  --portfolio-subrow-indent: 1rem;
+  --portfolio-subrow-indent: 0rem;
   --portfolio-submenu-offset: 0.5rem;
   --portfolio-submenu-bg: var(--color-section-bg-white);
   --portfolio-submenu-radius: var(--portfolio-card-radius);

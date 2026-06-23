@@ -26,7 +26,7 @@ export default function OurStorySection() {
           transition: "opacity var(--duration-scroll) ease-out, transform var(--duration-scroll) ease-out",
         }}
       >
-        <SectionHeading size="sectionCompact" mb={4}>
+        <SectionHeading mb={4}>
           {ourStory.heading}
         </SectionHeading>
 

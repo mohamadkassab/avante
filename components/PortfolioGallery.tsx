@@ -57,7 +57,7 @@ export default function PortfolioGallery() {
               <Box
                 key={filter.label}
                 onMouseEnter={() => setHoveredLabel(filter.label)}
-                sx={{ display: "inline-flex", flexDirection: "column", alignItems: "flex-start" }}
+                sx={{ display: "inline-flex", flexDirection: "column", alignItems: "center" }}
               >
                 <FilterItem
                   filter={filter}
@@ -72,7 +72,7 @@ export default function PortfolioGallery() {
                     sx={{
                       display: "flex",
                       flexDirection: "column",
-                      alignItems: "flex-start",
+                      alignItems: "center",
                       gap: "var(--portfolio-subrow-gap)",
                       pt: "var(--portfolio-subrow-pt)",
                       pl: "var(--portfolio-subrow-indent)",
