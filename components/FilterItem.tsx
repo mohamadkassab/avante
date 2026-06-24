@@ -32,11 +32,12 @@ export default function FilterItem({ filter, active, onSelect, variant = "dropdo
     return <InlineGroup filter={filter} active={active} onSelect={onSelect} />;
   }
 
-  // Option 3 — the parent pill just selects itself; the sub-row is rendered by the gallery.
+  // Option 3 — the parent only reveals its sub-row (rendered by the gallery); it is not
+  // selectable on its own, so a sub-option must be chosen to filter.
   if (variant === "subrow") {
     const parentActive = active === filter.label || filter.children.includes(active);
     return (
-      <FilterPill active={parentActive} onClick={() => onSelect(filter.label)}>
+      <FilterPill active={parentActive} interactive={false}>
         {filter.label}
         <KeyboardArrowDownIcon sx={{ fontSize: "var(--btn-icon-size)" }} />
       </FilterPill>

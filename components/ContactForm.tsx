@@ -156,7 +156,7 @@ export default function ContactForm() {
               name="phone"
               fullWidth
               size="small"
-              placeholder="+971 XX XXX XXXX"
+              placeholder="+971 4 239 2882"
               value={formState.phone}
               onChange={handleChange}
               disabled={isSending}

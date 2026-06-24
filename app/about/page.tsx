@@ -21,7 +21,7 @@ export default function AboutUs() {
         inlineGradient
         cta={null}
         showScrollIndicator={false}
-        height="60vh"
+        height="var(--hero-page-height)"
       />
       <OurStorySection />
       <WhyChooseUsSection />

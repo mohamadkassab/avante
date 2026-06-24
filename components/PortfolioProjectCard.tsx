@@ -50,7 +50,7 @@ export default function PortfolioProjectCard({ project, index }: { project: Proj
         </Typography>
         <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, color: "var(--portfolio-location-color)" }}>
           <LocationOnIcon sx={{ fontSize: "var(--portfolio-location-icon-size)" }} />
-          <Typography sx={{ fontSize: "var(--font-size-nav)" }}>{project.location}</Typography>
+          <Typography sx={{ fontSize: "var(--font-size-nav)" }}>{project.outsideLocation}</Typography>
         </Box>
       </Box>
     </Box>

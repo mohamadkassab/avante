@@ -119,7 +119,10 @@ export default function CertificationsSection() {
           sx={{
             fontSize: "var(--font-size-body-lg)",
             color: "var(--color-text-muted)",
-            maxWidth: "var(--cert-subtitle-max-width)",
+            maxWidth: {
+              xs: "var(--cert-subtitle-max-width)",
+              lg: "var(--cert-subtitle-max-width-lg)",
+            },
             mx: "auto",
           }}
         >
@@ -155,7 +158,7 @@ export default function CertificationsSection() {
       >
         <Typography
           sx={{
-            fontSize: "var(--font-size-body-md)",
+            fontSize: "var(--font-size-body-lg)",
             color: "var(--color-text-muted)",
             maxWidth: "var(--cert-footer-max-width)",
             mx: "auto",

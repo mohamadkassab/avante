@@ -78,7 +78,7 @@
 
   /* Sections */
   --section-py: 6rem;
-  --section-sm-py: 2rem;
+  --section-sm-py: 3rem;
   --section-px: 1.5rem;
   --section-px-lg: 2rem;
   --color-section-bg-white: #FFFFFF;
@@ -210,6 +210,7 @@
   --hero-content-max-width: 64rem;
   --hero-content-px: 1.5rem;
   --hero-content-offset-y: 12rem;
+  --hero-page-height: 60vh;
   --hero-heading-mb: 1.5rem;
   --hero-subtitle-mb: 3rem;
   --hero-subtitle-max-width: 48rem;
@@ -248,6 +249,7 @@
   --cert-icon-size: 2.5rem;
   --cert-title-size: 1.25rem;
   --cert-subtitle-max-width: 42rem;
+  --cert-subtitle-max-width-lg: 50rem;
   --cert-footer-max-width: 48rem;
 
   /* Contact */
@@ -267,7 +269,7 @@
   --clients-card-radius: 12px;
   --clients-logo-height: 5rem;
   --clients-logo-opacity: 0.6;
-  --clients-scroll-duration: 30s;
+  --clients-scroll-duration: 350s;
   --clients-subtitle-max-width: 42rem;
   --clients-footer-max-width: 48rem;
 }

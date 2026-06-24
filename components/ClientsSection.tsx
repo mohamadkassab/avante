@@ -47,6 +47,7 @@ export default function ClientsSection() {
         <Box
           sx={{
             display: "flex",
+            width: "max-content",
             animationName: "clients-scroll",
             animationDuration: "var(--clients-scroll-duration)",
             animationTimingFunction: "linear",

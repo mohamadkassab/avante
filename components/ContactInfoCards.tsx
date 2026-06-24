@@ -27,8 +27,12 @@ const contactIcons: Record<string, ReactNode> = {
 type InfoItem = (typeof info.items)[number];
 
 function ContactInfoCard({ item }: { item: InfoItem }) {
+  const href = "href" in item ? item.href : undefined;
   return (
     <Box
+      {...(href
+        ? { component: "a", href, target: "_blank", rel: "noopener noreferrer" }
+        : {})}
       sx={{
         display: "flex",
         alignItems: "center",
@@ -37,6 +41,9 @@ function ContactInfoCard({ item }: { item: InfoItem }) {
         bgcolor: "var(--color-section-bg-white)",
         borderRadius: "var(--radius-card)",
         boxShadow: "var(--shadow-sm)",
+        textDecoration: "none",
+        color: "inherit",
+        ...(href && { cursor: "pointer" }),
       }}
     >
       <Box

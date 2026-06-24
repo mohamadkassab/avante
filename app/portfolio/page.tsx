@@ -17,7 +17,7 @@ export default function Portfolio() {
         inlineGradient
         cta={null}
         showScrollIndicator={false}
-        height="50vh"
+        height="var(--hero-page-height)"
       />
       <PortfolioGallery />
       <PortfolioStats />

@@ -13,7 +13,7 @@ export default function Contact() {
         inlineGradient
         cta={null}
         showScrollIndicator={false}
-        height="50vh"
+        height="var(--hero-page-height)"
       />
       <ContactSection />
     </>

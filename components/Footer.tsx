@@ -50,11 +50,28 @@ function FooterSocial() {
   return (
     <Box sx={{ mt: 3 }}>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5, mb: 3 }}>
-        <Typography
-          sx={{ fontSize: "var(--font-size-nav)", color: "var(--footer-muted-color)" }}
+        <Box
+          component={Link}
+          href="https://maps.app.goo.gl/vKKwti2g5cs4siN99"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            display: "block",
+            fontSize: "var(--font-size-nav)",
+            color: "var(--footer-muted-color)",
+            textDecoration: "none",
+            width: "fit-content",
+            transition: "color var(--duration-fast)",
+            "&:hover": {
+              background: "var(--gradient-caption)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            },
+          }}
         >
           Dubai Investment Park – 2, UAE
-        </Typography>
+        </Box>
         {contacts.map((item) => (
           <FooterContactRow key={item.label} item={item} />
         ))}
