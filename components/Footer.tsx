@@ -44,12 +44,15 @@ function FooterContactRow({ item }: { item: { display?: string; href: string } }
 }
 
 function FooterSocial() {
-  const contacts = footer.social.filter((item) => item.icon === "phone" || item.icon === "email");
+  const contactOrder = ["email", "phone"];
+  const contacts = footer.social
+    .filter((item) => item.icon === "phone" || item.icon === "email")
+    .sort((a, b) => contactOrder.indexOf(a.icon) - contactOrder.indexOf(b.icon));
   const socials = footer.social.filter((item) => item.icon === "instagram" || item.icon === "linkedin");
 
   return (
-    <Box sx={{ mt: 3 }}>
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5, mb: 3 }}>
+    <Box>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: 1, mb: 3 }}>
         <Box
           component={Link}
           href="https://maps.app.goo.gl/vKKwti2g5cs4siN99"
@@ -115,7 +118,7 @@ function FooterSocial() {
 
 function FooterLinkList({ items }: { items: { label: string; href: string }[] }) {
   return (
-    <Box component="ul" sx={{ listStyle: "none", m: 0, p: 0, display: "flex", flexDirection: "column", gap: 1.5 }}>
+    <Box component="ul" sx={{ listStyle: "none", m: 0, p: 0, display: "flex", flexDirection: "column", gap: 1 }}>
       {items.map((item) => (
         <li key={item.label}>
           <Box
@@ -145,7 +148,7 @@ function FooterColumnHeading({ children }: { children: string }) {
         fontWeight: "var(--font-weight-bold)",
         letterSpacing: "var(--badge-letter-spacing)",
         color: "var(--color-primary)",
-        mb: 2,
+        mb: 1,
       }}
     >
       {children}
@@ -163,30 +166,31 @@ export default function Footer() {
           maxWidth: "var(--container-max-width)",
           mx: "auto",
           px: { xs: "var(--section-px)", lg: "var(--section-px-lg)" },
-          pt: { xs: 6, md: 8 },
-          pb: 4,
+          pt: { xs: 4, md: 5 },
+          pb: 2,
         }}
       >
+        {/* Logo row */}
+        <Box sx={{ mb: { xs: 2, md: 3 } }}>
+          <Logo />
+        </Box>
+
         <Box
           sx={{
             display: "grid",
             gridTemplateColumns: { xs: "1fr", sm: "repeat(3, 1fr)", md: "2fr 1fr 1fr" },
             gap: { xs: 6, md: 8 },
-            mb: 6,
+            mb: 3,
           }}
         >
           {/* Brand column */}
           <Box>
-            <Box sx={{ mb: 3 }}>
-              <Logo />
-            </Box>
             <Typography
               sx={{
                 fontSize: "var(--font-size-body-md)",
                 color: "var(--footer-text-color)",
-                lineHeight: "var(--line-height-relaxed)",
                 maxWidth: "36rem",
-                mb: 2,
+                mb: 1,
               }}
             >
               {footer.description}
@@ -207,7 +211,7 @@ export default function Footer() {
           </Box>
         </Box>
 
-        <Box sx={{ borderTop: "1px solid var(--footer-divider-color)", pt: 4 }}>
+        <Box sx={{ borderTop: "1px solid var(--footer-divider-color)", pt: 2 }}>
           <Typography
             sx={{
               fontSize: "var(--font-size-nav)",

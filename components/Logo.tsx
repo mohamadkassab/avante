@@ -12,6 +12,7 @@ const Logo =() =>{
         display: "flex",
         alignItems: "center",
         gap: 1.5,
+        width: "fit-content",
         textDecoration: "none",
       }}
     >
