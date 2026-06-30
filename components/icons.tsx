@@ -1,4 +1,22 @@
 import type { ReactNode } from "react";
+import ApartmentIcon from "@mui/icons-material/Apartment";
+import AirIcon from "@mui/icons-material/Air";
+import FireExtinguisherIcon from "@mui/icons-material/FireExtinguisher";
+import Grid3x3Icon from "@mui/icons-material/Grid3x3";
+import BoltIcon from "@mui/icons-material/Bolt";
+
+/**
+ * Product type icons, shared by the home ProductsSection and the products page
+ * ProductDetailSection. Rendered bare — consumers control size/color via the
+ * wrapping element's `& svg` so each context can size them independently.
+ */
+export const productIcons: Record<string, ReactNode> = {
+  building: <ApartmentIcon />,
+  air: <AirIcon />,
+  fire: <FireExtinguisherIcon />,
+  grid: <Grid3x3Icon />,
+  bolt: <BoltIcon />,
+};
 
 export const sectionIcons: Record<string, ReactNode> = {
   award: (

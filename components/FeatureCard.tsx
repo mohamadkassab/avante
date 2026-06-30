@@ -41,18 +41,7 @@ export default function FeatureCard({ icon, title, description, index }: Feature
         }}
       />
 
-      <Box
-        sx={{
-          width: "var(--values-icon-circle-size)",
-          height: "var(--values-icon-circle-size)",
-          borderRadius: "50%",
-          background: "var(--gradient-brand-diagonal)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          mb: 3,
-        }}
-      >
+      <Box sx={{ mb: 3, "& svg": { color: "var(--color-primary)" } }}>
         {sectionIcons[icon]}
       </Box>
 

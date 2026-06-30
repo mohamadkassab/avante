@@ -13,6 +13,7 @@
 
   /* Text colors */
   --color-text-primary: #1A1A1A;
+  --color-text-body: #4B5563;
   --color-text-muted: #6B7280;
   --color-text-white: #FFFFFF;
 
@@ -144,6 +145,14 @@
   --products-card-icon-offset: 1.5rem;
   --products-subtitle-max-width: 42rem;
   --products-overlay: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+
+  /* Product detail (products page) */
+  --product-detail-row-gap: 5rem;
+  --product-detail-col-gap: 3rem;
+  --product-detail-icon-box-size: 4rem;
+  --product-detail-icon-size: 2rem;
+  --product-detail-point-icon-size: 1.25rem;
+  --product-detail-image-aspect: 4 / 3;
 
   /* Portfolio */
   --portfolio-grid-gap: 1.5rem;

@@ -1,16 +1,11 @@
 "use client";
 
-import type { ReactNode } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import ApartmentIcon from "@mui/icons-material/Apartment";
-import AirIcon from "@mui/icons-material/Air";
-import FireExtinguisherIcon from "@mui/icons-material/FireExtinguisher";
-import Grid3x3Icon from "@mui/icons-material/Grid3x3";
-import BoltIcon from "@mui/icons-material/Bolt";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useInView } from "@/hooks/useInView";
 import { home } from "@/content/home";
+import { productIcons } from "@/components/icons";
 import AppButton from "@/components/AppButton";
 import SectionBadge from "@/components/SectionBadge";
 import SectionShell from "@/components/SectionShell";
@@ -18,14 +13,6 @@ import SectionHeading from "@/components/SectionHeading";
 import Carousel from "@/components/Carousel";
 
 const { products } = home;
-
-const productIcons: Record<string, ReactNode> = {
-  building: <ApartmentIcon sx={{ fontSize: "var(--products-card-icon-size)", color: "white" }} />,
-  air: <AirIcon sx={{ fontSize: "var(--products-card-icon-size)", color: "white" }} />,
-  fire: <FireExtinguisherIcon sx={{ fontSize: "var(--products-card-icon-size)", color: "white" }} />,
-  grid: <Grid3x3Icon sx={{ fontSize: "var(--products-card-icon-size)", color: "white" }} />,
-  bolt: <BoltIcon sx={{ fontSize: "var(--products-card-icon-size)", color: "white" }} />,
-};
 
 type ProductItem = (typeof products.items)[number];
 
@@ -65,6 +52,10 @@ function ProductCard({ item, index }: { item: ProductItem; index: number }) {
             position: "absolute",
             bottom: "var(--products-card-icon-offset)",
             left: "var(--products-card-icon-offset)",
+            "& svg": {
+              fontSize: "var(--products-card-icon-size)",
+              color: "var(--color-text-white)",
+            },
           }}
         >
           {productIcons[item.icon]}
