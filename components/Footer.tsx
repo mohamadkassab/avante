@@ -65,12 +65,7 @@ function FooterSocial() {
             textDecoration: "none",
             width: "fit-content",
             transition: "color var(--duration-fast)",
-            "&:hover": {
-              background: "var(--gradient-caption)",
-              WebkitBackgroundClip: "text",
-              backgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            },
+            "&:hover": { color: "var(--color-text-white)" },
           }}
         >
           Dubai Investment Park – 2, UAE

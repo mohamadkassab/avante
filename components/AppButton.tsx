@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-type Variant = "primary" | "glass";
+type Variant = "primary" | "glass" | "solid";
 type Size = "sm" | "md";
 
 interface AppButtonProps {
@@ -37,10 +37,18 @@ const variantSx: Record<Variant, object> = {
     bgcolor: "var(--color-btn-glass-bg)",
     backdropFilter: "blur(4px)",
     color: "white",
-    border: "2px solid var(--color-btn-glass-border)",
+    border: "var(--btn-border-width) solid var(--color-btn-glass-border)",
     transition: "background-color var(--duration-fast)",
     "& svg": { fontSize: "var(--btn-icon-size)" },
     "&:hover": { bgcolor: "var(--color-btn-glass-hover)" },
+  },
+  solid: {
+    background: "var(--color-primary)",
+    color: "white",
+    transition: "opacity var(--duration-fast)",
+    "& svg": { fontSize: "var(--btn-icon-size)", transition: "transform var(--duration-medium)" },
+    "&:hover": { opacity: 0.9 },
+    "&:hover svg": { transform: "translateX(4px)" },
   },
 };
 

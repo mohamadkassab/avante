@@ -1,17 +1,28 @@
 "use client";
 
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useInView } from "@/hooks/useInView";
 import { productCategories } from "@/content/products";
 import { productIcons } from "@/components/icons";
 import SectionShell from "@/components/SectionShell";
 import SectionHeading from "@/components/SectionHeading";
+import ProductPointsList from "@/components/ProductPointsList";
+import ProductModal from "@/components/ProductModal";
 
 type ProductCategory = (typeof productCategories)[number];
 
-function ProductFeatureRow({ category, reversed }: { category: ProductCategory; reversed: boolean }) {
+function ProductFeatureRow({
+  category,
+  reversed,
+  onOpen,
+}: {
+  category: ProductCategory;
+  reversed: boolean;
+  onOpen: () => void;
+}) {
   const { ref, visible } = useInView();
 
   return (
@@ -61,39 +72,91 @@ function ProductFeatureRow({ category, reversed }: { category: ProductCategory; 
           {category.description}
         </Typography>
 
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
-          {category.items.map((point) => (
-            <Box key={point} sx={{ display: "flex", alignItems: "flex-start", gap: 1.5 }}>
-              <CheckCircleOutlineIcon
-                sx={{
-                  fontSize: "var(--product-detail-point-icon-size)",
-                  color: "var(--color-primary)",
-                  flexShrink: 0,
-                  mt: 0.25,
-                }}
-              />
-              <Typography sx={{ color: "var(--color-text-muted)" }}>{point}</Typography>
-            </Box>
-          ))}
-        </Box>
+        <ProductPointsList items={category.items} />
       </Box>
 
-      {/* Image column */}
+      {/* Image column — click to open the product popup */}
       <Box sx={{ order: { lg: reversed ? 1 : 2 } }}>
         <Box
+          onClick={onOpen}
+          role="button"
+          tabIndex={0}
+          aria-label={`View ${category.title} details`}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              onOpen();
+            }
+          }}
           sx={{
+            position: "relative",
             aspectRatio: "var(--product-detail-image-aspect)",
             borderRadius: "var(--radius-card)",
             overflow: "hidden",
             boxShadow: "var(--shadow-xl)",
+            cursor: "pointer",
+            transition: "box-shadow var(--duration-base) ease",
+            "& .detail-img": { transition: "transform var(--duration-image) ease" },
+            "& .detail-scrim": { opacity: 0, transition: "opacity var(--duration-base) ease" },
+            "& .detail-reveal": {
+              opacity: 0,
+              transform: "translateY(var(--product-detail-image-label-shift))",
+              transition: "opacity var(--duration-base) ease, transform var(--duration-base) ease",
+            },
+            "&:hover": { boxShadow: "var(--shadow-2xl)" },
+            "&:hover .detail-img": { transform: "scale(var(--product-detail-image-hover-scale))" },
+            "&:hover .detail-scrim": { opacity: 1 },
+            "&:hover .detail-reveal": { opacity: 1, transform: "none" },
           }}
         >
           <Box
             component="img"
+            className="detail-img"
             src={category.image.src}
             alt={category.image.alt}
-            sx={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            sx={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
           />
+
+          <Box
+            className="detail-scrim"
+            sx={{
+              position: "absolute",
+              inset: 0,
+              background: "var(--product-detail-image-reveal-gradient)",
+              pointerEvents: "none",
+            }}
+          />
+
+          <Box
+            className="detail-reveal"
+            sx={{
+              position: "absolute",
+              left: "var(--product-detail-image-label-inset)",
+              right: "var(--product-detail-image-label-inset)",
+              bottom: "var(--product-detail-image-label-inset)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: 1.5,
+              pointerEvents: "none",
+              "& svg": {
+                fontSize: "var(--product-detail-image-label-icon-size)",
+                color: "var(--color-text-white)",
+              },
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: "var(--font-size-body-md)",
+                fontWeight: "var(--font-weight-semibold)",
+                color: "var(--color-text-white)",
+                letterSpacing: "var(--letter-spacing-wide)",
+              }}
+            >
+              View details
+            </Typography>
+            <ArrowForwardIcon />
+          </Box>
         </Box>
       </Box>
     </Box>
@@ -101,13 +164,22 @@ function ProductFeatureRow({ category, reversed }: { category: ProductCategory; 
 }
 
 export default function ProductDetailSection() {
+  const [selected, setSelected] = useState<ProductCategory | null>(null);
+
   return (
     <SectionShell variant="offWhite">
       <Box sx={{ display: "flex", flexDirection: "column", gap: "var(--product-detail-row-gap)" }}>
         {productCategories.map((category, i) => (
-          <ProductFeatureRow key={category.title} category={category} reversed={i % 2 === 1} />
+          <ProductFeatureRow
+            key={category.title}
+            category={category}
+            reversed={i % 2 === 1}
+            onOpen={() => setSelected(category)}
+          />
         ))}
       </Box>
+
+      <ProductModal category={selected} open={selected !== null} onClose={() => setSelected(null)} />
     </SectionShell>
   );
 }
