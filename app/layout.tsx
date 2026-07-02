@@ -1,9 +1,6 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Arimo } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import HeaderCaption from "@/components/HeaderCaption";
-import Footer from "@/components/Footer";
 import Providers from "./providers";
 import "./globals.css";
 
@@ -27,14 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${arimo.variable} h-full antialiased`}>
       <body className="min-h-screen flex flex-col">
-        <Providers>
-          <HeaderCaption />
-          <Navbar />
-          <div >
-            {children}
-          </div>
-          <Footer />
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

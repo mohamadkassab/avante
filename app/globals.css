@@ -158,46 +158,35 @@
   --product-detail-icon-size: 2rem;
   --product-detail-point-icon-size: 1.25rem;
   --product-detail-image-aspect: 4 / 3;
+  --product-detail-scroll-offset: calc(var(--navbar-height) + 2rem);
 
-  /* Product detail image (clickable → opens modal) */
-  --product-detail-image-hover-scale: 1.05;
-  --product-detail-image-reveal-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0) 55%);
-  --product-detail-image-label-inset: 1.25rem;
-  --product-detail-image-label-shift: 0.75rem;
-  --product-detail-image-label-icon-size: 1.1rem;
+  /* Product detail page (single product) */
+  --product-page-gap: 2.5rem;
+  --product-page-image-bg: var(--color-section-bg-off-white);
+  --product-page-gallery-gap: 1rem;
+  --product-page-thumb-size: 4.5rem;
+  --product-page-thumb-gap: 0.75rem;
+  --product-page-thumb-border-width: 2px;
 
-  /* Product modal (popup) */
-  --product-modal-max-width: 84rem;
-  --product-modal-p: 2rem;
-  --product-modal-gap: 2.5rem;
-  --product-modal-close-size: 2.5rem;
-  --product-modal-close-icon-size: 1.5rem;
-  --product-modal-image-aspect: 4 / 3;
-  --product-modal-image-bg: var(--color-section-bg-off-white);
-  --product-modal-gallery-gap: 1rem;
-  --product-modal-thumb-size: 4.5rem;
-  --product-modal-thumb-gap: 0.75rem;
-  --product-modal-thumb-border-width: 2px;
-  --product-modal-backdrop: rgba(0, 0, 0, 0.6);
+  /* Product detail page — breadcrumb header */
+  --product-page-header-bg: #F3F4F6;
+  --product-page-header-py: 1rem;
+  --product-page-breadcrumb-gap: 0.4rem;
+  --product-page-close-size: 2.5rem;
+  --product-page-close-icon-size: 1.5rem;
 
-  /* Product modal — gray header bar */
-  --product-modal-header-bg: #F3F4F6;
-  --product-modal-header-py: 1rem;
-  --product-modal-header-px: 1.5rem;
-  --product-modal-breadcrumb-gap: 0.4rem;
+  /* Product detail page — document links + action buttons */
+  --product-page-doclinks-gap: 1.5rem;
+  --product-page-doclinks-mb: 1rem;
+  --product-page-actions-gap: 1rem;
+  --product-page-actions-mt: 2rem;
 
-  /* Product modal — document links + action buttons */
-  --product-modal-doclinks-gap: 1.5rem;
-  --product-modal-doclinks-mb: 1rem;
-
-  /* Product modal — actions + specs accordion */
-  --product-modal-actions-gap: 1rem;
-  --product-modal-actions-mt: 2rem;
-  --product-modal-accordion-mt: 2rem;
-  --product-modal-accordion-header-py: 0.875rem;
-  --product-modal-accordion-icon-size: 1.25rem;
-  --product-modal-accordion-body-pb: 1.25rem;
-  --product-modal-accordion-body-gap: 0.5rem;
+  /* Product detail page — specs accordion */
+  --product-page-accordion-mt: 2rem;
+  --product-page-accordion-header-py: 0.875rem;
+  --product-page-accordion-icon-size: 1.25rem;
+  --product-page-accordion-body-pb: 1.25rem;
+  --product-page-accordion-body-gap: 0.5rem;
 
   /* Portfolio */
   --portfolio-grid-gap: 1.5rem;

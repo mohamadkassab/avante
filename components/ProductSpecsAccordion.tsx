@@ -20,7 +20,7 @@ export default function ProductSpecsAccordion({ specs }: { specs: readonly Spec[
   const [expanded, setExpanded] = useState(0);
 
   return (
-    <Box sx={{ mt: "var(--product-modal-accordion-mt)" }}>
+    <Box sx={{ mt: "var(--product-page-accordion-mt)" }}>
       {specs.map((spec, i) => {
         const open = expanded === i;
         return (
@@ -42,13 +42,13 @@ export default function ProductSpecsAccordion({ specs }: { specs: readonly Spec[
               expandIcon={open ? <RemoveIcon /> : <AddIcon />}
               sx={{
                 px: 0,
-                py: "var(--product-modal-accordion-header-py)",
+                py: "var(--product-page-accordion-header-py)",
                 minHeight: "unset",
                 "& .MuiAccordionSummary-content": { my: 0 },
                 "& .MuiAccordionSummary-expandIconWrapper": {
                   color: "var(--color-text-primary)",
                   transform: "none",
-                  "& svg": { fontSize: "var(--product-modal-accordion-icon-size)" },
+                  "& svg": { fontSize: "var(--product-page-accordion-icon-size)" },
                 },
                 "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": { transform: "none" },
               }}
@@ -64,7 +64,7 @@ export default function ProductSpecsAccordion({ specs }: { specs: readonly Spec[
               </Typography>
             </AccordionSummary>
 
-            <AccordionDetails sx={{ px: 0, pt: 0, pb: "var(--product-modal-accordion-body-pb)" }}>
+            <AccordionDetails sx={{ px: 0, pt: 0, pb: "var(--product-page-accordion-body-pb)" }}>
               {Array.isArray(spec.body) ? (
                 <Box
                   component="ul"
@@ -74,7 +74,7 @@ export default function ProductSpecsAccordion({ specs }: { specs: readonly Spec[
                     p: 0,
                     display: "flex",
                     flexDirection: "column",
-                    gap: "var(--product-modal-accordion-body-gap)",
+                    gap: "var(--product-page-accordion-body-gap)",
                   }}
                 >
                   {spec.body.map((line) => (

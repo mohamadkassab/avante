@@ -1,3 +1,5 @@
+"use client";
+
 import type { ReactNode } from "react";
 import Box from "@mui/material/Box";
 import Link from "next/link";
@@ -5,7 +7,8 @@ import Link from "next/link";
 /**
  * Clickable icon + text link for a downloadable document (Catalogue, manual…).
  * Reusable anywhere a labelled document/resource link is needed. The icon takes
- * the brand color; the text turns brand-colored on hover.
+ * the brand color; the text turns brand-colored on hover. Client component
+ * because it relies on the `Box component={Link}` interop.
  */
 export default function DocLink({
   href,

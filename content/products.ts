@@ -13,9 +13,10 @@ export const products = {
     subtitle: "Every project is unique. Let's discuss your specific requirements.",
     button: { label: "GET IN TOUCH", href: "/contact" },
   },
-  // Product popup document labels. Hrefs are per category (see
-  // `productCategories[].documents`); the labels are shared across all products.
-  modal: {
+  // Document link labels shown on the product detail page. Hrefs are per point
+  // (falling back to the category — see `productCategories[].documents`); the
+  // labels are shared across all products.
+  docLabels: {
     catalogue: "Catalogue",
     manual: "Installation Operation Manual",
     specSheets: "Technical Spec Sheets",
@@ -23,25 +24,64 @@ export const products = {
   },
 };
 
+type ImageRef = { src: string; alt: string };
+type ProductDocuments = {
+  catalogue: string;
+  manual: string;
+  specSheets: string;
+  electricalDrawing: string;
+};
+type ProductSpec = { title: string; body: string | string[] };
+
+/**
+ * A single sub-product ("point") within a category — e.g. "Condensate Hood".
+ * Each point has its own detail page at `/products/<category>/<point>`.
+ *
+ * Only `title` is required. The optional fields are per-point overrides: when
+ * absent, the point inherits its category's description, gallery, documents and
+ * specs (see `findProductPoint`). Fill these in as real per-product content
+ * becomes available.
+ */
+export type ProductPoint = {
+  title: string;
+  description?: string;
+  image?: ImageRef;
+  images?: ImageRef[];
+  documents?: ProductDocuments;
+  specs?: ProductSpec[];
+};
+
+export type ProductCategory = {
+  icon: string;
+  title: string;
+  description: string;
+  image: ImageRef;
+  images: ImageRef[];
+  items: ProductPoint[];
+  documents: ProductDocuments;
+  specs: ProductSpec[];
+};
+
 /**
  * Full product catalogue — four categories, each with a short description and
- * its list of sub-products. Icon keys map to the shared `productIcons`
+ * its list of sub-products (`items`). Icon keys map to the shared `productIcons`
  * registry in components/icons.tsx.
  *
- * `image` is the cover shot for each category. `images` holds the rest of the
- * gallery shots for that category. Both currently point at placeholder stock
- * photos — replace each `src` with the real product image link when available.
+ * `image` is the cover shot for each category (used on the products page row and
+ * as the first gallery shot on each point's detail page). `images` holds the
+ * rest of the gallery. Both currently point at placeholder stock photos —
+ * replace each `src` with the real product image link when available.
  *
- * `specs` feeds the single-open accordion in the product popup — an ordered list
+ * `specs` feeds the single-open accordion on the detail page — an ordered list
  * of `{ title, body }` sections, where `body` is a paragraph (string) or a
  * bullet list (string[]). The content below is PLACEHOLDER — replace with the
- * real technical data per category.
+ * real technical data.
  *
- * `documents` holds the (placeholder) download links surfaced in the popup:
- * `catalogue` and `manual` as text links, `specSheets` and `electricalDrawing`
- * as buttons. Replace each "#" with the real file link.
+ * `documents` holds the (placeholder) download links surfaced on the detail
+ * page: `catalogue` and `manual` as text links, `specSheets` and
+ * `electricalDrawing` as buttons. Replace each "#" with the real file link.
  */
-export const productCategories = [
+export const productCategories: ProductCategory[] = [
   {
     icon: "building",
     title: "Commercial Kitchen Canopies",
@@ -70,14 +110,14 @@ export const productCategories = [
       },
     ],
     items: [
-      "High Efficiency Kitchen Hood",
-      "High Efficiency Kitchen Hood with Ultraviolet Filtration",
-      "High Efficiency Kitchen Hood with Water Mist",
-      "High Efficiency Kitchen Hood with Water Wash",
-      "High Efficiency Kitchen Hood with Water Mist and Water Wash",
-      "High Efficiency Kitchen Hood with Ultra Violet and Water Mist",
-      "High Efficiency Kitchen Hood with Ultra Violet and Water Wash",
-      "Condensate Hood",
+      { title: "High Efficiency Kitchen Hood" },
+      { title: "High Efficiency Kitchen Hood with Ultraviolet Filtration" },
+      { title: "High Efficiency Kitchen Hood with Water Mist" },
+      { title: "High Efficiency Kitchen Hood with Water Wash" },
+      { title: "High Efficiency Kitchen Hood with Water Mist and Water Wash" },
+      { title: "High Efficiency Kitchen Hood with Ultra Violet and Water Mist" },
+      { title: "High Efficiency Kitchen Hood with Ultra Violet and Water Wash" },
+      { title: "Condensate Hood" },
     ],
     documents: {
       catalogue: "#",
@@ -125,10 +165,10 @@ export const productCategories = [
       },
     ],
     items: [
-      "Ventilated Ceiling",
-      "SDU (Service Distribution Unit)",
-      "Mobile Cooking Unit",
-      "Slim Hood",
+      { title: "Ventilated Ceiling" },
+      { title: "SDU (Service Distribution Unit)" },
+      { title: "Mobile Cooking Unit" },
+      { title: "Slim Hood" },
     ],
     documents: {
       catalogue: "#",
@@ -176,9 +216,9 @@ export const productCategories = [
       },
     ],
     items: [
-      "Kitchen Exhaust Ecology Unit",
-      "AHU and FAHU",
-      "Venturi Cowl",
+      { title: "Kitchen Exhaust Ecology Unit" },
+      { title: "AHU and FAHU" },
+      { title: "Venturi Cowl" },
     ],
     documents: {
       catalogue: "#",
@@ -226,8 +266,8 @@ export const productCategories = [
       },
     ],
     items: [
-      "FSS",
-      "Demand Control Ventilated System",
+      { title: "FSS" },
+      { title: "Demand Control Ventilated System" },
     ],
     documents: {
       catalogue: "#",
@@ -256,3 +296,55 @@ export const productCategories = [
     ],
   },
 ];
+
+/** URL-safe slug from a title, e.g. "SDU (Service Distribution Unit)" → "sdu-service-distribution-unit". */
+export function slugify(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/** Resolved product point ready to render on a detail page. */
+export type ResolvedProduct = {
+  categoryTitle: string;
+  categorySlug: string;
+  pointSlug: string;
+  title: string;
+  description: string;
+  image: ImageRef;
+  images: ImageRef[];
+  documents: ProductDocuments;
+  specs: ProductSpec[];
+};
+
+/**
+ * Resolve a category + point from their URL slugs. Per-point overrides win;
+ * anything a point doesn't define falls back to its category. Returns null for
+ * unknown slugs so the route can 404.
+ */
+export function findProductPoint(categorySlug: string, pointSlug: string): ResolvedProduct | null {
+  const category = productCategories.find((c) => slugify(c.title) === categorySlug);
+  if (!category) return null;
+  const point = category.items.find((p) => slugify(p.title) === pointSlug);
+  if (!point) return null;
+
+  return {
+    categoryTitle: category.title,
+    categorySlug,
+    pointSlug,
+    title: point.title,
+    description: point.description ?? category.description,
+    image: point.image ?? category.image,
+    images: point.images ?? category.images,
+    documents: point.documents ?? category.documents,
+    specs: point.specs ?? category.specs,
+  };
+}
+
+/** Every category/point slug pair, for `generateStaticParams`. */
+export function productPointParams(): { category: string; point: string }[] {
+  return productCategories.flatMap((c) =>
+    c.items.map((p) => ({ category: slugify(c.title), point: slugify(p.title) })),
+  );
+}
