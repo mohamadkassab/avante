@@ -41,7 +41,7 @@ export default function ProductGallery({ images }: { images: readonly GalleryIma
               onClick={() => setActiveIndex(i)}
               aria-label={img.alt}
               sx={{
-                p: 0,
+                p: "var(--product-page-thumb-padding)",
                 flexShrink: 0,
                 width: "var(--product-page-thumb-size)",
                 height: "var(--product-page-thumb-size)",
@@ -50,7 +50,8 @@ export default function ProductGallery({ images }: { images: readonly GalleryIma
                 cursor: "pointer",
                 bgcolor: "var(--product-page-image-bg)",
                 border: "var(--product-page-thumb-border-width) solid",
-                borderColor: i === activeIndex ? "var(--color-primary)" : "transparent",
+                borderColor:
+                  i === activeIndex ? "var(--color-primary)" : "var(--product-page-image-border-color)",
                 transition: "border-color var(--duration-fast)",
               }}
             >
@@ -72,6 +73,8 @@ export default function ProductGallery({ images }: { images: readonly GalleryIma
           borderRadius: "var(--radius-card)",
           overflow: "hidden",
           bgcolor: "var(--product-page-image-bg)",
+          border: "var(--product-page-image-border-width) solid var(--product-page-image-border-color)",
+          p: "var(--product-page-image-padding)",
         }}
       >
         <Box

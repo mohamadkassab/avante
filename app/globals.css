@@ -167,6 +167,10 @@
   --product-page-thumb-size: 4.5rem;
   --product-page-thumb-gap: 0.75rem;
   --product-page-thumb-border-width: 2px;
+  --product-page-image-border-width: 1px;
+  --product-page-image-border-color: var(--color-border);
+  --product-page-image-padding: 3rem;
+  --product-page-thumb-padding: 0.4rem;
 
   /* Product detail page — breadcrumb header */
   --product-page-header-bg: #F3F4F6;

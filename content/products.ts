@@ -110,7 +110,49 @@ export const productCategories: ProductCategory[] = [
       },
     ],
     items: [
-      { title: "High Efficiency Kitchen Hood" },
+      {
+        title: "High Efficiency Kitchen Hood",
+        description:
+          "A high-performance commercial kitchen canopy designed to efficiently capture and extract heat, smoke, grease, and cooking fumes. Built for reliability and compliance, it provides effective ventilation for a wide range of commercial cooking applications.",
+        specs: [
+          {
+            title: "Specifications",
+            body: [
+              "Material: AISI 304 stainless steel",
+              "Thickness: 1.0 / 1.2 mm",
+              "High-efficiency UL listed grease filters",
+              "Integrated hood lighting: 500 LUX at cooking surface",
+              "Construction and performance compliant with DW172 standards",
+              "Configuration: With or without make-up air as per project requirement",
+            ],
+          },
+          {
+            title: "Options",
+            body: [
+              "LED dimmable spotlights",
+              "Service Distribution Unit",
+              "Factory-installed hood Fire Suppression System",
+              "Factory-installed hood Demand Control Ventilation System",
+              "Hood cladding / powder coating",
+              "Special shape and size",
+            ],
+          },
+          {
+            title: "Application",
+            body: "For all types of commercial and professional cooking.",
+          },
+          {
+            title: "Standard type and dimension",
+            body: [
+              "Wall mounted",
+              "Island mounted",
+              "Height — 600 mm",
+              "Width — 1350 mm",
+              "Length varies according to layout requirements",
+            ],
+          },
+        ],
+      },
       { title: "High Efficiency Kitchen Hood with Ultraviolet Filtration" },
       { title: "High Efficiency Kitchen Hood with Water Mist" },
       { title: "High Efficiency Kitchen Hood with Water Wash" },
