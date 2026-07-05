@@ -79,6 +79,7 @@ function ProductFeatureRow({
             borderRadius: "var(--radius-card)",
             overflow: "hidden",
             boxShadow: "var(--shadow-xl)",
+            p: "var(--product-page-image-padding)",
           }}
         >
           <Box
