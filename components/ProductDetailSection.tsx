@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useInView } from "@/hooks/useInView";
 import { productCategories, slugify, type ProductCategory } from "@/content/products";
-import { productIcons } from "@/components/icons";
 import SectionShell from "@/components/SectionShell";
 import SectionHeading from "@/components/SectionHeading";
 import ProductPointsList from "@/components/ProductPointsList";
@@ -36,25 +35,6 @@ function ProductFeatureRow({
     >
       {/* Text column */}
       <Box sx={{ order: { lg: reversed ? 2 : 1 } }}>
-        <Box
-          sx={{
-            width: "var(--product-detail-icon-box-size)",
-            height: "var(--product-detail-icon-box-size)",
-            borderRadius: "var(--radius-card)",
-            background: "var(--gradient-brand-diagonal)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            mb: 3,
-            "& svg": {
-              fontSize: "var(--product-detail-icon-size)",
-              color: "var(--color-text-white)",
-            },
-          }}
-        >
-          {productIcons[category.icon]}
-        </Box>
-
         <SectionHeading>{category.title}</SectionHeading>
 
         <Typography

@@ -6,8 +6,8 @@ import Box from "@mui/material/Box";
 type GalleryImage = { src: string; alt: string };
 
 /**
- * Product detail gallery: a vertical thumbnail column (horizontal on xs) beside
- * the main image. Clicking a thumbnail swaps the main image. Interactive, so it
+ * Product detail gallery: a full-width main image with a horizontal thumbnail
+ * row beneath it. Clicking a thumbnail swaps the main image. Interactive, so it
  * stays a client leaf while the surrounding ProductDetail remains server-side.
  */
 export default function ProductGallery({ images }: { images: readonly GalleryImage[] }) {
@@ -18,19 +18,36 @@ export default function ProductGallery({ images }: { images: readonly GalleryIma
   return (
     <Box
       sx={{
-        display: "grid",
-        gridTemplateColumns: hasThumbs ? { xs: "1fr", sm: "auto 1fr" } : "1fr",
+        display: "flex",
+        flexDirection: "column",
         gap: "var(--product-page-gallery-gap)",
       }}
     >
+      <Box
+        sx={{
+          aspectRatio: "var(--product-detail-image-aspect)",
+          borderRadius: "var(--radius-card)",
+          overflow: "hidden",
+          bgcolor: "var(--product-page-image-bg)",
+          border: "var(--product-page-image-border-width) solid var(--product-page-image-border-color)",
+          p: "var(--product-page-image-padding)",
+        }}
+      >
+        <Box
+          component="img"
+          src={activeImage?.src}
+          alt={activeImage?.alt}
+          sx={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
+        />
+      </Box>
+
       {hasThumbs && (
         <Box
           sx={{
             display: "flex",
-            flexDirection: { xs: "row", sm: "column" },
+            flexDirection: "row",
             flexWrap: "wrap",
             gap: "var(--product-page-thumb-gap)",
-            order: { xs: 2, sm: 1 },
           }}
         >
           {images.map((img, i) => (
@@ -65,25 +82,6 @@ export default function ProductGallery({ images }: { images: readonly GalleryIma
           ))}
         </Box>
       )}
-
-      <Box
-        sx={{
-          order: { xs: 1, sm: 2 },
-          aspectRatio: "var(--product-detail-image-aspect)",
-          borderRadius: "var(--radius-card)",
-          overflow: "hidden",
-          bgcolor: "var(--product-page-image-bg)",
-          border: "var(--product-page-image-border-width) solid var(--product-page-image-border-color)",
-          p: "var(--product-page-image-padding)",
-        }}
-      >
-        <Box
-          component="img"
-          src={activeImage?.src}
-          alt={activeImage?.alt}
-          sx={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
-        />
-      </Box>
     </Box>
   );
 }
