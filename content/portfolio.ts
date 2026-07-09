@@ -238,6 +238,106 @@ export const portfolio = {
           "Inspired by the rich culinary traditions of North Africa and the Mediterranean, Berber brings together bold flavors, vibrant hospitality, and contemporary design in a unique waterfront setting on Bluewaters Island. The restaurant's warm atmosphere, open-fire cooking influences, and carefully curated dining experience create a destination that celebrates culture, craftsmanship, and shared moments around food. Drawing from a menu that embraces charcoal grilling and traditional cooking techniques, custom kitchen canopies were incorporated to accommodate the demands of an active culinary environment. Designed for dependable performance and seamless integration, the ventilation solution supports the rhythm of the kitchen while helping maintain the standards expected of a modern dining destination overlooking Dubai's iconic waterfront.",
         image: { src: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&q=80", alt: "Berber" },
       },
+
+      // Cafes
+      {
+        title: "BOHOX",
+        location: ["Downtown Dubai, UAE"],
+        outsideLocation: "Dubai, UAE",
+        category: "Cafes",
+        scope: "Ecology Units",
+        description:
+          "BOHOX reimagines all-day dining through a blend of Mediterranean flavors, wellness-inspired cuisine, and contemporary bohemian design. Nestled in the heart of Downtown Dubai, the venue has become known for its lush interiors, vibrant atmosphere, and thoughtfully curated menu that celebrates fresh, wholesome ingredients. An advanced Ecology Unit forms an integral part of the restaurant's kitchen exhaust system, helping treat grease, smoke, and cooking odors before air is discharged. The solution enables the venue to maintain high environmental standards while preserving the comfortable and inviting atmosphere that has become synonymous with the BOHOX experience.",
+        image: { src: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80", alt: "BOHOX" },
+      },
+      {
+        title: "EL&N",
+        location: ["Yas Bay Waterfront, Abu Dhabi, UAE"],
+        outsideLocation: "Abu Dhabi, UAE",
+        category: "Cafes",
+        scope: "Kitchen Canopies",
+        description:
+          "Originally founded in London, EL&N has grown into a globally recognized lifestyle café brand celebrated for its signature floral interiors, vibrant pink aesthetic, and indulgent all-day dining experience. Its Yas Bay Waterfront location in Abu Dhabi continues this vision, offering guests a stylish destination where contemporary cuisine, specialty coffee, and elegant surroundings come together. Custom kitchen canopies were incorporated to complement the café's fast-paced kitchen operations, providing dependable ventilation performance. Carefully integrated into the back-of-house infrastructure, the system supports the efficient preparation of EL&N's diverse menu while maintaining the high standards expected of an internationally acclaimed hospitality brand.",
+        image: { src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80", alt: "EL&N" },
+      },
+      {
+        title: "Armani Café",
+        location: ["Dubai Mall, Dubai, UAE"],
+        outsideLocation: "Dubai, UAE",
+        category: "Cafes",
+        scope: "Ecology Units",
+        description:
+          "Overlooking the iconic Dubai Fountain from Dubai Mall, Armani/Caffè embodies the understated elegance and timeless sophistication synonymous with the Armani brand. Combining authentic Italian cuisine with contemporary design and impeccable hospitality, the café offers a refined dining experience where every detail reflects Giorgio Armani's signature philosophy of style and simplicity. Behind this premium dining destination, Ecology Units were integrated to enhance the treatment of kitchen exhaust emissions before discharge, while complementing the seamless, high-quality experience that defines Armani/Caffè.",
+        image: { src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80", alt: "Armani Café" },
+      },
+      {
+        title: "Bateel Café",
+        location: ["Reem Mall, Abu Dhabi", "Zaa'beel Palace St, Dubai"],
+        outsideLocation: "Multiple locations in UAE",
+        category: "Cafes",
+        scope: "Kitchen Canopies & Ecology Units",
+        description:
+          "Renowned for combining Middle Eastern heritage with contemporary dining, Bateel Café offers a refined culinary experience centered around gourmet cuisine, specialty coffee, and the brand's world-famous organic dates. Its locations at Reem Mall, Abu Dhabi, and One Za'abeel, Dubai, reflect the brand's commitment to elegant hospitality, premium ingredients, and thoughtfully designed dining spaces. Across both locations, the kitchen infrastructure was enhanced with Kitchen Canopies and Ecology Units, providing a solution suited to the brand's diverse culinary offerings. Working together as an integrated ventilation solution, the systems provide efficient extraction and effective treatment of kitchen exhaust emissions, supporting a clean, comfortable, and environmentally responsible kitchen environment while maintaining the premium standards associated with the Bateel brand.",
+        image: { src: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80", alt: "Bateel Café" },
+      },
+      {
+        title: "Paul Café",
+        location: [
+          "Nakheel Mall, Palm Jumeirah, Dubai, UAE",
+          "Reem Mall, Abu Dhabi, UAE",
+          "Dalma Mall, Abu Dhabi, UAE",
+          "Arabian Ranches Souk, Dubai, UAE",
+          "Al Jimi Mall, Al Ain, UAE",
+          "Nad Al Sheba Mall, Dubai, UAE",
+          "Marina Mall, Abu Dhabi, UAE",
+        ],
+        outsideLocation: "Multiple locations in UAE",
+        category: "Cafes",
+        scope: "Kitchen Canopies & Ecology Units",
+        description:
+          "Founded in France in 1889, PAUL has grown into an internationally celebrated bakery and café brand, renowned for its artisanal breads, French pastries, and classic café cuisine. With multiple locations across the UAE, including Dubai, Abu Dhabi, and Al Ain, the brand continues to deliver an authentic Parisian dining experience defined by timeless elegance, traditional baking, and exceptional hospitality. An integrated kitchen ventilation solution featuring Kitchen Canopies and Ecology Units was implemented to accommodate the varied culinary activities taking place throughout each café. From freshly baked breads and viennoiseries to hot kitchen preparations, the integrated solution was tailored to meet the diverse demands of PAUL's culinary operations, ensuring reliable ventilation and effective exhaust air treatment throughout every stage of service.",
+        image: { src: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&q=80", alt: "Paul Café" },
+      },
+      {
+        title: "Brunch and Cakes",
+        location: ["Marassi Galleria, Bahrain", "The Montgomerie, Emirates Hills, Dubai, UAE"],
+        outsideLocation: "Multiple locations in Bahrain & UAE",
+        category: "Cafes",
+        scope: "Kitchen Canopies",
+        description:
+          "Originating in Barcelona, Brunch & Cake has become an internationally recognized café brand, celebrated for its wholesome cuisine, beautifully presented dishes, and inviting interiors that embody a relaxed Mediterranean lifestyle. Its locations at Marassi Galleria, Bahrain, and The Montgomerie, Dubai, continue the brand's philosophy of creating memorable all-day dining experiences through fresh ingredients, creative menus, and warm hospitality. Kitchen Canopies were incorporated across both locations to accommodate the lively pace of an all-day café where breakfast, brunch, baking, and à la carte dining operate seamlessly throughout the day. Tailored to the brand's diverse culinary offerings, the ventilation solution integrates effortlessly into the kitchen environment, supporting the smooth preparation of every dish while complementing the welcoming atmosphere.",
+        image: { src: "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800&q=80", alt: "Brunch and Cakes" },
+      },
+      {
+        title: "Angel Cakes",
+        location: ["Dubai Creek Harbour, Dubai, UAE"],
+        outsideLocation: "Dubai, UAE",
+        category: "Cafes",
+        scope: "Ecology Unit",
+        description:
+          "Founded with the vision of making indulgence healthier, Angel Cakes has redefined the café experience through a menu of refined desserts, artisan pastries, and specialty coffee, all crafted without refined sugar, gluten, or artificial ingredients. At its Dubai Creek Harbour location, the café combines contemporary design with mindful dining, offering guests a bright and elegant space that celebrates wellness without compromising on flavor. The kitchen exhaust system was equipped with an Ecology Unit to efficiently treat cooking and baking emissions, promoting cleaner and more environmentally responsible operation. Carefully selected to complement the café's sustainable philosophy, the solution promotes cleaner air quality and environmentally responsible operations while supporting the smooth day-to-day functioning of this modern bakery concept.",
+        image: { src: "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80", alt: "Angel Cakes" },
+      },
+      {
+        title: "Bake My Day",
+        location: ["Downtown Dubai, UAE"],
+        outsideLocation: "Dubai, UAE",
+        category: "Cafes",
+        scope: "Ecology Unit",
+        description:
+          "From handcrafted celebration cakes to artisan pastries and specialty coffee, Bake My Day has established itself as a contemporary bakery destination where creativity, quality, and craftsmanship come together. Located in Downtown Dubai, the bakery offers an inviting space dedicated to freshly prepared desserts and memorable culinary experiences. To accommodate the demands of continuous baking and dessert production, an Ecology Unit was integrated into the kitchen exhaust system. Designed to effectively treat kitchen emissions before discharge, the solution promotes cleaner and more sustainable operations while allowing the bakery to focus on delivering freshly crafted creations throughout the day.",
+        image: { src: "https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=800&q=80", alt: "Bake My Day" },
+      },
+      {
+        title: "Saddle House",
+        location: ["Al Qana, Abu Dhabi, UAE", "Al Jimi Mall, Al Ain, UAE"],
+        outsideLocation: "Multiple locations in UAE",
+        category: "Cafes",
+        scope: "Ecology Units",
+        description:
+          "Born from Dubai's vibrant café culture, Saddle House has evolved from the iconic Saddle concept into a contemporary dining destination where refined comfort food, specialty coffee, and stylish interiors come together. Its locations at Al Qana, Abu Dhabi, and Al Jimi Mall, Al Ain, reflect the brand's signature blend of modern design, relaxed luxury, and memorable hospitality. To complement the dynamic kitchen operations across both venues, Ecology Units were incorporated into the exhaust air treatment system to effectively manage grease, smoke, and cooking odors before discharge. Carefully integrated into the kitchen infrastructure, the solution enhances air quality while supporting the seamless operation of a brand known for its elevated café and dining experience.",
+        image: { src: "https://images.unsplash.com/photo-1535007813616-79dc02ba4021?w=800&q=80", alt: "Saddle House" },
+      },
     ],
   },
   stats: {
