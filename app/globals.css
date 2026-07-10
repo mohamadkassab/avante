@@ -235,6 +235,27 @@
   --portfolio-submenu-item-radius: 8px;
   --color-portfolio-submenu-item-hover-bg: var(--color-section-bg-off-white);
 
+  /* Portfolio detail page (single project) */
+  --portfolio-detail-cover-height: 26rem;
+  --portfolio-detail-col-gap: 3rem;
+  --portfolio-detail-divider-color: var(--color-primary);
+  --portfolio-detail-divider-width: 2px;
+  --portfolio-detail-desc-mt: 1rem;
+  --portfolio-overview-bg: var(--color-section-bg-off-white);
+  --portfolio-overview-p: 2rem;
+  --portfolio-overview-radius: var(--radius-card);
+  --portfolio-overview-heading-size: 1.5rem;
+  --portfolio-overview-heading-mb: 1.5rem;
+  --portfolio-overview-row-gap: 1rem;
+  --portfolio-overview-label-color: var(--color-text-primary);
+  --portfolio-overview-value-color: var(--color-text-muted);
+  --portfolio-detail-gallery-mt: 4rem;
+  --portfolio-detail-gallery-gap: 1rem;
+  --portfolio-detail-gallery-radius: var(--radius-card);
+  --portfolio-gallery-aspect-rect: 4 / 3;
+  --portfolio-gallery-aspect-vertical: 3 / 4;
+  --portfolio-gallery-aspect-xl: 2 / 3;
+
   /* Why Choose Us */
   --why-grid-gap: 2rem;
   --why-card-p: 2rem;

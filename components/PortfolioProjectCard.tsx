@@ -3,8 +3,9 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import Link from "next/link";
 import { useInView } from "@/hooks/useInView";
-import { portfolio } from "@/content/portfolio";
+import { portfolio, slugify } from "@/content/portfolio";
 
 type Project = (typeof portfolio.gallery.projects)[number];
 
@@ -14,7 +15,11 @@ export default function PortfolioProjectCard({ project, index }: { project: Proj
   return (
     <Box
       ref={ref}
+      component={Link}
+      href={`/portfolio/${slugify(project.title)}`}
       sx={{
+        display: "block",
+        textDecoration: "none",
         position: "relative",
         height: "var(--portfolio-card-height)",
         borderRadius: "var(--portfolio-card-radius)",
