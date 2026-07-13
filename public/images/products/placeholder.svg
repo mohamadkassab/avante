@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Image coming soon">
+  <rect width="800" height="600" fill="#F9FAFB"/>
+  <rect x="14" y="14" width="772" height="572" rx="16" fill="none" stroke="#E5E7EB" stroke-width="3" stroke-dasharray="14 12"/>
+  <g fill="none" stroke="#9CA3AF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="300" y="205" width="200" height="150" rx="12"/>
+    <circle cx="352" cy="253" r="16"/>
+    <path d="M312 345 l56 -56 40 36 44 -60 36 44"/>
+  </g>
+  <text x="400" y="430" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#6B7280">Image coming soon</text>
+  <text x="400" y="470" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#9CA3AF">Product photos are not available yet</text>
+</svg>

@@ -88,10 +88,9 @@ export default function PortfolioDetail({ project }: { project: PortfolioProject
           {/* Left — project profile */}
           <Box>
             <SectionBadge>PROJECT PROFILE</SectionBadge>
-            <SectionHeading mb={0}>{project.title}</SectionHeading>
+            <SectionHeading>{project.title}</SectionHeading>
             <Typography
               sx={{
-                mt: "var(--portfolio-detail-desc-mt)",
                 fontSize: "var(--font-size-body-lg)",
                 color: "var(--color-text-muted)",
                 lineHeight: "var(--line-height-relaxed)",

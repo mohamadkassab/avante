@@ -115,15 +115,10 @@ export const productCategories: ProductCategory[] = [
         description:
           "A high-performance commercial kitchen canopy designed to efficiently capture and extract heat, smoke, grease, and cooking fumes. Built for reliability and compliance, it provides effective ventilation for a wide range of commercial cooking applications.",
         image: {
-          src: "/images/products/cd/cover-CD.webp",
+          src: "/images/products/high-efficiency-kitchen-hood/ef-1.webp",
           alt: "High Efficiency Kitchen Hood",
         },
         images: [
-          { src: "/images/products/cd/1-CD-%20Full.webp", alt: "High Efficiency Kitchen Hood — full view" },
-          { src: "/images/products/cd/2-CD-Bottom.webp", alt: "High Efficiency Kitchen Hood — bottom view" },
-          { src: "/images/products/cd/3-CD-Front.webp", alt: "High Efficiency Kitchen Hood — front view" },
-          { src: "/images/products/cd/4-CD-Section.webp", alt: "High Efficiency Kitchen Hood — section view" },
-          { src: "/images/products/high-efficiency-kitchen-hood/ef-1.webp", alt: "High Efficiency Kitchen Hood — extract hood front view" },
           { src: "/images/products/high-efficiency-kitchen-hood/ef-2.webp", alt: "High Efficiency Kitchen Hood — extract hood angled view" },
           { src: "/images/products/high-efficiency-kitchen-hood/ef-3.webp", alt: "High Efficiency Kitchen Hood — extract hood side view" },
           { src: "/images/products/high-efficiency-kitchen-hood/sef-1.webp", alt: "High Efficiency Kitchen Hood with supply air — front view" },
@@ -944,6 +939,16 @@ export function slugify(value: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+/**
+ * Fallback shown on a point's detail page when it has no images of its own yet.
+ * Deliberately a single "coming soon" placeholder (not the category's cover) so
+ * a missing gallery reads as missing rather than borrowing another product's shots.
+ */
+const PLACEHOLDER_IMAGE: ImageRef = {
+  src: "/images/products/placeholder.svg",
+  alt: "Image coming soon — product photos are not available yet",
+};
+
 /** Resolved product point ready to render on a detail page. */
 export type ResolvedProduct = {
   categoryTitle: string;
@@ -974,8 +979,10 @@ export function findProductPoint(categorySlug: string, pointSlug: string): Resol
     pointSlug,
     title: point.title,
     description: point.description ?? category.description,
-    image: point.image ?? category.image,
-    images: point.images ?? category.images,
+    // A point with no images of its own shows a single "coming soon"
+    // placeholder — it does NOT borrow the category's cover/gallery.
+    image: point.image ?? PLACEHOLDER_IMAGE,
+    images: point.image ? point.images ?? [] : [],
     documents: point.documents ?? category.documents,
     specs: point.specs ?? category.specs,
   };
