@@ -336,14 +336,12 @@
   --clients-card-radius: 12px;
   --clients-logo-height: 5rem;
   --clients-logo-opacity: 0.6;
+  /* Time for one full copy of the logo strip to scroll past (read by useMarquee). */
   --clients-scroll-duration: 350s;
+  /* Eased duration of one arrow-nudge (~2/3 of the visible width) — read by useMarquee. */
+  --clients-nudge-duration: 1s;
   --clients-subtitle-max-width: 42rem;
   --clients-footer-max-width: 48rem;
-}
-
-@keyframes clients-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
 }
 
 @keyframes hero-fade-in {

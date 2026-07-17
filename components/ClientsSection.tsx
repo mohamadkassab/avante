@@ -2,7 +2,10 @@
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { useInView } from "@/hooks/useInView";
+import { useMarquee } from "@/hooks/useMarquee";
 import { home } from "@/content/home";
 import SectionBadge from "@/components/SectionBadge";
 import SectionShell from "@/components/SectionShell";
@@ -12,8 +15,27 @@ const { clients } = home;
 
 const doubled = [...clients.items, ...clients.items];
 
+const navBtnSx = {
+  position: "absolute" as const,
+  top: "50%",
+  zIndex: 10,
+  width: "var(--carousel-nav-btn-size)",
+  height: "var(--carousel-nav-btn-size)",
+  bgcolor: "var(--color-section-bg-white)",
+  borderRadius: "50%",
+  boxShadow: "var(--shadow-lg)",
+  display: { xs: "none", sm: "flex" },
+  alignItems: "center",
+  justifyContent: "center",
+  border: "none",
+  cursor: "pointer",
+  transition: "background-color var(--duration-medium)",
+  "&:hover": { bgcolor: "var(--color-nav-btn-hover)" },
+};
+
 export default function ClientsSection() {
   const header = useInView();
+  const { trackRef, nudge, pause, resume } = useMarquee();
 
   return (
     <SectionShell variant="white">
@@ -43,19 +65,37 @@ export default function ClientsSection() {
         </Typography>
       </Box>
 
-      <Box sx={{ position: "relative", overflow: "hidden" }}>
+      <Box sx={{ position: "relative" }}>
         <Box
-          sx={{
-            display: "flex",
-            width: "max-content",
-            animationName: "clients-scroll",
-            animationDuration: "var(--clients-scroll-duration)",
-            animationTimingFunction: "linear",
-            animationIterationCount: "infinite",
-            "&:hover": { animationPlayState: "paused" },
-          }}
+          component="button"
+          type="button"
+          aria-label="Previous clients"
+          onClick={() => nudge("left")}
+          sx={{ ...navBtnSx, left: 0, transform: "translate(var(--carousel-nav-btn-offset), -50%)" }}
         >
-          {doubled.map((item, i) => (
+          <ChevronLeftIcon sx={{ fontSize: "var(--icon-size-md)", color: "var(--color-text-primary)" }} />
+        </Box>
+
+        <Box
+          component="button"
+          type="button"
+          aria-label="Next clients"
+          onClick={() => nudge("right")}
+          sx={{ ...navBtnSx, right: 0, transform: "translate(calc(-1 * var(--carousel-nav-btn-offset)), -50%)" }}
+        >
+          <ChevronRightIcon sx={{ fontSize: "var(--icon-size-md)", color: "var(--color-text-primary)" }} />
+        </Box>
+
+        <Box onMouseEnter={pause} onMouseLeave={resume} sx={{ overflow: "hidden" }}>
+          <Box
+            ref={trackRef}
+            sx={{
+              display: "flex",
+              width: "max-content",
+              willChange: "transform",
+            }}
+          >
+            {doubled.map((item, i) => (
             <Box
               key={`${item.name}-${i}`}
               sx={{
@@ -80,14 +120,15 @@ export default function ClientsSection() {
                 },
               }}
             >
-              <Box
-                component="img"
-                src={item.image.src}
-                alt={item.image.alt}
-                sx={{ width: "100%", height: "var(--clients-logo-height)", objectFit: "contain" }}
-              />
-            </Box>
-          ))}
+                <Box
+                  component="img"
+                  src={item.image.src}
+                  alt={item.image.alt}
+                  sx={{ width: "100%", height: "var(--clients-logo-height)", objectFit: "contain" }}
+                />
+              </Box>
+            ))}
+          </Box>
         </Box>
       </Box>
 
