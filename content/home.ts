@@ -37,7 +37,7 @@ export const home = {
     cta: { label: "LEARN MORE ABOUT US", href: "/about" },
     images: [
       { src: "/images/home-about-1.jpeg", alt: "Avante Kitchen" },
-      { src: "/images/home-about-2.jpeg", alt: "Avante Kitchen" },
+      { src: "/images/home-about-2.jpg", alt: "Avante Kitchen" },
       { src: "/images/home-about-3.jpeg", alt: "Avante Kitchen" },
     ],
   },
