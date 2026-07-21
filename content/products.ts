@@ -88,24 +88,24 @@ export const productCategories: ProductCategory[] = [
     description:
       "A complete range of engineered kitchen canopies designed to capture heat, grease, smoke, and vapours with maximum efficiency, delivering safer kitchens and superior ventilation performance.",
     image: {
-      src: "/images/products/cd/cover-CD.webp",
+      src: "/images/products/commercial-kitchen-canopies/condensate-hood/cover-CD.webp",
       alt: "Commercial Kitchen Canopies",
     },
     images: [
       {
-        src: "/images/products/cd/1-CD-%20Full.webp",
+        src: "/images/products/commercial-kitchen-canopies/condensate-hood/1-CD-%20Full.webp",
         alt: "Commercial Kitchen Canopies — full view",
       },
       {
-        src: "/images/products/cd/2-CD-Bottom.webp",
+        src: "/images/products/commercial-kitchen-canopies/condensate-hood/2-CD-Bottom.webp",
         alt: "Commercial Kitchen Canopies — bottom view",
       },
       {
-        src: "/images/products/cd/3-CD-Front.webp",
+        src: "/images/products/commercial-kitchen-canopies/condensate-hood/3-CD-Front.webp",
         alt: "Commercial Kitchen Canopies — front view",
       },
       {
-        src: "/images/products/cd/4-CD-Section.webp",
+        src: "/images/products/commercial-kitchen-canopies/condensate-hood/4-CD-Section.webp",
         alt: "Commercial Kitchen Canopies — section view",
       },
     ],
@@ -115,19 +115,19 @@ export const productCategories: ProductCategory[] = [
         description:
           "A high-performance commercial kitchen canopy designed to efficiently capture and extract heat, smoke, grease, and cooking fumes. Built for reliability and compliance, it provides effective ventilation for a wide range of commercial cooking applications.",
         image: {
-          src: "/images/products/high-efficiency-kitchen-hood/ef-1.webp",
+          src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood/ef-1.webp",
           alt: "High Efficiency Kitchen Hood",
         },
         images: [
-          { src: "/images/products/high-efficiency-kitchen-hood/ef-2.webp", alt: "High Efficiency Kitchen Hood — extract hood angled view" },
-          { src: "/images/products/high-efficiency-kitchen-hood/ef-3.webp", alt: "High Efficiency Kitchen Hood — extract hood side view" },
-          { src: "/images/products/high-efficiency-kitchen-hood/sef-1.webp", alt: "High Efficiency Kitchen Hood with supply air — front view" },
-          { src: "/images/products/high-efficiency-kitchen-hood/sef-2.webp", alt: "High Efficiency Kitchen Hood with supply air — angled view" },
-          { src: "/images/products/high-efficiency-kitchen-hood/sef-3.webp", alt: "High Efficiency Kitchen Hood with supply air — side view" },
-          { src: "/images/products/high-efficiency-kitchen-hood/sef-4.webp", alt: "High Efficiency Kitchen Hood with supply air — detail" },
-          { src: "/images/products/high-efficiency-kitchen-hood/sef-5.webp", alt: "High Efficiency Kitchen Hood with supply air — detail" },
-          { src: "/images/products/high-efficiency-kitchen-hood/sef-6.webp", alt: "High Efficiency Kitchen Hood with supply air — detail" },
-          { src: "/images/products/high-efficiency-kitchen-hood/sef-7.webp", alt: "High Efficiency Kitchen Hood with supply air — detail" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood/ef-2.webp", alt: "High Efficiency Kitchen Hood — extract hood angled view" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood/ef-3.webp", alt: "High Efficiency Kitchen Hood — extract hood side view" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood/sef-1.webp", alt: "High Efficiency Kitchen Hood with supply air — front view" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood/sef-2.webp", alt: "High Efficiency Kitchen Hood with supply air — angled view" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood/sef-3.webp", alt: "High Efficiency Kitchen Hood with supply air — side view" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood/sef-4.webp", alt: "High Efficiency Kitchen Hood with supply air — detail" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood/sef-5.webp", alt: "High Efficiency Kitchen Hood with supply air — detail" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood/sef-6.webp", alt: "High Efficiency Kitchen Hood with supply air — detail" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood/sef-7.webp", alt: "High Efficiency Kitchen Hood with supply air — detail" },
         ],
         specs: [
           {
@@ -173,16 +173,16 @@ export const productCategories: ProductCategory[] = [
         description:
           "Designed for heavy-duty grease-producing kitchens, this canopy integrates ultraviolet filtration technology to significantly reduce grease vapours, duct contamination, and exhaust odours while maintaining high extraction efficiency.",
         image: {
-          src: "/images/products/high-efficiency-kitchen-hood-with-ultraviolet-filtration/cover.webp",
+          src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-ultraviolet-filtration/cover.webp",
           alt: "High Efficiency Kitchen Hood with Ultraviolet Filtration",
         },
         images: [
-          { src: "/images/products/high-efficiency-kitchen-hood-with-ultraviolet-filtration/ef-uv-2.webp", alt: "UV filtration kitchen hood — angled view" },
-          { src: "/images/products/high-efficiency-kitchen-hood-with-ultraviolet-filtration/uv-lights.webp", alt: "UV filtration hood — ultraviolet lights detail" },
-          { src: "/images/products/high-efficiency-kitchen-hood-with-ultraviolet-filtration/sef-uv-1.webp", alt: "UV filtration kitchen hood with supply air — front view" },
-          { src: "/images/products/high-efficiency-kitchen-hood-with-ultraviolet-filtration/sef-uv-2.webp", alt: "UV filtration kitchen hood with supply air — angled view" },
-          { src: "/images/products/high-efficiency-kitchen-hood-with-ultraviolet-filtration/sef-uv-3.webp", alt: "UV filtration kitchen hood with supply air — side view" },
-          { src: "/images/products/high-efficiency-kitchen-hood-with-ultraviolet-filtration/sef-uv-4.webp", alt: "UV filtration kitchen hood with supply air — detail" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-ultraviolet-filtration/ef-uv-2.webp", alt: "UV filtration kitchen hood — angled view" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-ultraviolet-filtration/uv-lights.webp", alt: "UV filtration hood — ultraviolet lights detail" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-ultraviolet-filtration/sef-uv-1.webp", alt: "UV filtration kitchen hood with supply air — front view" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-ultraviolet-filtration/sef-uv-2.webp", alt: "UV filtration kitchen hood with supply air — angled view" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-ultraviolet-filtration/sef-uv-3.webp", alt: "UV filtration kitchen hood with supply air — side view" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-ultraviolet-filtration/sef-uv-4.webp", alt: "UV filtration kitchen hood with supply air — detail" },
         ],
         specs: [
           {
@@ -231,15 +231,15 @@ export const productCategories: ProductCategory[] = [
         description:
           "Engineered for high-temperature and solid fuel cooking applications, this canopy incorporates a cold-water mist system to cool grease-laden exhaust and improve filtration performance.",
         image: {
-          src: "/images/products/high-efficiency-kitchen-hood-with-water-mist/cover.webp",
+          src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-water-mist/cover.webp",
           alt: "High Efficiency Kitchen Hood with Water Mist",
         },
         images: [
-          { src: "/images/products/high-efficiency-kitchen-hood-with-water-mist/ef-wm-with-panel.webp", alt: "Water mist kitchen hood — with panel" },
-          { src: "/images/products/high-efficiency-kitchen-hood-with-water-mist/sef-wm-1.webp", alt: "Water mist kitchen hood with supply air — front view" },
-          { src: "/images/products/high-efficiency-kitchen-hood-with-water-mist/sef-wm-2.webp", alt: "Water mist kitchen hood with supply air — angled view" },
-          { src: "/images/products/high-efficiency-kitchen-hood-with-water-mist/sef-wm-with-panel.webp", alt: "Water mist kitchen hood with supply air — with panel" },
-          { src: "/images/products/high-efficiency-kitchen-hood-with-water-mist/water-mist.webp", alt: "Water mist system detail" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-water-mist/ef-wm-with-panel.webp", alt: "Water mist kitchen hood — with panel" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-water-mist/sef-wm-1.webp", alt: "Water mist kitchen hood with supply air — front view" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-water-mist/sef-wm-2.webp", alt: "Water mist kitchen hood with supply air — angled view" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-water-mist/sef-wm-with-panel.webp", alt: "Water mist kitchen hood with supply air — with panel" },
+          { src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-water-mist/water-mist.webp", alt: "Water mist system detail" },
         ],
         specs: [
           {
@@ -283,57 +283,57 @@ export const productCategories: ProductCategory[] = [
           },
         ],
       },
-      {
-        title: "High Efficiency Kitchen Hood with Water Wash",
-        description:
-          "Featuring an automatic hot water wash system, this canopy continuously cleans internal components, reducing grease accumulation and minimizing maintenance requirements for demanding commercial kitchens.",
-        image: {
-          src: "/images/products/high-efficiency-kitchen-hood-with-water-wash/cover.webp",
-          alt: "High Efficiency Kitchen Hood with Water Wash",
-        },
-        images: [],
-        specs: [
-          {
-            title: "Specifications",
-            body: [
-              "High-efficiency stainless steel kitchen canopy",
-              "Material: AISI 304 stainless steel",
-              "Thickness: 1.0 / 1.2 mm",
-              "Aerodynamically designed panel filters",
-              "Integrated hood lighting providing 500 LUX at cooking surface",
-              "Automatic hot water wash system",
-              "Dedicated control panel for cleaning operation",
-              "Hood construction and performance compliant with DW172 standards",
-              "With or without make-up air as per configuration",
-            ],
-          },
-          {
-            title: "Options",
-            body: [
-              "LED dimmable spotlights",
-              "Service Distribution Unit",
-              "Factory-installed hood Fire Suppression System",
-              "Factory-installed hood Demand Control Ventilation System",
-              "Hood cladding / powder coating",
-              "Special shape and size",
-            ],
-          },
-          {
-            title: "Application",
-            body: "Suitable for high-volume commercial kitchens requiring automatic internal cleaning systems.",
-          },
-          {
-            title: "Standard type and dimension",
-            body: [
-              "Wall mounted",
-              "Island mounted",
-              "Height — 600 mm",
-              "Width — 1350 mm",
-              "Length varies according to layout requirements",
-            ],
-          },
-        ],
-      },
+      // {
+      //   title: "High Efficiency Kitchen Hood with Water Wash",
+      //   description:
+      //     "Featuring an automatic hot water wash system, this canopy continuously cleans internal components, reducing grease accumulation and minimizing maintenance requirements for demanding commercial kitchens.",
+      //   image: {
+      //     src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-water-wash/cover.webp",
+      //     alt: "High Efficiency Kitchen Hood with Water Wash",
+      //   },
+      //   images: [],
+      //   specs: [
+      //     {
+      //       title: "Specifications",
+      //       body: [
+      //         "High-efficiency stainless steel kitchen canopy",
+      //         "Material: AISI 304 stainless steel",
+      //         "Thickness: 1.0 / 1.2 mm",
+      //         "Aerodynamically designed panel filters",
+      //         "Integrated hood lighting providing 500 LUX at cooking surface",
+      //         "Automatic hot water wash system",
+      //         "Dedicated control panel for cleaning operation",
+      //         "Hood construction and performance compliant with DW172 standards",
+      //         "With or without make-up air as per configuration",
+      //       ],
+      //     },
+      //     {
+      //       title: "Options",
+      //       body: [
+      //         "LED dimmable spotlights",
+      //         "Service Distribution Unit",
+      //         "Factory-installed hood Fire Suppression System",
+      //         "Factory-installed hood Demand Control Ventilation System",
+      //         "Hood cladding / powder coating",
+      //         "Special shape and size",
+      //       ],
+      //     },
+      //     {
+      //       title: "Application",
+      //       body: "Suitable for high-volume commercial kitchens requiring automatic internal cleaning systems.",
+      //     },
+      //     {
+      //       title: "Standard type and dimension",
+      //       body: [
+      //         "Wall mounted",
+      //         "Island mounted",
+      //         "Height — 600 mm",
+      //         "Width — 1350 mm",
+      //         "Length varies according to layout requirements",
+      //       ],
+      //     },
+      //   ],
+      // },
       {
         title: "High Efficiency Kitchen Hood with Water Mist and Water Wash",
         description:
@@ -479,6 +479,16 @@ export const productCategories: ProductCategory[] = [
         title: "Condensate Hood",
         description:
           "Specially designed for non-grease cooking equipment, the condensate hood efficiently captures steam, moisture, and condensation, helping maintain a dry, comfortable, and hygienic kitchen environment.",
+        image: {
+          src: "/images/products/commercial-kitchen-canopies/condensate-hood/cover-CD.webp",
+          alt: "Condensate Hood",
+        },
+        images: [
+          { src: "/images/products/commercial-kitchen-canopies/condensate-hood/1-CD-%20Full.webp", alt: "Condensate Hood — full view" },
+          { src: "/images/products/commercial-kitchen-canopies/condensate-hood/2-CD-Bottom.webp", alt: "Condensate Hood — bottom view" },
+          { src: "/images/products/commercial-kitchen-canopies/condensate-hood/3-CD-Front.webp", alt: "Condensate Hood — front view" },
+          { src: "/images/products/commercial-kitchen-canopies/condensate-hood/4-CD-Section.webp", alt: "Condensate Hood — section view" },
+        ],
         specs: [
           {
             title: "Specifications",
@@ -559,7 +569,7 @@ export const productCategories: ProductCategory[] = [
         description:
           "Factory-fabricated stainless steel ventilated ceiling system designed for complete kitchen coverage, delivering uniform extraction, integrated air supply, and high-efficiency grease removal.",
         image: {
-          src: "/images/products/ventilated-ceiling/cover.webp",
+          src: "/images/products/special-kitchen-ventilation-products/ventilated-ceiling/cover.webp",
           alt: "Ventilated Ceiling",
         },
         images: [],
@@ -603,7 +613,7 @@ export const productCategories: ProductCategory[] = [
         description:
           "The Avante Service Distribution Unit (SDU) is a centralized utility delivery system designed to safely distribute gas, electrical power, and auxiliary services to commercial cooking equipment. It eliminates floor clutter, improves safety, and ensures compliance with international kitchen safety standards.",
         image: {
-          src: "/images/products/sdu-service-distribution-unit/cover.webp",
+          src: "/images/products/special-kitchen-ventilation-products/sdu-service-distribution-unit/cover.webp",
           alt: "SDU (Service Distribution Unit)",
         },
         images: [],
@@ -628,7 +638,7 @@ export const productCategories: ProductCategory[] = [
         description:
           "High-performance mobile cooking unit with integrated air extraction, engineered for front-of-house applications, flexible placement, and efficient, on-demand preparation.",
         image: {
-          src: "/images/products/mobile-cooking-unit/cover.webp",
+          src: "/images/products/special-kitchen-ventilation-products/mobile-cooking-unit/cover.webp",
           alt: "Mobile Cooking Unit",
         },
         images: [],
@@ -651,7 +661,7 @@ export const productCategories: ProductCategory[] = [
         description:
           "Avante Slim Hood is a compact, high-efficiency kitchen ventilation system designed for light to medium-duty cooking applications. It removes heat, smoke, grease, and odours effectively while maintaining a clean environment.",
         image: {
-          src: "/images/products/slim-hood/cover.webp",
+          src: "/images/products/special-kitchen-ventilation-products/slim-hood/cover.webp",
           alt: "Slim Hood",
         },
         images: [],
@@ -725,7 +735,7 @@ export const productCategories: ProductCategory[] = [
         description:
           "High-performance ecology unit designed for advanced air purification, combining electrostatic precipitation and multi-stage filtration to effectively remove grease, smoke, and airborne contaminants. Integrated with energy-efficient fan systems and VFD controls, the unit delivers optimized airflow performance. Modular construction allows flexible configuration to suit project-specific requirements across a wide capacity range.",
         image: {
-          src: "/images/products/kitchen-exhaust-ecology-unit/cover.webp",
+          src: "/images/products/hvac/kitchen-exhaust-ecology-unit/cover.webp",
           alt: "Kitchen Exhaust Ecology Unit",
         },
         images: [],
@@ -747,7 +757,7 @@ export const productCategories: ProductCategory[] = [
         description:
           "High-performance air handling units, including AHU and FAHU systems, designed to condition, filter, and circulate both recirculated and fresh air, ensuring controlled temperature, improved indoor air quality, proper ventilation, and energy-efficient operation across commercial and industrial applications.",
         image: {
-          src: "/images/products/ahu-and-fahu/cover.webp",
+          src: "/images/products/hvac/ahu-and-fahu/cover.webp",
           alt: "AHU and FAHU",
         },
         images: [],
@@ -774,7 +784,7 @@ export const productCategories: ProductCategory[] = [
         description:
           "A durable, weather-protected ventilation cowl engineered for industrial and comfort applications, featuring upward air ejection, debris protection, and rainwater drainage.",
         image: {
-          src: "/images/products/venturi-cowl/cover.webp",
+          src: "/images/products/hvac/venturi-cowl/cover.webp",
           alt: "Venturi Cowl",
         },
         images: [],
