@@ -185,6 +185,20 @@
   --product-page-actions-gap: 1rem;
   --product-page-actions-mt: 2rem;
 
+  /* Product detail page — model selector */
+  --product-model-row-gap: 1rem;
+  --product-model-btn-text: var(--color-text-primary);
+  --product-model-btn-text-active: #FFFFFF;
+  --product-model-btn-bg: var(--product-page-image-bg);
+  --product-model-btn-border-width: var(--product-page-image-border-width);
+  --product-model-btn-border-color: var(--product-page-image-border-color);
+  --product-model-box-mt: 0.75rem;
+  --product-model-box-p: 1rem;
+  --product-model-box-gap: 0.5rem;
+  /* Vertical space reserved below the button row for the (absolutely
+     positioned) doc box, so opening it never shifts the buttons. */
+  --product-model-box-reserve: 6.5rem;
+
   /* Product detail page — specs accordion */
   --product-page-accordion-mt: 2rem;
   --product-page-accordion-header-py: 0.875rem;

@@ -18,8 +18,8 @@ export const footer = {
   social: [
     { label: "Phone", icon: "phone", href: "tel:+97142392882", display: "+971 4 239 2882" },
     { label: "Email", icon: "email", href: "mailto:sales@avanteuae.com", display: "sales@avanteuae.com" },
-    { label: "Instagram", icon: "instagram", href: "https://www.instagram.com/" },
-    { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/" },
+    { label: "Instagram", icon: "instagram", href: "https://www.instagram.com/avanteuae/" },
+    { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/company/avante-ventilation-equipment/" },
   ],
   copyright: "Avante UAE. All rights reserved.",
 };

@@ -31,7 +31,7 @@ export default function PortfolioGallery() {
 
   return (
     <SectionShell variant="offWhite">
-      <Box onMouseLeave={() => setHoveredLabel(null)} sx={{ mt: 8, mb: 8 }}>
+      <Box onMouseLeave={() => setHoveredLabel(null)} sx={{ mb: 8 }}>
         <Box
           sx={{
             display: "flex",

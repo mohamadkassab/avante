@@ -16,7 +16,7 @@ export default function DocLink({
   label,
 }: {
   href: string;
-  icon: ReactNode;
+  icon?: ReactNode;
   label: string;
 }) {
   return (

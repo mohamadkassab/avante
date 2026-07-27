@@ -17,9 +17,10 @@ export const products = {
   // (falling back to the category — see `productCategories[].documents`); the
   // labels are shared across all products.
   docLabels: {
-    catalogue: "Catalogue",
-    manual: "Installation Operation Manual",
+    manual: "Installation & Operation Manual",
     specSheets: "Technical Spec Sheets",
+    specSheet: "Technical Spec Sheet",
+    catalogue: "Catalogue",
     electricalDrawing: "Electrical Drawing",
   },
 };
@@ -32,6 +33,12 @@ type ProductDocuments = {
   electricalDrawing: string;
 };
 type ProductSpec = { title: string; body: string | string[] };
+
+/**
+ * A purchasable model of a product point — e.g. "AV-EF" / "AV-SEF" for the
+ * High Efficiency Kitchen Hood. Each model carries its own document links.
+ */
+export type ProductModel = { name: string; specSheet: string; catalogue: string };
 
 /**
  * A single sub-product ("point") within a category — e.g. "Condensate Hood".
@@ -49,6 +56,12 @@ export type ProductPoint = {
   images?: ImageRef[];
   documents?: ProductDocuments;
   specs?: ProductSpec[];
+  /**
+   * Model codes for this point (e.g. ["AV-EF", "AV-SEF"]). Per-model document
+   * links are placeholders for now — see `findProductPoint`. A point with no
+   * `models` falls back to a single "TEST" button so the gap stays visible.
+   */
+  models?: string[];
 };
 
 export type ProductCategory = {
@@ -112,6 +125,7 @@ export const productCategories: ProductCategory[] = [
     items: [
       {
         title: "High Efficiency Kitchen Hood",
+        models: ["AV-EF", "AV-SEF"],
         description:
           "A high-performance commercial kitchen canopy designed to efficiently capture and extract heat, smoke, grease, and cooking fumes. Built for reliability and compliance, it provides effective ventilation for a wide range of commercial cooking applications.",
         image: {
@@ -170,6 +184,7 @@ export const productCategories: ProductCategory[] = [
       },
       {
         title: "High Efficiency Kitchen Hood with Ultraviolet Filtration",
+        models: ["AV-EF-UV", "AV-SEF-UV"],
         description:
           "Designed for heavy-duty grease-producing kitchens, this canopy integrates ultraviolet filtration technology to significantly reduce grease vapours, duct contamination, and exhaust odours while maintaining high extraction efficiency.",
         image: {
@@ -228,6 +243,7 @@ export const productCategories: ProductCategory[] = [
       },
       {
         title: "High Efficiency Kitchen Hood with Water Mist",
+        models: ["AV-EF-WM", "AV-SEF-WM"],
         description:
           "Engineered for high-temperature and solid fuel cooking applications, this canopy incorporates a cold-water mist system to cool grease-laden exhaust and improve filtration performance.",
         image: {
@@ -336,6 +352,7 @@ export const productCategories: ProductCategory[] = [
       // },
       {
         title: "High Efficiency Kitchen Hood with Water Mist and Water Wash",
+        models: ["AV-EF-WMW", "AV-SEF-WMW"],
         description:
           "Combining cold water mist technology with an automatic water wash system, this canopy provides enhanced grease management, improved safety, and automated internal cleaning for intensive cooking operations.",
         specs: [
@@ -383,6 +400,7 @@ export const productCategories: ProductCategory[] = [
       },
       {
         title: "High Efficiency Kitchen Hood with Ultraviolet and Water Mist",
+        models: ["AV-EF-UVWM", "AV-SEF-UVWM"],
         description:
           "A dual-technology canopy combining ultraviolet filtration and cold-water mist to maximize grease extraction and improve air quality in high-intensity commercial kitchens.",
         specs: [
@@ -430,6 +448,7 @@ export const productCategories: ProductCategory[] = [
       },
       {
         title: "High Efficiency Kitchen Hood with Ultraviolet and Water Wash",
+        models: ["AV-EF-UVWW", "AV-SEF-UVWW"],
         description:
           "Designed for kitchens requiring maximum grease control, this canopy combines ultraviolet filtration with an automatic water wash system for superior extraction performance and simplified maintenance.",
         specs: [
@@ -477,6 +496,7 @@ export const productCategories: ProductCategory[] = [
       },
       {
         title: "Condensate Hood",
+        models: ["AV-CD"],
         description:
           "Specially designed for non-grease cooking equipment, the condensate hood efficiently captures steam, moisture, and condensation, helping maintain a dry, comfortable, and hygienic kitchen environment.",
         image: {
@@ -635,6 +655,7 @@ export const productCategories: ProductCategory[] = [
       },
       {
         title: "Mobile Cooking Unit",
+        models: ["AV-MCU"],
         description:
           "High-performance mobile cooking unit with integrated air extraction, engineered for front-of-house applications, flexible placement, and efficient, on-demand preparation.",
         image: {
@@ -658,6 +679,7 @@ export const productCategories: ProductCategory[] = [
       },
       {
         title: "Slim Hood",
+        models: ["AV-SH"],
         description:
           "Avante Slim Hood is a compact, high-efficiency kitchen ventilation system designed for light to medium-duty cooking applications. It removes heat, smoke, grease, and odours effectively while maintaining a clean environment.",
         image: {
@@ -732,6 +754,7 @@ export const productCategories: ProductCategory[] = [
     items: [
       {
         title: "Kitchen Exhaust Ecology Unit",
+        models: ["AV-KFU"],
         description:
           "High-performance ecology unit designed for advanced air purification, combining electrostatic precipitation and multi-stage filtration to effectively remove grease, smoke, and airborne contaminants. Integrated with energy-efficient fan systems and VFD controls, the unit delivers optimized airflow performance. Modular construction allows flexible configuration to suit project-specific requirements across a wide capacity range.",
         image: {
@@ -781,6 +804,7 @@ export const productCategories: ProductCategory[] = [
       },
       {
         title: "Venturi Cowl",
+        models: ["AV-RVC"],
         description:
           "A durable, weather-protected ventilation cowl engineered for industrial and comfort applications, featuring upward air ejection, debris protection, and rainwater drainage.",
         image: {
@@ -970,6 +994,7 @@ export type ResolvedProduct = {
   images: ImageRef[];
   documents: ProductDocuments;
   specs: ProductSpec[];
+  models: ProductModel[];
 };
 
 /**
@@ -995,6 +1020,13 @@ export function findProductPoint(categorySlug: string, pointSlug: string): Resol
     images: point.image ? point.images ?? [] : [],
     documents: point.documents ?? category.documents,
     specs: point.specs ?? category.specs,
+    // Per-model document links are placeholders for now. A point with no model
+    // codes yet shows a single "TEST" button so the missing data stays visible.
+    models: (point.models ?? ["TEST"]).map((name) => ({
+      name,
+      specSheet: "#",
+      catalogue: "#",
+    })),
   };
 }
 

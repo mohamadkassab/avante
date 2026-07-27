@@ -3,8 +3,8 @@ import Typography from "@mui/material/Typography";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import { products, type ResolvedProduct } from "@/content/products";
-import AppButton from "@/components/AppButton";
 import DocLink from "@/components/DocLink";
+import ProductModelSelector from "@/components/ProductModelSelector";
 import SectionShell from "@/components/SectionShell";
 import SectionHeading from "@/components/SectionHeading";
 import ProductBreadcrumb from "@/components/ProductBreadcrumb";
@@ -69,32 +69,35 @@ export default function ProductDetail({ product }: { product: ResolvedProduct })
             </Typography>
 
             <Box sx={{ mt: "var(--product-page-actions-mt)" }}>
+
+              {/* Model selector — one button per model, each revealing its docs */}
+              <Box sx={{ mb: "var(--product-page-doclinks-mb)" }}>
+                <ProductModelSelector models={product.models} />
+              </Box>
+
               {/* Document text links — one row */}
               <Box
                 sx={{
                   display: "flex",
                   flexWrap: "wrap",
                   gap: "var(--product-page-doclinks-gap)",
-                  mb: "var(--product-page-doclinks-mb)",
+    
                 }}
               >
-                <DocLink href={product.documents.catalogue} icon={<MenuBookIcon />} label={products.docLabels.catalogue} />
-                <DocLink
+                                <DocLink
                   href={product.documents.manual}
-                  icon={<FileDownloadOutlinedIcon />}
+                  icon={<MenuBookIcon />} 
                   label={products.docLabels.manual}
                 />
+                <DocLink 
+                href={product.documents.electricalDrawing} 
+                icon={<FileDownloadOutlinedIcon />}
+                label={products.docLabels.electricalDrawing} 
+                />
+
               </Box>
 
-              {/* Action buttons — logo gradient */}
-              <Box sx={{ display: "flex", flexWrap: "wrap", gap: "var(--product-page-actions-gap)" }}>
-                <AppButton size="sm" variant="primary" href={product.documents.specSheets}>
-                  {products.docLabels.specSheets}
-                </AppButton>
-                <AppButton size="sm" variant="primary" href={product.documents.electricalDrawing}>
-                  {products.docLabels.electricalDrawing}
-                </AppButton>
-              </Box>
+
             </Box>
 
             <ProductSpecsAccordion specs={product.specs} />
