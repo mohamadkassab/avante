@@ -184,7 +184,7 @@ export const productCategories: ProductCategory[] = [
       },
       {
         title: "High Efficiency Kitchen Hood with Ultraviolet Filtration",
-        models: ["AV-EF-UV", "AV-SEF-UV"],
+        models: ["AV-EF-UV", "AV-SEF-UV", "A-EF-UV", "A-SEF-UV"],
         description:
           "Designed for heavy-duty grease-producing kitchens, this canopy integrates ultraviolet filtration technology to significantly reduce grease vapours, duct contamination, and exhaust odours while maintaining high extraction efficiency.",
         image: {
@@ -243,7 +243,7 @@ export const productCategories: ProductCategory[] = [
       },
       {
         title: "High Efficiency Kitchen Hood with Water Mist",
-        models: ["AV-EF-WM", "AV-SEF-WM"],
+        models: ["AV-EF-WM", "AV-SEF-WM", "A-EF-WM", "A-SEF-WM"],
         description:
           "Engineered for high-temperature and solid fuel cooking applications, this canopy incorporates a cold-water mist system to cool grease-laden exhaust and improve filtration performance.",
         image: {
@@ -630,6 +630,8 @@ export const productCategories: ProductCategory[] = [
       },
       {
         title: "SDU (Service Distribution Unit)",
+        models: ["SDU"],
+
         description:
           "The Avante Service Distribution Unit (SDU) is a centralized utility delivery system designed to safely distribute gas, electrical power, and auxiliary services to commercial cooking equipment. It eliminates floor clutter, improves safety, and ensures compliance with international kitchen safety standards.",
         image: {
@@ -911,6 +913,7 @@ export const productCategories: ProductCategory[] = [
       },
       {
         title: "Demand Control Ventilated System",
+        models: ["CHEETAH"],
         description:
           "Intelligent ventilation system with temperature and optical sensors that automatically adjusts airflow based on real-time cooking activity, optimizing energy use while ensuring efficient, demand-based kitchen ventilation.",
         specs: [

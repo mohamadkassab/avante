@@ -60,15 +60,20 @@ export default function ProductModelSelector({ models }: { models: ProductModel[
                       background: "var(--gradient-brand)",
                       color: "var(--product-model-btn-text-active)",
                       borderColor: "transparent",
+                      "&:hover": { opacity: 0.9 },
                     }
                   : {
                       background: "var(--product-model-btn-bg)",
                       color: "var(--product-model-btn-text)",
                       borderColor: "var(--product-model-btn-border-color)",
+                      "&:hover": {
+                        background: "var(--gradient-brand)",
+                        color: "var(--product-model-btn-text-active)",
+                        borderColor: "transparent",
+                      },
                     }),
                 transition:
                   "background-color var(--duration-fast), border-color var(--duration-fast), opacity var(--duration-fast)",
-                "&:hover": { opacity: 0.9 },
               }}
             >
               {model.name}
