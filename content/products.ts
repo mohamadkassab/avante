@@ -125,7 +125,7 @@ export const productCategories: ProductCategory[] = [
     items: [
       {
         title: "High Efficiency Kitchen Hood",
-        models: ["AV-EF", "AV-SEF"],
+        models: ["AV-EF", "AV-SEF", "A-EF", "A-SEF"],
         description:
           "A high-performance commercial kitchen canopy designed to efficiently capture and extract heat, smoke, grease, and cooking fumes. Built for reliability and compliance, it provides effective ventilation for a wide range of commercial cooking applications.",
         image: {
@@ -188,7 +188,7 @@ export const productCategories: ProductCategory[] = [
         description:
           "Designed for heavy-duty grease-producing kitchens, this canopy integrates ultraviolet filtration technology to significantly reduce grease vapours, duct contamination, and exhaust odours while maintaining high extraction efficiency.",
         image: {
-          src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-ultraviolet-filtration/cover.webp",
+          src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-ultraviolet-filtration/sef-uv-1.webp",
           alt: "High Efficiency Kitchen Hood with Ultraviolet Filtration",
         },
         images: [
@@ -299,57 +299,57 @@ export const productCategories: ProductCategory[] = [
           },
         ],
       },
-      // {
-      //   title: "High Efficiency Kitchen Hood with Water Wash",
-      //   description:
-      //     "Featuring an automatic hot water wash system, this canopy continuously cleans internal components, reducing grease accumulation and minimizing maintenance requirements for demanding commercial kitchens.",
-      //   image: {
-      //     src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-water-wash/cover.webp",
-      //     alt: "High Efficiency Kitchen Hood with Water Wash",
-      //   },
-      //   images: [],
-      //   specs: [
-      //     {
-      //       title: "Specifications",
-      //       body: [
-      //         "High-efficiency stainless steel kitchen canopy",
-      //         "Material: AISI 304 stainless steel",
-      //         "Thickness: 1.0 / 1.2 mm",
-      //         "Aerodynamically designed panel filters",
-      //         "Integrated hood lighting providing 500 LUX at cooking surface",
-      //         "Automatic hot water wash system",
-      //         "Dedicated control panel for cleaning operation",
-      //         "Hood construction and performance compliant with DW172 standards",
-      //         "With or without make-up air as per configuration",
-      //       ],
-      //     },
-      //     {
-      //       title: "Options",
-      //       body: [
-      //         "LED dimmable spotlights",
-      //         "Service Distribution Unit",
-      //         "Factory-installed hood Fire Suppression System",
-      //         "Factory-installed hood Demand Control Ventilation System",
-      //         "Hood cladding / powder coating",
-      //         "Special shape and size",
-      //       ],
-      //     },
-      //     {
-      //       title: "Application",
-      //       body: "Suitable for high-volume commercial kitchens requiring automatic internal cleaning systems.",
-      //     },
-      //     {
-      //       title: "Standard type and dimension",
-      //       body: [
-      //         "Wall mounted",
-      //         "Island mounted",
-      //         "Height — 600 mm",
-      //         "Width — 1350 mm",
-      //         "Length varies according to layout requirements",
-      //       ],
-      //     },
-      //   ],
-      // },
+      {
+        title: "High Efficiency Kitchen Hood with Water Wash",
+        models: ["AV-EF-WW", "AV-SEF-WW"],
+        description:
+          "Featuring an automatic hot water wash system, this canopy continuously cleans internal components, reducing grease accumulation and minimizing maintenance requirements for demanding commercial kitchens.",
+        image: {
+          src: "/images/products/commercial-kitchen-canopies/high-efficiency-kitchen-hood-with-water-wash/EF-WW.webp",
+          alt: "High Efficiency Kitchen Hood with Water Wash",
+        },
+        specs: [
+          {
+            title: "Specifications",
+            body: [
+              "High-efficiency stainless steel kitchen canopy",
+              "Material: AISI 304 stainless steel",
+              "Thickness: 1.0 / 1.2 mm",
+              "Aerodynamically designed panel filters",
+              "Integrated hood lighting providing 500 LUX at cooking surface",
+              "Automatic hot water wash system",
+              "Dedicated control panel for cleaning operation",
+              "Hood construction and performance compliant with DW172 standards",
+              "With or without make-up air as per configuration",
+            ],
+          },
+          {
+            title: "Options",
+            body: [
+              "LED dimmable spotlights",
+              "Service Distribution Unit",
+              "Factory-installed hood Fire Suppression System",
+              "Factory-installed hood Demand Control Ventilation System",
+              "Hood cladding / powder coating",
+              "Special shape and size",
+            ],
+          },
+          {
+            title: "Application",
+            body: "Suitable for high-volume commercial kitchens requiring automatic internal cleaning systems.",
+          },
+          {
+            title: "Standard type and dimension",
+            body: [
+              "Wall mounted",
+              "Island mounted",
+              "Height — 600 mm",
+              "Width — 1350 mm",
+              "Length varies according to layout requirements",
+            ],
+          },
+        ],
+      },
       {
         title: "High Efficiency Kitchen Hood with Water Mist and Water Wash",
         models: ["AV-EF-WMW", "AV-SEF-WMW"],

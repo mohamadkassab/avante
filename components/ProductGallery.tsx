@@ -52,7 +52,7 @@ export default function ProductGallery({ images }: { images: readonly GalleryIma
         >
           {images.map((img, i) => (
             <Box
-              key={img.src}
+              key={i}
               component="button"
               type="button"
               onClick={() => setActiveIndex(i)}
