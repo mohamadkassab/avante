@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Box from "@mui/material/Box";
 import { portfolio } from "@/content/portfolio";
 import SectionShell from "@/components/SectionShell";
@@ -29,9 +29,22 @@ export default function PortfolioGallery() {
   const [hoveredLabel, setHoveredLabel] = useState<string | null>(null);
   const projects = getProjects(activeFilter);
 
+  // Hover intent: keep the (floating) sub-options open while moving between the
+  // parent and its pills. A short close delay bridges the gap over the grid so
+  // brief pointer excursions don't collapse it.
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const openSub = (label: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setHoveredLabel(label);
+  };
+  const scheduleCloseSub = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setHoveredLabel(null), 180);
+  };
+
   return (
     <SectionShell variant="offWhite">
-      <Box onMouseLeave={() => setHoveredLabel(null)} sx={{ mb: 8 }}>
+      <Box onMouseLeave={scheduleCloseSub} sx={{ mb: 4}}>
         <Box
           sx={{
             display: "flex",
@@ -42,22 +55,18 @@ export default function PortfolioGallery() {
           }}
         >
           {gallery.filters.map((filter) => {
-            // Option 3 — each parent owns a sub-options column directly beneath it.
-            // The column is always rendered (space reserved, so the grid never shifts);
-            // only its visibility toggles when the parent is selected or hovered.
+            // Option 3 — each parent owns a floating sub-options flyout. It is a
+            // pure hover affordance: visible only while the pointer is over the
+            // parent or its pills, so selecting a sub-option never pins it open.
             const subVisible = Boolean(
-              FILTER_VARIANT === "subrow" &&
-                filter.children &&
-                (activeFilter === filter.label ||
-                  filter.children.includes(activeFilter) ||
-                  hoveredLabel === filter.label),
+              FILTER_VARIANT === "subrow" && filter.children && hoveredLabel === filter.label,
             );
 
             return (
               <Box
                 key={filter.label}
-                onMouseEnter={() => setHoveredLabel(filter.label)}
-                sx={{ display: "inline-flex", flexDirection: "column", alignItems: "center" }}
+                onMouseEnter={() => openSub(filter.label)}
+                sx={{ position: "relative", display: "inline-flex", flexDirection: "column", alignItems: "center" }}
               >
                 <FilterItem
                   filter={filter}
@@ -69,15 +78,22 @@ export default function PortfolioGallery() {
                 {FILTER_VARIANT === "subrow" && filter.children && (
                   <Box
                     aria-hidden={!subVisible}
+                    onMouseEnter={() => openSub(filter.label)}
+                    onMouseLeave={scheduleCloseSub}
                     sx={{
+                      position: "absolute",
+                      top: "100%",
+                      left: "50%",
+                      zIndex: 2,
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
                       gap: "var(--portfolio-subrow-gap)",
                       pt: "var(--portfolio-subrow-pt)",
-                      pl: "var(--portfolio-subrow-indent)",
                       opacity: subVisible ? 1 : 0,
-                      transform: subVisible ? "none" : "translateY(-0.5rem)",
+                      transform: subVisible
+                        ? "translateX(-50%)"
+                        : "translateX(-50%) translateY(-0.5rem)",
                       pointerEvents: subVisible ? "auto" : "none",
                       transition: "opacity var(--duration-base) ease, transform var(--duration-base) ease",
                     }}
