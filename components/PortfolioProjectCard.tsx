@@ -4,19 +4,13 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Link from "next/link";
-import { useInView } from "@/hooks/useInView";
 import { portfolio, slugify } from "@/content/portfolio";
 
 type Project = (typeof portfolio.gallery.projects)[number];
 
 export default function PortfolioProjectCard({ project, index }: { project: Project; index: number }) {
-  // Low threshold so the first row reveals as soon as it's 1% on-screen at load,
-  // rather than waiting for 15% (which the first row misses until you scroll).
-  const { ref, visible } = useInView(0.01);
-
   return (
     <Box
-      ref={ref}
       component={Link}
       href={`/portfolio/${slugify(project.title)}`}
       sx={{
@@ -27,9 +21,10 @@ export default function PortfolioProjectCard({ project, index }: { project: Proj
         borderRadius: "var(--portfolio-card-radius)",
         overflow: "hidden",
         boxShadow: "var(--shadow-sm)",
-        transition: `opacity var(--duration-scroll) ease-out ${index * 0.15}s, transform var(--duration-scroll) ease-out ${index * 0.15}s, box-shadow var(--duration-base)`,
-        opacity: visible ? 1 : 0,
-        transform: visible ? "none" : "translateY(30px)",
+        // Show immediately on mount (page load / filter change) with a brief
+        // staggered entrance — no scroll/visibility gating.
+        animation: `portfolio-card-in var(--duration-scroll) ease-out ${index * 0.08}s both`,
+        transition: "box-shadow var(--duration-base)",
         "& .card-img": { transition: "transform var(--duration-image) ease" },
         "&:hover": { boxShadow: "var(--shadow-xl)" },
         "&:hover .card-img": { transform: "scale(1.1)" },
