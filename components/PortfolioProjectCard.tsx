@@ -10,7 +10,9 @@ import { portfolio, slugify } from "@/content/portfolio";
 type Project = (typeof portfolio.gallery.projects)[number];
 
 export default function PortfolioProjectCard({ project, index }: { project: Project; index: number }) {
-  const { ref, visible } = useInView();
+  // Low threshold so the first row reveals as soon as it's 1% on-screen at load,
+  // rather than waiting for 15% (which the first row misses until you scroll).
+  const { ref, visible } = useInView(0.01);
 
   return (
     <Box
