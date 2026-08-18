@@ -4,6 +4,7 @@ import type { PortfolioProject } from "@/content/portfolio";
 import SectionShell from "@/components/SectionShell";
 import SectionBadge from "@/components/SectionBadge";
 import SectionHeading from "@/components/SectionHeading";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 type ImageRef = { src: string; alt: string };
 
@@ -21,35 +22,58 @@ function GalleryImage({ image, aspect }: { image: ImageRef; aspect: string }) {
         component="img"
         src={image.src}
         alt={image.alt}
-        sx={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+        sx={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          display: "block",
+        }}
       />
     </Box>
   );
 }
 
 /** A labelled Overview row. Multiple values stack, one per line. */
-function MetaRow({ label, values }: { label: string; values: string[] }) {
+function MetaRow({
+  label,
+  values,
+  isLocation = false,
+}: {
+  label: string;
+  values: string[];
+  isLocation?: boolean;
+}) {
   return (
     <Box>
       <Typography
         component="span"
-        sx={{ fontWeight: "var(--font-weight-bold)", color: "var(--portfolio-overview-label-color)" }}
+        sx={{
+          fontWeight: "var(--font-weight-bold)",
+          color: "var(--portfolio-overview-label-color)",
+        }}
       >
         {label}:
       </Typography>{" "}
-      {values.length === 1 ? (
-        <Typography component="span" sx={{ color: "var(--portfolio-overview-value-color)" }}>
-          {values[0]}
-        </Typography>
-      ) : (
-        <Box sx={{ mt: 0.5, display: "flex", flexDirection: "column", gap: 0.5 }}>
-          {values.map((value) => (
-            <Typography key={value} sx={{ color: "var(--portfolio-overview-value-color)" }}>
+      <Box sx={{ mt: 0.5, display: "flex", flexDirection: "column", gap: 0.5 }}>
+        {values.map((value) => (
+          <div className="flex items-center gap-1" key={value}>
+            {isLocation && (
+              <LocationOnIcon
+                sx={{
+                  fontSize: "var(--portfolio-location-icon-size)",
+                  color: "var(--color-primary)",
+                }}
+              />
+            )}
+            <Typography
+              key={value}
+              sx={{ color: "var(--portfolio-overview-value-color)" }}
+            >
               {value}
             </Typography>
-          ))}
-        </Box>
-      )}
+          </div>
+        ))}
+      </Box>
     </Box>
   );
 }
@@ -60,18 +84,33 @@ function MetaRow({ label, values }: { label: string; values: string[] }) {
  * box with location + scope) separated by a vertical divider, and a fixed
  * two-column masonry gallery. Pure Server Component — no interactivity.
  */
-export default function PortfolioDetail({ project }: { project: PortfolioProject }) {
+export default function PortfolioDetail({
+  project,
+}: {
+  project: PortfolioProject;
+}) {
   const gallery = project.gallery;
 
   return (
     <>
       {/* §1 — full-width cover */}
-      <Box sx={{ width: "100%", height: "var(--portfolio-detail-cover-height)", overflow: "hidden" }}>
+      <Box
+        sx={{
+          width: "100%",
+          height: "var(--portfolio-detail-cover-height)",
+          overflow: "hidden",
+        }}
+      >
         <Box
           component="img"
           src={project.image.src}
           alt={project.image.alt}
-          sx={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+          sx={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            display: "block",
+          }}
         />
       </Box>
 
@@ -80,7 +119,10 @@ export default function PortfolioDetail({ project }: { project: PortfolioProject
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: { xs: "1fr", md: "2fr var(--portfolio-detail-divider-width) 1fr" },
+            gridTemplateColumns: {
+              xs: "1fr",
+              md: "2fr var(--portfolio-detail-divider-width) 1fr",
+            },
             gap: { xs: 4, md: "var(--portfolio-detail-col-gap)" },
             alignItems: "start",
           }}
@@ -130,8 +172,18 @@ export default function PortfolioDetail({ project }: { project: PortfolioProject
             >
               Overview
             </Typography>
-            <Box sx={{ display: "flex", flexDirection: "column", gap: "var(--portfolio-overview-row-gap)" }}>
-              <MetaRow label="Location" values={project.location} />
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "var(--portfolio-overview-row-gap)",
+              }}
+            >
+              <MetaRow
+                label={project.location?.length > 1 ? "Locations" : "Location"}
+                values={project.location}
+                isLocation={true}
+              />
               <MetaRow label="Scope" values={[project.scope]} />
             </Box>
           </Box>
@@ -148,14 +200,38 @@ export default function PortfolioDetail({ project }: { project: PortfolioProject
           }}
         >
           {/* Left column: rectangle on top, tall vertical below */}
-          <Box sx={{ display: "flex", flexDirection: "column", gap: "var(--portfolio-detail-gallery-gap)" }}>
-            <GalleryImage image={gallery[0]} aspect="var(--portfolio-gallery-aspect-rect)" />
-            <GalleryImage image={gallery[2]} aspect="var(--portfolio-gallery-aspect-xl)" />
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "var(--portfolio-detail-gallery-gap)",
+            }}
+          >
+            <GalleryImage
+              image={gallery[0]}
+              aspect="var(--portfolio-gallery-aspect-rect)"
+            />
+            <GalleryImage
+              image={gallery[2]}
+              aspect="var(--portfolio-gallery-aspect-xl)"
+            />
           </Box>
           {/* Right column: two verticals stacked */}
-          <Box sx={{ display: "flex", flexDirection: "column", gap: "var(--portfolio-detail-gallery-gap)" }}>
-            <GalleryImage image={gallery[1]} aspect="var(--portfolio-gallery-aspect-vertical)" />
-            <GalleryImage image={gallery[3]} aspect="var(--portfolio-gallery-aspect-vertical)" />
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "var(--portfolio-detail-gallery-gap)",
+            }}
+          >
+            <GalleryImage
+              image={gallery[1]}
+              aspect="var(--portfolio-gallery-aspect-vertical)"
+            />
+            <GalleryImage
+              image={gallery[3]}
+              aspect="var(--portfolio-gallery-aspect-vertical)"
+            />
           </Box>
         </Box>
       </SectionShell>
