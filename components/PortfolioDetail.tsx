@@ -56,12 +56,13 @@ function MetaRow({
       </Typography>{" "}
       <Box sx={{ mt: 0.5, display: "flex", flexDirection: "column", gap: 0.5 }}>
         {values.map((value) => (
-          <div className="flex items-center gap-1" key={value}>
+          <div className="flex items-start gap-1" key={value}>
             {isLocation && (
               <LocationOnIcon
                 sx={{
                   fontSize: "var(--portfolio-location-icon-size)",
                   color: "var(--color-primary)",
+                  mt: "var(--portfolio-location-icon-offset)",
                 }}
               />
             )}

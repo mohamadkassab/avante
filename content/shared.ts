@@ -9,11 +9,11 @@ export const footer = {
     { label: "Contact", href: "/contact" },
   ],
   products: [
-    { label: "Kitchen Canopies", href: "/products" },
-    { label: "HVAC Systems", href: "/products" },
-    { label: "Fire Suppression", href: "/products" },
-    { label: "Ventilated Ceiling", href: "/products" },
-    { label: "Demand Control Ventilation", href: "/products" },
+    { label: "Kitchen Canopies", href: "/products#commercial-kitchen-canopies" },
+    { label: "HVAC Systems", href: "/products#hvac" },
+    { label: "Fire Suppression", href: "/products#fire-smart-control-systems" },
+    { label: "Ventilated Ceiling", href: "/products#special-kitchen-ventilation-products" },
+    { label: "Demand Control Ventilation", href: "/products#fire-smart-control-systems" },
   ],
   social: [
     { label: "Phone", icon: "phone", href: "tel:+97142392882", display: "+971 4 239 2882" },

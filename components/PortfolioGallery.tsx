@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Box from "@mui/material/Box";
 import { portfolio } from "@/content/portfolio";
 import SectionShell from "@/components/SectionShell";
@@ -12,6 +12,18 @@ const { gallery } = portfolio;
 
 // Sub-option presentation: "subrow" (option 3), "inline" (option 2), or "dropdown" (option 1)
 const FILTER_VARIANT: FilterVariant = "subrow";
+
+// Every valid filter value — parent labels plus their children — used to
+// validate a persisted selection before restoring it.
+const VALID_FILTERS = new Set<string>();
+gallery.filters.forEach((f) => {
+  VALID_FILTERS.add(f.label);
+  f.children?.forEach((c) => VALID_FILTERS.add(c));
+});
+
+// Survives a round-trip to a project detail page (and back) so the gallery
+// reopens on the same filter and scroll position instead of resetting.
+const RETURN_KEY = "portfolioReturn";
 
 function getProjects(active: string) {
   const parentOfChild = gallery.filters.find((f) => f.children?.includes(active));
@@ -28,6 +40,29 @@ export default function PortfolioGallery() {
   const [activeFilter, setActiveFilter] = useState(gallery.filters[0].label);
   const [hoveredLabel, setHoveredLabel] = useState<string | null>(null);
   const projects = getProjects(activeFilter);
+
+  // On return from a project page, restore the filter and scroll position that
+  // were captured when the card was clicked, then clear the saved state.
+  useEffect(() => {
+    const raw = sessionStorage.getItem(RETURN_KEY);
+    if (!raw) return;
+    sessionStorage.removeItem(RETURN_KEY);
+    try {
+      const { filter, scrollY } = JSON.parse(raw) as { filter?: string; scrollY?: number };
+      if (filter && VALID_FILTERS.has(filter)) setActiveFilter(filter);
+      // Two frames so the restored filter's grid has laid out before we scroll.
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => window.scrollTo(0, scrollY ?? 0)),
+      );
+    } catch {
+      /* ignore malformed state */
+    }
+  }, []);
+
+  // Capture where we were before navigating into a project's detail page.
+  const saveReturnState = () => {
+    sessionStorage.setItem(RETURN_KEY, JSON.stringify({ filter: activeFilter, scrollY: window.scrollY }));
+  };
 
   // Hover intent: keep the (floating) sub-options open while moving between the
   // parent and its pills. A short close delay bridges the gap over the grid so
@@ -124,7 +159,7 @@ export default function PortfolioGallery() {
         }}
       >
         {projects.map((project, i) => (
-          <PortfolioProjectCard key={project.title} project={project} index={i} />
+          <PortfolioProjectCard key={project.title} project={project} index={i} onNavigate={saveReturnState} />
         ))}
       </Box>
     </SectionShell>

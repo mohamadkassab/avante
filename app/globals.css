@@ -214,6 +214,7 @@
   --portfolio-card-title-size: 1.5rem;
   --portfolio-subtitle-max-width: 42rem;
   --portfolio-location-icon-size: 1rem;
+  --portfolio-location-icon-offset: 0.15rem;
   --portfolio-location-color: rgb(209, 213, 219);
   --portfolio-overlay: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
 

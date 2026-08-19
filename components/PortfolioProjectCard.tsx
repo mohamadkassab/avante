@@ -2,17 +2,26 @@
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Link from "next/link";
 import { portfolio, slugify } from "@/content/portfolio";
+import PortfolioCardLocation from "@/components/PortfolioCardLocation";
 
 type Project = (typeof portfolio.gallery.projects)[number];
 
-export default function PortfolioProjectCard({ project, index }: { project: Project; index: number }) {
+export default function PortfolioProjectCard({
+  project,
+  index,
+  onNavigate,
+}: {
+  project: Project;
+  index: number;
+  onNavigate?: () => void;
+}) {
   return (
     <Box
       component={Link}
       href={`/portfolio/${slugify(project.title)}`}
+      onClick={onNavigate}
       sx={{
         display: "block",
         textDecoration: "none",
@@ -50,10 +59,7 @@ export default function PortfolioProjectCard({ project, index }: { project: Proj
         >
           {project.title}
         </Typography>
-        <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, color: "var(--portfolio-location-color)" }}>
-          <LocationOnIcon sx={{ fontSize: "var(--portfolio-location-icon-size)" }} />
-          <Typography sx={{ fontSize: "var(--font-size-nav)" }}>{project.outsideLocation}</Typography>
-        </Box>
+        <PortfolioCardLocation location={project.outsideLocation} />
       </Box>
     </Box>
   );
