@@ -12,7 +12,7 @@ export default function Products() {
         heading={hero.heading}
         headingGradient={hero.headingGradient}
         subtitle={hero.subtitle}
-        image={hero.image}
+        image={{ src: "/images/about-us-cover.webp", alt: "About Avante" }}
         align="center"
         inlineGradient
         cta={null}
