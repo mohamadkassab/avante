@@ -14,6 +14,9 @@ export default function Products() {
         subtitle={hero.subtitle}
         image={{ src: "/images/about-us-cover.webp", alt: "About Avante" }}
         align="center"
+        imagePosition="top"
+        imageFit="contain"
+        imageOffsetTop="-30%"
         inlineGradient
         cta={null}
         showScrollIndicator={false}
