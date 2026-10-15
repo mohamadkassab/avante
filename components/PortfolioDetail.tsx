@@ -22,6 +22,7 @@ function GalleryImage({ image, aspect }: { image: ImageRef; aspect: string }) {
         component="img"
         src={image.src}
         alt={image.alt}
+        loading="lazy"
         sx={{
           width: "100%",
           height: "100%",
@@ -29,6 +30,44 @@ function GalleryImage({ image, aspect }: { image: ImageRef; aspect: string }) {
           display: "block",
         }}
       />
+    </Box>
+  );
+}
+
+/** Images per masonry block — GalleryBlock's four slots. */
+const BLOCK_SIZE = 4;
+
+const galleryColumnSx = {
+  display: "flex",
+  flexDirection: "column",
+  gap: "var(--portfolio-detail-gallery-gap)",
+} as const;
+
+/**
+ * One block of the fixed two-column masonry, for up to BLOCK_SIZE images.
+ * Slots without an image are left out, so a short last block has no empty boxes.
+ */
+function GalleryBlock({ images }: { images: ImageRef[] }) {
+  const [a, b, c, d] = images;
+  return (
+    <Box
+      sx={{
+        display: "grid",
+        gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
+        gap: "var(--portfolio-detail-gallery-gap)",
+        alignItems: "start",
+      }}
+    >
+      {/* Left column: rectangle on top, tall vertical below */}
+      <Box sx={galleryColumnSx}>
+        {a && <GalleryImage image={a} aspect="var(--portfolio-gallery-aspect-rect)" />}
+        {c && <GalleryImage image={c} aspect="var(--portfolio-gallery-aspect-xl)" />}
+      </Box>
+      {/* Right column: two verticals stacked */}
+      <Box sx={galleryColumnSx}>
+        {b && <GalleryImage image={b} aspect="var(--portfolio-gallery-aspect-vertical)" />}
+        {d && <GalleryImage image={d} aspect="var(--portfolio-gallery-aspect-vertical)" />}
+      </Box>
     </Box>
   );
 }
@@ -80,10 +119,10 @@ function MetaRow({
 }
 
 /**
- * Full-page portfolio project view: a full-width cover image, a two-column
- * profile section (left: badge + title + description; right: a gray "Overview"
- * box with location + scope) separated by a vertical divider, and a fixed
- * two-column masonry gallery. Pure Server Component — no interactivity.
+ * Full-page portfolio project view: a full-width hero image (`heroImage`, not the
+ * card's `image`), a two-column profile section (left: badge + title + description;
+ * right: a gray "Overview" box with location + scope) separated by a vertical
+ * divider, and the masonry gallery. Pure Server Component — no interactivity.
  */
 export default function PortfolioDetail({
   project,
@@ -104,8 +143,8 @@ export default function PortfolioDetail({
       >
         <Box
           component="img"
-          src={project.image.src}
-          alt={project.image.alt}
+          src={project.heroImage.src}
+          alt={project.heroImage.alt}
           sx={{
             width: "100%",
             height: "100%",
@@ -190,50 +229,18 @@ export default function PortfolioDetail({
           </Box>
         </Box>
 
-        {/* §4 — fixed two-column masonry gallery */}
+        {/* §4 — the four-image masonry block, repeated for every next four images */}
         <Box
           sx={{
             mt: "var(--portfolio-detail-gallery-mt)",
-            display: "grid",
-            gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
+            display: "flex",
+            flexDirection: "column",
             gap: "var(--portfolio-detail-gallery-gap)",
-            alignItems: "start",
           }}
         >
-          {/* Left column: rectangle on top, tall vertical below */}
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "var(--portfolio-detail-gallery-gap)",
-            }}
-          >
-            <GalleryImage
-              image={gallery[0]}
-              aspect="var(--portfolio-gallery-aspect-rect)"
-            />
-            <GalleryImage
-              image={gallery[2]}
-              aspect="var(--portfolio-gallery-aspect-xl)"
-            />
-          </Box>
-          {/* Right column: two verticals stacked */}
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "var(--portfolio-detail-gallery-gap)",
-            }}
-          >
-            <GalleryImage
-              image={gallery[1]}
-              aspect="var(--portfolio-gallery-aspect-vertical)"
-            />
-            <GalleryImage
-              image={gallery[3]}
-              aspect="var(--portfolio-gallery-aspect-vertical)"
-            />
-          </Box>
+          {Array.from({ length: Math.ceil(gallery.length / BLOCK_SIZE) }, (_, i) => (
+            <GalleryBlock key={i} images={gallery.slice(i * BLOCK_SIZE, (i + 1) * BLOCK_SIZE)} />
+          ))}
         </Box>
       </SectionShell>
     </>
