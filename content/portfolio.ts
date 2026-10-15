@@ -206,7 +206,7 @@ export const portfolio = {
 
       // Restaurants — Premium
       {
-        title: "MeatCo",
+        title: "Meat Co",
         location: ["MeatCo Kuwait Restaurant, Kuwait", "Meat Co SMJ, Dubai, UAE"],
         outsideLocation: "Multiple locations in Kuwait & UAE",
         category: "Restaurants",
@@ -233,7 +233,7 @@ export const portfolio = {
         ],
       },
       {
-        title: "Cipriani",
+        title: "Cipriani Dolci",
         location: ["Jumeirah, Dubai, UAE"],
         outsideLocation: "Jumeirah, Dubai, UAE",
         category: "Restaurants",
@@ -252,7 +252,7 @@ export const portfolio = {
         ],
       },
       {
-        title: "San Beach",
+        title: "SĀN Beach",
         location: ["Jumeirah, Dubai, UAE"],
         outsideLocation: "Jumeirah, Dubai, UAE",
         category: "Restaurants",
@@ -342,7 +342,7 @@ export const portfolio = {
         ],
       },
       {
-        title: "Baoli Beach Club",
+        title: "Bâoli",
         location: ["Jumeirah, Dubai, UAE"],
         outsideLocation: "Jumeirah, Dubai, UAE",
         category: "Restaurants",
@@ -363,7 +363,7 @@ export const portfolio = {
         ],
       },
       {
-        title: "Cullinan",
+        title: "The Cullinan",
         location: ["Marsa al Arab Hotel, Jumeirah St, Jumeirah, Dubai, UAE"],
         outsideLocation: "Jumeirah, Dubai, UAE",
         category: "Restaurants",
@@ -588,7 +588,7 @@ export const portfolio = {
         ],
       },
       {
-        title: "Time Out Market Bahrain",
+        title: "Time Out Market",
         location: ["City Centre Bahrain, Manama, Bahrain"],
         outsideLocation: "City Centre Bahrain, Manama, Bahrain",
         category: "QSR",
@@ -963,7 +963,7 @@ export const portfolio = {
         ],
       },
       {
-        title: "Four Seasons Resort Dubai at Jumeirah Beach",
+        title: "Four Seasons Resort",
         location: ["Jumeirah Beach Residence (JBR), Dubai, UAE"],
         outsideLocation: "Jumeirah Beach Residence (JBR), Dubai, UAE",
         category: "Hotels & Resorts",
@@ -996,7 +996,7 @@ export const portfolio = {
         ],
       },
       {
-        title: "Hilton Garden Inn",
+        title: "Hilton",
         location: ["Saudi Arabia"],
         outsideLocation: "Saudi Arabia",
         category: "Hotels & Resorts",
@@ -1044,7 +1044,7 @@ export const portfolio = {
         ],
       },
       {
-        title: "Hyatt Palace AlUla",
+        title: "Hyatt Palace",
         location: ["AlUla, Saudi Arabia"],
         outsideLocation: "AlUla, Saudi Arabia",
         category: "Hotels & Resorts",
@@ -1060,7 +1060,7 @@ export const portfolio = {
         ],
       },
       {
-        title: "Hyatt Regency Mumbai",
+        title: "Hyatt Regency",
         location: ["Mumbai, India"],
         outsideLocation: "Mumbai, India",
         category: "Hotels & Resorts",
@@ -1077,7 +1077,7 @@ export const portfolio = {
         ],
       },
       {
-        title: "ibis World Trade Centre",
+        title: "Ibis",
         location: ["Dubai World Trade Centre, Dubai, UAE"],
         outsideLocation: "Dubai World Trade Centre, Dubai, UAE",
         category: "Hotels & Resorts",
