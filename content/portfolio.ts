@@ -163,7 +163,7 @@ export const portfolio = {
       },
       {
         title: "Al Beiruti",
-        location: ["DIFC, Dubai Festival City", "Nakheel Mall, Dubai, UAE"],
+        location: ["DIFC, UAE", "Dubai Festival City, UAE", "Nakheel Mall, Dubai, UAE"],
         outsideLocation: "Dubai, UAE",
         category: "Restaurants",
         subcategory: "Modern",
