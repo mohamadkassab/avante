@@ -1,3 +1,4 @@
+import { asset } from "@/content/asset";
 import Hero from "@/components/Hero";
 import OurStorySection from "@/components/OurStorySection";
 import OurValuesSection from "@/components/OurValuesSection";
@@ -13,7 +14,7 @@ export default function AboutUs() {
         heading="About"
         headingGradient="Avante"
         subtitle="Setting new standards of excellence in commercial kitchen solutions"
-        image={{ src: "/images/about-us-cover.webp", alt: "About Avante" }}
+        image={{ src: asset("/images/about-us-cover.webp"), alt: "About Avante" }}
         align="center"
         imagePosition="top"
         imageFit="contain"

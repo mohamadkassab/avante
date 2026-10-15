@@ -1,4 +1,6 @@
-// Client logo data — files live in /public/images/clients.
+import { asset } from "@/content/asset";
+
+// Client logo data — files live in /images/clients on the CDN (see content/asset.ts).
 // Paths are URL-encoded because the source filenames contain spaces and parentheses.
 const LOGO_COUNT = 39;
 
@@ -12,7 +14,7 @@ export const clientLogos: ClientLogo[] = Array.from({ length: LOGO_COUNT }, (_, 
   return {
     name: `client-${n}`,
     image: {
-      src: encodeURI(`/images/clients/our clients (logos)-${n}.webp`),
+      src: asset(encodeURI(`/images/clients/our clients (logos)-${n}.webp`)),
       alt: `Client logo ${i + 1}`,
     },
   };

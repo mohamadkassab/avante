@@ -1,3 +1,5 @@
+import { asset } from "@/content/asset";
+
 export const about = {
   whyChooseUs: {
     heading: "Why Choose Avante",
@@ -63,10 +65,10 @@ export const about = {
     subtitle: "Avante ventilation systems are engineered to meet international performance and safety standards used across the hospitality and commercial kitchen industries. Our products are designed and tested in accordance with recognized engineering guidelines including:",
     footerText: "These certifications ensure that our ventilation systems provide: Superior grease extraction performance, improved indoor air quality, reduced energy consumption, reliable long-term operation.",
     items: [
-      { icon: "shield", title: "UL Certified Grease Filters", subtitle: "Quality Management System", pdf: "/Certificates/AVANTE - UL - R40750-20220429-CertificateofCompliance.pdf" },
-      { icon: "award", title: "DMT Certification", subtitle: "European Conformity Standards", pdf: "/Certificates/AVANTE - DMT Test Certificate.pdf" },
-      { icon: "check", title: "In-Country Value Certificate", subtitle: "Fire Safety Standards", pdf: "/Certificates/AVANTE - ICV Certificate 85007-2.pdf" },
-      { icon: "star", title: "ISO Certificate", subtitle: "Safety Certification", pdf: "/Certificates/Avante_ISO_Certificate.pdf" },
+      { icon: "shield", title: "UL Certified Grease Filters", subtitle: "Quality Management System", pdf: asset("/Certificates/AVANTE - UL - R40750-20220429-CertificateofCompliance.pdf") },
+      { icon: "award", title: "DMT Certification", subtitle: "European Conformity Standards", pdf: asset("/Certificates/AVANTE - DMT Test Certificate.pdf") },
+      { icon: "check", title: "In-Country Value Certificate", subtitle: "Fire Safety Standards", pdf: asset("/Certificates/AVANTE - ICV Certificate 85007-2.pdf") },
+      { icon: "star", title: "ISO Certificate", subtitle: "Safety Certification", pdf: asset("/Certificates/Avante_ISO_Certificate.pdf") },
     ],
   },
   ourStory: {

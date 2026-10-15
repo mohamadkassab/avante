@@ -1,4 +1,5 @@
 import { clientLogos } from "@/content/clients";
+import { asset } from "@/content/asset";
 
 export const home = {
   hero: {
@@ -7,12 +8,12 @@ export const home = {
     subtitle:
       "Performance. Safety. Sustainability. ",
     image: {
-      src: "/images/about-us-cover.webp",
+      src: asset("/images/about-us-cover.webp"),
       alt: "Commercial Kitchen",
     },
     video: {
-      webm: "/Videos/hero-video.webm",
-      mp4: "/Videos/hero-video.mp4",
+      webm: asset("/Videos/hero-video.webm"),
+      mp4: asset("/Videos/hero-video.mp4"),
     },
     cta: {
       primary: { label: "EXPLORE PRODUCTS", href: "/products" },
@@ -36,9 +37,9 @@ export const home = {
     ],
     cta: { label: "LEARN MORE ABOUT US", href: "/about" },
     images: [
-      { src: "/images/home-about-1.jpeg", alt: "Avante Kitchen" },
-      { src: "/images/home-about-2.jpg", alt: "Avante Kitchen" },
-      { src: "/images/home-about-3.jpeg", alt: "Avante Kitchen" },
+      { src: asset("/images/home-about-1.jpeg"), alt: "Avante Kitchen" },
+      { src: asset("/images/home-about-2.jpg"), alt: "Avante Kitchen" },
+      { src: asset("/images/home-about-3.jpeg"), alt: "Avante Kitchen" },
     ],
   },
   products: {

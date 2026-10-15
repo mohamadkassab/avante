@@ -1,3 +1,4 @@
+import { asset } from "@/content/asset";
 import Hero from "@/components/Hero";
 import ProductDetailSection from "@/components/ProductDetailSection";
 import ProductsCTASection from "@/components/ProductsCTASection";
@@ -12,7 +13,7 @@ export default function Products() {
         heading={hero.heading}
         headingGradient={hero.headingGradient}
         subtitle={hero.subtitle}
-        image={{ src: "/images/about-us-cover.webp", alt: "About Avante" }}
+        image={{ src: asset("/images/about-us-cover.webp"), alt: "About Avante" }}
         align="center"
         imagePosition="top"
         imageFit="contain"
