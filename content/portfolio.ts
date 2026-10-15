@@ -1206,9 +1206,15 @@ export const portfolio = {
 /** A single portfolio project — one entry from `portfolio.gallery.projects`. */
 export type PortfolioProject = (typeof portfolio.gallery.projects)[number];
 
-/** URL-safe slug from a title, e.g. "Bateel Café" → "bateel-caf". */
+/**
+ * URL-safe slug from a title, e.g. "Bateel Café" → "bateel-cafe", "SĀN Beach" → "san-beach".
+ * Accents are stripped first (NFD splits "é" into "e" + a combining mark); without that,
+ * every accented letter became a dash ("s-n-beach").
+ */
 export function slugify(value: string): string {
   return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
