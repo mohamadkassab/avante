@@ -35,10 +35,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/alusia/cover.webp"), alt: "Alusia" },
         heroImage: { src: asset("/images/portfolio/alusia/hero.webp"), alt: "Alusia" },
         gallery: [
-          { src: asset("/images/portfolio/alusia/1.webp"), alt: "Alusia — photo 1" },
-          { src: asset("/images/portfolio/alusia/2.webp"), alt: "Alusia — photo 2" },
-          { src: asset("/images/portfolio/alusia/3.webp"), alt: "Alusia — photo 3" },
-          { src: asset("/images/portfolio/alusia/4.webp"), alt: "Alusia — photo 4" },
+          { src: asset("/images/portfolio/alusia/1.webp"), alt: "Alusia — photo 1", shape: "portrait" },
+          { src: asset("/images/portfolio/alusia/2.webp"), alt: "Alusia — photo 2", shape: "portrait" },
+          { src: asset("/images/portfolio/alusia/3.webp"), alt: "Alusia — photo 3", shape: "square" },
+          { src: asset("/images/portfolio/alusia/4.webp"), alt: "Alusia — photo 4", shape: "square" },
         ],
       },
       {
@@ -53,10 +53,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/birds-sky-view/cover.webp"), alt: "Birds Sky View" },
         heroImage: { src: asset("/images/portfolio/birds-sky-view/hero.webp"), alt: "Birds Sky View" },
         gallery: [
-          { src: asset("/images/portfolio/birds-sky-view/1.webp"), alt: "Birds Sky View — photo 1" },
-          { src: asset("/images/portfolio/birds-sky-view/2.webp"), alt: "Birds Sky View — photo 2" },
-          { src: asset("/images/portfolio/birds-sky-view/3.webp"), alt: "Birds Sky View — photo 3" },
-          { src: asset("/images/portfolio/birds-sky-view/4.webp"), alt: "Birds Sky View — photo 4" },
+          { src: asset("/images/portfolio/birds-sky-view/1.webp"), alt: "Birds Sky View — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/birds-sky-view/2.webp"), alt: "Birds Sky View — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/birds-sky-view/3.webp"), alt: "Birds Sky View — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/birds-sky-view/4.webp"), alt: "Birds Sky View — photo 4", shape: "landscape" },
         ],
       },
       {
@@ -71,9 +71,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/blue-haven/cover.webp"), alt: "Blue Haven" },
         heroImage: { src: asset("/images/portfolio/blue-haven/hero.webp"), alt: "Blue Haven" },
         gallery: [
-          { src: asset("/images/portfolio/blue-haven/1.webp"), alt: "Blue Haven — photo 1" },
-          { src: asset("/images/portfolio/blue-haven/2.webp"), alt: "Blue Haven — photo 2" },
-          { src: asset("/images/portfolio/blue-haven/3.webp"), alt: "Blue Haven — photo 3" },
+          { src: asset("/images/portfolio/blue-haven/1.webp"), alt: "Blue Haven — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/blue-haven/2.webp"), alt: "Blue Haven — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/blue-haven/3.webp"), alt: "Blue Haven — photo 3", shape: "landscape" },
         ],
       },
       {
@@ -88,10 +88,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/fenix/cover.webp"), alt: "Fenix" },
         heroImage: { src: asset("/images/portfolio/fenix/hero.webp"), alt: "Fenix" },
         gallery: [
-          { src: asset("/images/portfolio/fenix/1.webp"), alt: "Fenix — photo 1" },
-          { src: asset("/images/portfolio/fenix/2.webp"), alt: "Fenix — photo 2" },
-          { src: asset("/images/portfolio/fenix/3.webp"), alt: "Fenix — photo 3" },
-          { src: asset("/images/portfolio/fenix/4.webp"), alt: "Fenix — photo 4" },
+          { src: asset("/images/portfolio/fenix/1.webp"), alt: "Fenix — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/fenix/2.webp"), alt: "Fenix — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/fenix/3.webp"), alt: "Fenix — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/fenix/4.webp"), alt: "Fenix — photo 4", shape: "landscape" },
         ],
       },
       {
@@ -106,9 +106,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/lady-bird-25-jump-street/cover.webp"), alt: "Lady Bird, 25 Jump Street" },
         heroImage: { src: asset("/images/portfolio/lady-bird-25-jump-street/hero.webp"), alt: "Lady Bird, 25 Jump Street" },
         gallery: [
-          { src: asset("/images/portfolio/lady-bird-25-jump-street/1.webp"), alt: "Lady Bird, 25 Jump Street — photo 1" },
-          { src: asset("/images/portfolio/lady-bird-25-jump-street/2.webp"), alt: "Lady Bird, 25 Jump Street — photo 2" },
-          { src: asset("/images/portfolio/lady-bird-25-jump-street/3.webp"), alt: "Lady Bird, 25 Jump Street — photo 3" },
+          { src: asset("/images/portfolio/lady-bird-25-jump-street/1.webp"), alt: "Lady Bird, 25 Jump Street — photo 1", shape: "portrait" },
+          { src: asset("/images/portfolio/lady-bird-25-jump-street/2.webp"), alt: "Lady Bird, 25 Jump Street — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/lady-bird-25-jump-street/3.webp"), alt: "Lady Bird, 25 Jump Street — photo 3", shape: "square" },
         ],
       },
       {
@@ -123,9 +123,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/the-cherry-house/cover.webp"), alt: "The Cherry House" },
         heroImage: { src: asset("/images/portfolio/the-cherry-house/hero.webp"), alt: "The Cherry House" },
         gallery: [
-          { src: asset("/images/portfolio/the-cherry-house/1.webp"), alt: "The Cherry House — photo 1" },
-          { src: asset("/images/portfolio/the-cherry-house/2.webp"), alt: "The Cherry House — photo 2" },
-          { src: asset("/images/portfolio/the-cherry-house/3.webp"), alt: "The Cherry House — photo 3" },
+          { src: asset("/images/portfolio/the-cherry-house/1.webp"), alt: "The Cherry House — photo 1", shape: "portrait" },
+          { src: asset("/images/portfolio/the-cherry-house/2.webp"), alt: "The Cherry House — photo 2", shape: "portrait" },
+          { src: asset("/images/portfolio/the-cherry-house/3.webp"), alt: "The Cherry House — photo 3", shape: "portrait" },
         ],
       },
       {
@@ -140,8 +140,8 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/yubi-by-chef-reif-othman-25-jump-street/cover.webp"), alt: "Yubi by Chef Reif Othman, 25 Jump Street" },
         heroImage: { src: asset("/images/portfolio/yubi-by-chef-reif-othman-25-jump-street/hero.webp"), alt: "Yubi by Chef Reif Othman, 25 Jump Street" },
         gallery: [
-          { src: asset("/images/portfolio/yubi-by-chef-reif-othman-25-jump-street/1.webp"), alt: "Yubi by Chef Reif Othman, 25 Jump Street — photo 1" },
-          { src: asset("/images/portfolio/yubi-by-chef-reif-othman-25-jump-street/2.webp"), alt: "Yubi by Chef Reif Othman, 25 Jump Street — photo 2" },
+          { src: asset("/images/portfolio/yubi-by-chef-reif-othman-25-jump-street/1.webp"), alt: "Yubi by Chef Reif Othman, 25 Jump Street — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/yubi-by-chef-reif-othman-25-jump-street/2.webp"), alt: "Yubi by Chef Reif Othman, 25 Jump Street — photo 2", shape: "landscape" },
         ],
       },
       {
@@ -156,9 +156,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/din-tai-fung/cover.webp"), alt: "Din Tai Fung" },
         heroImage: { src: asset("/images/portfolio/din-tai-fung/hero.webp"), alt: "Din Tai Fung" },
         gallery: [
-          { src: asset("/images/portfolio/din-tai-fung/1.webp"), alt: "Din Tai Fung — photo 1" },
-          { src: asset("/images/portfolio/din-tai-fung/2.webp"), alt: "Din Tai Fung — photo 2" },
-          { src: asset("/images/portfolio/din-tai-fung/3.webp"), alt: "Din Tai Fung — photo 3" },
+          { src: asset("/images/portfolio/din-tai-fung/1.webp"), alt: "Din Tai Fung — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/din-tai-fung/2.webp"), alt: "Din Tai Fung — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/din-tai-fung/3.webp"), alt: "Din Tai Fung — photo 3", shape: "landscape" },
         ],
       },
       {
@@ -173,10 +173,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/al-beiruti/cover.webp"), alt: "Al Beiruti" },
         heroImage: { src: asset("/images/portfolio/al-beiruti/hero.webp"), alt: "Al Beiruti" },
         gallery: [
-          { src: asset("/images/portfolio/al-beiruti/1.webp"), alt: "Al Beiruti — photo 1" },
-          { src: asset("/images/portfolio/al-beiruti/2.webp"), alt: "Al Beiruti — photo 2" },
-          { src: asset("/images/portfolio/al-beiruti/3.webp"), alt: "Al Beiruti — photo 3" },
-          { src: asset("/images/portfolio/al-beiruti/4.webp"), alt: "Al Beiruti — photo 4" },
+          { src: asset("/images/portfolio/al-beiruti/1.webp"), alt: "Al Beiruti — photo 1", shape: "portrait" },
+          { src: asset("/images/portfolio/al-beiruti/2.webp"), alt: "Al Beiruti — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/al-beiruti/3.webp"), alt: "Al Beiruti — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/al-beiruti/4.webp"), alt: "Al Beiruti — photo 4", shape: "landscape" },
         ],
       },
       {
@@ -197,10 +197,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/awani/cover.webp"), alt: "Awani" },
         heroImage: { src: asset("/images/portfolio/awani/hero.webp"), alt: "Awani" },
         gallery: [
-          { src: asset("/images/portfolio/awani/1.webp"), alt: "Awani — photo 1" },
-          { src: asset("/images/portfolio/awani/2.webp"), alt: "Awani — photo 2" },
-          { src: asset("/images/portfolio/awani/3.webp"), alt: "Awani — photo 3" },
-          { src: asset("/images/portfolio/awani/4.webp"), alt: "Awani — photo 4" },
+          { src: asset("/images/portfolio/awani/1.webp"), alt: "Awani — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/awani/2.webp"), alt: "Awani — photo 2", shape: "square" },
+          { src: asset("/images/portfolio/awani/3.webp"), alt: "Awani — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/awani/4.webp"), alt: "Awani — photo 4", shape: "landscape" },
         ],
       },
 
@@ -217,19 +217,19 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/meatco/cover.webp"), alt: "MeatCo" },
         heroImage: { src: asset("/images/portfolio/meatco/hero.webp"), alt: "MeatCo" },
         gallery: [
-          { src: asset("/images/portfolio/meatco/1.webp"), alt: "MeatCo — photo 1" },
-          { src: asset("/images/portfolio/meatco/2.webp"), alt: "MeatCo — photo 2" },
-          { src: asset("/images/portfolio/meatco/3.webp"), alt: "MeatCo — photo 3" },
-          { src: asset("/images/portfolio/meatco/4.webp"), alt: "MeatCo — photo 4" },
-          { src: asset("/images/portfolio/meatco/5.webp"), alt: "MeatCo — photo 5" },
-          { src: asset("/images/portfolio/meatco/6.webp"), alt: "MeatCo — photo 6" },
-          { src: asset("/images/portfolio/meatco/7.webp"), alt: "MeatCo — photo 7" },
-          { src: asset("/images/portfolio/meatco/8.webp"), alt: "MeatCo — photo 8" },
-          { src: asset("/images/portfolio/meatco/9.webp"), alt: "MeatCo — photo 9" },
-          { src: asset("/images/portfolio/meatco/10.webp"), alt: "MeatCo — photo 10" },
-          { src: asset("/images/portfolio/meatco/11.webp"), alt: "MeatCo — photo 11" },
-          { src: asset("/images/portfolio/meatco/12.webp"), alt: "MeatCo — photo 12" },
-          { src: asset("/images/portfolio/meatco/13.webp"), alt: "MeatCo — photo 13" },
+          { src: asset("/images/portfolio/meatco/1.webp"), alt: "MeatCo — photo 1", shape: "square" },
+          { src: asset("/images/portfolio/meatco/2.webp"), alt: "MeatCo — photo 2", shape: "portrait" },
+          { src: asset("/images/portfolio/meatco/3.webp"), alt: "MeatCo — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/meatco/4.webp"), alt: "MeatCo — photo 4", shape: "landscape" },
+          { src: asset("/images/portfolio/meatco/5.webp"), alt: "MeatCo — photo 5", shape: "landscape" },
+          { src: asset("/images/portfolio/meatco/6.webp"), alt: "MeatCo — photo 6", shape: "landscape" },
+          { src: asset("/images/portfolio/meatco/7.webp"), alt: "MeatCo — photo 7", shape: "landscape" },
+          { src: asset("/images/portfolio/meatco/8.webp"), alt: "MeatCo — photo 8", shape: "landscape" },
+          { src: asset("/images/portfolio/meatco/9.webp"), alt: "MeatCo — photo 9", shape: "portrait" },
+          { src: asset("/images/portfolio/meatco/10.webp"), alt: "MeatCo — photo 10", shape: "portrait" },
+          { src: asset("/images/portfolio/meatco/11.webp"), alt: "MeatCo — photo 11", shape: "landscape" },
+          { src: asset("/images/portfolio/meatco/12.webp"), alt: "MeatCo — photo 12", shape: "landscape" },
+          { src: asset("/images/portfolio/meatco/13.webp"), alt: "MeatCo — photo 13", shape: "landscape" },
         ],
       },
       {
@@ -244,11 +244,11 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/cipriani/cover.webp"), alt: "Cipriani" },
         heroImage: { src: asset("/images/portfolio/cipriani/hero.webp"), alt: "Cipriani" },
         gallery: [
-          { src: asset("/images/portfolio/cipriani/1.webp"), alt: "Cipriani — photo 1" },
-          { src: asset("/images/portfolio/cipriani/2.webp"), alt: "Cipriani — photo 2" },
-          { src: asset("/images/portfolio/cipriani/3.webp"), alt: "Cipriani — photo 3" },
-          { src: asset("/images/portfolio/cipriani/4.webp"), alt: "Cipriani — photo 4" },
-          { src: asset("/images/portfolio/cipriani/5.webp"), alt: "Cipriani — photo 5" },
+          { src: asset("/images/portfolio/cipriani/1.webp"), alt: "Cipriani — photo 1", shape: "portrait" },
+          { src: asset("/images/portfolio/cipriani/2.webp"), alt: "Cipriani — photo 2", shape: "portrait" },
+          { src: asset("/images/portfolio/cipriani/3.webp"), alt: "Cipriani — photo 3", shape: "portrait" },
+          { src: asset("/images/portfolio/cipriani/4.webp"), alt: "Cipriani — photo 4", shape: "portrait" },
+          { src: asset("/images/portfolio/cipriani/5.webp"), alt: "Cipriani — photo 5", shape: "tall" },
         ],
       },
       {
@@ -263,15 +263,15 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/san-beach/cover.webp"), alt: "San Beach" },
         heroImage: { src: asset("/images/portfolio/san-beach/hero.webp"), alt: "San Beach" },
         gallery: [
-          { src: asset("/images/portfolio/san-beach/1.webp"), alt: "San Beach — photo 1" },
-          { src: asset("/images/portfolio/san-beach/2.webp"), alt: "San Beach — photo 2" },
-          { src: asset("/images/portfolio/san-beach/3.webp"), alt: "San Beach — photo 3" },
-          { src: asset("/images/portfolio/san-beach/4.webp"), alt: "San Beach — photo 4" },
-          { src: asset("/images/portfolio/san-beach/5.webp"), alt: "San Beach — photo 5" },
-          { src: asset("/images/portfolio/san-beach/6.webp"), alt: "San Beach — photo 6" },
-          { src: asset("/images/portfolio/san-beach/7.webp"), alt: "San Beach — photo 7" },
-          { src: asset("/images/portfolio/san-beach/8.webp"), alt: "San Beach — photo 8" },
-          { src: asset("/images/portfolio/san-beach/9.webp"), alt: "San Beach — photo 9" },
+          { src: asset("/images/portfolio/san-beach/1.webp"), alt: "San Beach — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/san-beach/2.webp"), alt: "San Beach — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/san-beach/3.webp"), alt: "San Beach — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/san-beach/4.webp"), alt: "San Beach — photo 4", shape: "landscape" },
+          { src: asset("/images/portfolio/san-beach/5.webp"), alt: "San Beach — photo 5", shape: "portrait" },
+          { src: asset("/images/portfolio/san-beach/6.webp"), alt: "San Beach — photo 6", shape: "portrait" },
+          { src: asset("/images/portfolio/san-beach/7.webp"), alt: "San Beach — photo 7", shape: "portrait" },
+          { src: asset("/images/portfolio/san-beach/8.webp"), alt: "San Beach — photo 8", shape: "landscape" },
+          { src: asset("/images/portfolio/san-beach/9.webp"), alt: "San Beach — photo 9", shape: "landscape" },
         ],
       },
       {
@@ -286,14 +286,14 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/loren/cover.webp"), alt: "Loren" },
         heroImage: { src: asset("/images/portfolio/loren/hero.webp"), alt: "Loren" },
         gallery: [
-          { src: asset("/images/portfolio/loren/1.webp"), alt: "Loren — photo 1" },
-          { src: asset("/images/portfolio/loren/2.webp"), alt: "Loren — photo 2" },
-          { src: asset("/images/portfolio/loren/3.webp"), alt: "Loren — photo 3" },
-          { src: asset("/images/portfolio/loren/4.webp"), alt: "Loren — photo 4" },
-          { src: asset("/images/portfolio/loren/5.webp"), alt: "Loren — photo 5" },
-          { src: asset("/images/portfolio/loren/6.webp"), alt: "Loren — photo 6" },
-          { src: asset("/images/portfolio/loren/7.webp"), alt: "Loren — photo 7" },
-          { src: asset("/images/portfolio/loren/8.webp"), alt: "Loren — photo 8" },
+          { src: asset("/images/portfolio/loren/1.webp"), alt: "Loren — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/loren/2.webp"), alt: "Loren — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/loren/3.webp"), alt: "Loren — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/loren/4.webp"), alt: "Loren — photo 4", shape: "landscape" },
+          { src: asset("/images/portfolio/loren/5.webp"), alt: "Loren — photo 5", shape: "landscape" },
+          { src: asset("/images/portfolio/loren/6.webp"), alt: "Loren — photo 6", shape: "landscape" },
+          { src: asset("/images/portfolio/loren/7.webp"), alt: "Loren — photo 7", shape: "landscape" },
+          { src: asset("/images/portfolio/loren/8.webp"), alt: "Loren — photo 8", shape: "landscape" },
         ],
       },
       {
@@ -308,12 +308,12 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/gloria-osteria-big-mamma/cover.webp"), alt: "Gloria Osteria, Big Mamma" },
         heroImage: { src: asset("/images/portfolio/gloria-osteria-big-mamma/hero.webp"), alt: "Gloria Osteria, Big Mamma" },
         gallery: [
-          { src: asset("/images/portfolio/gloria-osteria-big-mamma/1.webp"), alt: "Gloria Osteria, Big Mamma — photo 1" },
-          { src: asset("/images/portfolio/gloria-osteria-big-mamma/2.webp"), alt: "Gloria Osteria, Big Mamma — photo 2" },
-          { src: asset("/images/portfolio/gloria-osteria-big-mamma/3.webp"), alt: "Gloria Osteria, Big Mamma — photo 3" },
-          { src: asset("/images/portfolio/gloria-osteria-big-mamma/4.webp"), alt: "Gloria Osteria, Big Mamma — photo 4" },
-          { src: asset("/images/portfolio/gloria-osteria-big-mamma/5.webp"), alt: "Gloria Osteria, Big Mamma — photo 5" },
-          { src: asset("/images/portfolio/gloria-osteria-big-mamma/6.webp"), alt: "Gloria Osteria, Big Mamma — photo 6" },
+          { src: asset("/images/portfolio/gloria-osteria-big-mamma/1.webp"), alt: "Gloria Osteria, Big Mamma — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/gloria-osteria-big-mamma/2.webp"), alt: "Gloria Osteria, Big Mamma — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/gloria-osteria-big-mamma/3.webp"), alt: "Gloria Osteria, Big Mamma — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/gloria-osteria-big-mamma/4.webp"), alt: "Gloria Osteria, Big Mamma — photo 4", shape: "landscape" },
+          { src: asset("/images/portfolio/gloria-osteria-big-mamma/5.webp"), alt: "Gloria Osteria, Big Mamma — photo 5", shape: "landscape" },
+          { src: asset("/images/portfolio/gloria-osteria-big-mamma/6.webp"), alt: "Gloria Osteria, Big Mamma — photo 6", shape: "landscape" },
         ],
       },
       {
@@ -328,17 +328,17 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/kaimana-beach/cover.webp"), alt: "Kaimana Beach" },
         heroImage: { src: asset("/images/portfolio/kaimana-beach/hero.webp"), alt: "Kaimana Beach" },
         gallery: [
-          { src: asset("/images/portfolio/kaimana-beach/1.webp"), alt: "Kaimana Beach — photo 1" },
-          { src: asset("/images/portfolio/kaimana-beach/2.webp"), alt: "Kaimana Beach — photo 2" },
-          { src: asset("/images/portfolio/kaimana-beach/3.webp"), alt: "Kaimana Beach — photo 3" },
-          { src: asset("/images/portfolio/kaimana-beach/4.webp"), alt: "Kaimana Beach — photo 4" },
-          { src: asset("/images/portfolio/kaimana-beach/5.webp"), alt: "Kaimana Beach — photo 5" },
-          { src: asset("/images/portfolio/kaimana-beach/6.webp"), alt: "Kaimana Beach — photo 6" },
-          { src: asset("/images/portfolio/kaimana-beach/7.webp"), alt: "Kaimana Beach — photo 7" },
-          { src: asset("/images/portfolio/kaimana-beach/8.webp"), alt: "Kaimana Beach — photo 8" },
-          { src: asset("/images/portfolio/kaimana-beach/9.webp"), alt: "Kaimana Beach — photo 9" },
-          { src: asset("/images/portfolio/kaimana-beach/10.webp"), alt: "Kaimana Beach — photo 10" },
-          { src: asset("/images/portfolio/kaimana-beach/11.webp"), alt: "Kaimana Beach — photo 11" },
+          { src: asset("/images/portfolio/kaimana-beach/1.webp"), alt: "Kaimana Beach — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/kaimana-beach/2.webp"), alt: "Kaimana Beach — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/kaimana-beach/3.webp"), alt: "Kaimana Beach — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/kaimana-beach/4.webp"), alt: "Kaimana Beach — photo 4", shape: "landscape" },
+          { src: asset("/images/portfolio/kaimana-beach/5.webp"), alt: "Kaimana Beach — photo 5", shape: "portrait" },
+          { src: asset("/images/portfolio/kaimana-beach/6.webp"), alt: "Kaimana Beach — photo 6", shape: "portrait" },
+          { src: asset("/images/portfolio/kaimana-beach/7.webp"), alt: "Kaimana Beach — photo 7", shape: "portrait" },
+          { src: asset("/images/portfolio/kaimana-beach/8.webp"), alt: "Kaimana Beach — photo 8", shape: "portrait" },
+          { src: asset("/images/portfolio/kaimana-beach/9.webp"), alt: "Kaimana Beach — photo 9", shape: "portrait" },
+          { src: asset("/images/portfolio/kaimana-beach/10.webp"), alt: "Kaimana Beach — photo 10", shape: "landscape" },
+          { src: asset("/images/portfolio/kaimana-beach/11.webp"), alt: "Kaimana Beach — photo 11", shape: "landscape" },
         ],
       },
       {
@@ -353,13 +353,13 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/baoli-beach-club/cover.webp"), alt: "Baoli Beach Club" },
         heroImage: { src: asset("/images/portfolio/baoli-beach-club/hero.webp"), alt: "Baoli Beach Club" },
         gallery: [
-          { src: asset("/images/portfolio/baoli-beach-club/1.webp"), alt: "Baoli Beach Club — photo 1" },
-          { src: asset("/images/portfolio/baoli-beach-club/2.webp"), alt: "Baoli Beach Club — photo 2" },
-          { src: asset("/images/portfolio/baoli-beach-club/3.webp"), alt: "Baoli Beach Club — photo 3" },
-          { src: asset("/images/portfolio/baoli-beach-club/4.webp"), alt: "Baoli Beach Club — photo 4" },
-          { src: asset("/images/portfolio/baoli-beach-club/5.webp"), alt: "Baoli Beach Club — photo 5" },
-          { src: asset("/images/portfolio/baoli-beach-club/6.webp"), alt: "Baoli Beach Club — photo 6" },
-          { src: asset("/images/portfolio/baoli-beach-club/7.webp"), alt: "Baoli Beach Club — photo 7" },
+          { src: asset("/images/portfolio/baoli-beach-club/1.webp"), alt: "Baoli Beach Club — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/baoli-beach-club/2.webp"), alt: "Baoli Beach Club — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/baoli-beach-club/3.webp"), alt: "Baoli Beach Club — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/baoli-beach-club/4.webp"), alt: "Baoli Beach Club — photo 4", shape: "landscape" },
+          { src: asset("/images/portfolio/baoli-beach-club/5.webp"), alt: "Baoli Beach Club — photo 5", shape: "landscape" },
+          { src: asset("/images/portfolio/baoli-beach-club/6.webp"), alt: "Baoli Beach Club — photo 6", shape: "square" },
+          { src: asset("/images/portfolio/baoli-beach-club/7.webp"), alt: "Baoli Beach Club — photo 7", shape: "square" },
         ],
       },
       {
@@ -374,14 +374,14 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/cullinan/cover.webp"), alt: "Cullinan" },
         heroImage: { src: asset("/images/portfolio/cullinan/hero.webp"), alt: "Cullinan" },
         gallery: [
-          { src: asset("/images/portfolio/cullinan/1.webp"), alt: "Cullinan — photo 1" },
-          { src: asset("/images/portfolio/cullinan/2.webp"), alt: "Cullinan — photo 2" },
-          { src: asset("/images/portfolio/cullinan/3.webp"), alt: "Cullinan — photo 3" },
-          { src: asset("/images/portfolio/cullinan/4.webp"), alt: "Cullinan — photo 4" },
-          { src: asset("/images/portfolio/cullinan/5.webp"), alt: "Cullinan — photo 5" },
-          { src: asset("/images/portfolio/cullinan/6.webp"), alt: "Cullinan — photo 6" },
-          { src: asset("/images/portfolio/cullinan/7.webp"), alt: "Cullinan — photo 7" },
-          { src: asset("/images/portfolio/cullinan/8.webp"), alt: "Cullinan — photo 8" },
+          { src: asset("/images/portfolio/cullinan/1.webp"), alt: "Cullinan — photo 1", shape: "portrait" },
+          { src: asset("/images/portfolio/cullinan/2.webp"), alt: "Cullinan — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/cullinan/3.webp"), alt: "Cullinan — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/cullinan/4.webp"), alt: "Cullinan — photo 4", shape: "portrait" },
+          { src: asset("/images/portfolio/cullinan/5.webp"), alt: "Cullinan — photo 5", shape: "square" },
+          { src: asset("/images/portfolio/cullinan/6.webp"), alt: "Cullinan — photo 6", shape: "landscape" },
+          { src: asset("/images/portfolio/cullinan/7.webp"), alt: "Cullinan — photo 7", shape: "landscape" },
+          { src: asset("/images/portfolio/cullinan/8.webp"), alt: "Cullinan — photo 8", shape: "square" },
         ],
       },
       {
@@ -396,12 +396,12 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/berber/cover.webp"), alt: "Berber" },
         heroImage: { src: asset("/images/portfolio/berber/hero.webp"), alt: "Berber" },
         gallery: [
-          { src: asset("/images/portfolio/berber/1.webp"), alt: "Berber — photo 1" },
-          { src: asset("/images/portfolio/berber/2.webp"), alt: "Berber — photo 2" },
-          { src: asset("/images/portfolio/berber/3.webp"), alt: "Berber — photo 3" },
-          { src: asset("/images/portfolio/berber/4.webp"), alt: "Berber — photo 4" },
-          { src: asset("/images/portfolio/berber/5.webp"), alt: "Berber — photo 5" },
-          { src: asset("/images/portfolio/berber/6.webp"), alt: "Berber — photo 6" },
+          { src: asset("/images/portfolio/berber/1.webp"), alt: "Berber — photo 1", shape: "portrait" },
+          { src: asset("/images/portfolio/berber/2.webp"), alt: "Berber — photo 2", shape: "portrait" },
+          { src: asset("/images/portfolio/berber/3.webp"), alt: "Berber — photo 3", shape: "portrait" },
+          { src: asset("/images/portfolio/berber/4.webp"), alt: "Berber — photo 4", shape: "square" },
+          { src: asset("/images/portfolio/berber/5.webp"), alt: "Berber — photo 5", shape: "square" },
+          { src: asset("/images/portfolio/berber/6.webp"), alt: "Berber — photo 6", shape: "square" },
         ],
       },
 
@@ -417,10 +417,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/bohox/cover.webp"), alt: "BOHOX" },
         heroImage: { src: asset("/images/portfolio/bohox/hero.webp"), alt: "BOHOX" },
         gallery: [
-          { src: asset("/images/portfolio/bohox/1.webp"), alt: "BOHOX — photo 1" },
-          { src: asset("/images/portfolio/bohox/2.webp"), alt: "BOHOX — photo 2" },
-          { src: asset("/images/portfolio/bohox/3.webp"), alt: "BOHOX — photo 3" },
-          { src: asset("/images/portfolio/bohox/4.webp"), alt: "BOHOX — photo 4" },
+          { src: asset("/images/portfolio/bohox/1.webp"), alt: "BOHOX — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/bohox/2.webp"), alt: "BOHOX — photo 2", shape: "square" },
+          { src: asset("/images/portfolio/bohox/3.webp"), alt: "BOHOX — photo 3", shape: "square" },
+          { src: asset("/images/portfolio/bohox/4.webp"), alt: "BOHOX — photo 4", shape: "landscape" },
         ],
       },
       {
@@ -434,10 +434,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/el-n/cover.webp"), alt: "EL&N" },
         heroImage: { src: asset("/images/portfolio/el-n/hero.webp"), alt: "EL&N" },
         gallery: [
-          { src: asset("/images/portfolio/el-n/1.webp"), alt: "EL&N — photo 1" },
-          { src: asset("/images/portfolio/el-n/2.webp"), alt: "EL&N — photo 2" },
-          { src: asset("/images/portfolio/el-n/3.webp"), alt: "EL&N — photo 3" },
-          { src: asset("/images/portfolio/el-n/4.webp"), alt: "EL&N — photo 4" },
+          { src: asset("/images/portfolio/el-n/1.webp"), alt: "EL&N — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/el-n/2.webp"), alt: "EL&N — photo 2", shape: "tall" },
+          { src: asset("/images/portfolio/el-n/3.webp"), alt: "EL&N — photo 3", shape: "square" },
+          { src: asset("/images/portfolio/el-n/4.webp"), alt: "EL&N — photo 4", shape: "tall" },
         ],
       },
       {
@@ -451,9 +451,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/armani-caf/cover.webp"), alt: "Armani Café" },
         heroImage: { src: asset("/images/portfolio/armani-caf/hero.webp"), alt: "Armani Café" },
         gallery: [
-          { src: asset("/images/portfolio/armani-caf/1.webp"), alt: "Armani Café — photo 1" },
-          { src: asset("/images/portfolio/armani-caf/2.webp"), alt: "Armani Café — photo 2" },
-          { src: asset("/images/portfolio/armani-caf/3.webp"), alt: "Armani Café — photo 3" },
+          { src: asset("/images/portfolio/armani-caf/1.webp"), alt: "Armani Café — photo 1", shape: "square" },
+          { src: asset("/images/portfolio/armani-caf/2.webp"), alt: "Armani Café — photo 2", shape: "tall" },
+          { src: asset("/images/portfolio/armani-caf/3.webp"), alt: "Armani Café — photo 3", shape: "square" },
         ],
       },
       {
@@ -467,10 +467,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/bateel-caf/cover.webp"), alt: "Bateel Café" },
         heroImage: { src: asset("/images/portfolio/bateel-caf/hero.webp"), alt: "Bateel Café" },
         gallery: [
-          { src: asset("/images/portfolio/bateel-caf/1.webp"), alt: "Bateel Café — photo 1" },
-          { src: asset("/images/portfolio/bateel-caf/2.webp"), alt: "Bateel Café — photo 2" },
-          { src: asset("/images/portfolio/bateel-caf/3.webp"), alt: "Bateel Café — photo 3" },
-          { src: asset("/images/portfolio/bateel-caf/4.webp"), alt: "Bateel Café — photo 4" },
+          { src: asset("/images/portfolio/bateel-caf/1.webp"), alt: "Bateel Café — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/bateel-caf/2.webp"), alt: "Bateel Café — photo 2", shape: "square" },
+          { src: asset("/images/portfolio/bateel-caf/3.webp"), alt: "Bateel Café — photo 3", shape: "square" },
+          { src: asset("/images/portfolio/bateel-caf/4.webp"), alt: "Bateel Café — photo 4", shape: "portrait" },
         ],
       },
       {
@@ -492,10 +492,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/paul-caf/cover.webp"), alt: "Paul Café" },
         heroImage: { src: asset("/images/portfolio/paul-caf/hero.webp"), alt: "Paul Café" },
         gallery: [
-          { src: asset("/images/portfolio/paul-caf/1.webp"), alt: "Paul Café — photo 1" },
-          { src: asset("/images/portfolio/paul-caf/2.webp"), alt: "Paul Café — photo 2" },
-          { src: asset("/images/portfolio/paul-caf/3.webp"), alt: "Paul Café — photo 3" },
-          { src: asset("/images/portfolio/paul-caf/4.webp"), alt: "Paul Café — photo 4" },
+          { src: asset("/images/portfolio/paul-caf/1.webp"), alt: "Paul Café — photo 1", shape: "square" },
+          { src: asset("/images/portfolio/paul-caf/2.webp"), alt: "Paul Café — photo 2", shape: "tall" },
+          { src: asset("/images/portfolio/paul-caf/3.webp"), alt: "Paul Café — photo 3", shape: "tall" },
+          { src: asset("/images/portfolio/paul-caf/4.webp"), alt: "Paul Café — photo 4", shape: "square" },
         ],
       },
       {
@@ -509,11 +509,11 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/brunch-and-cakes/cover.webp"), alt: "Brunch and Cakes" },
         heroImage: { src: asset("/images/portfolio/brunch-and-cakes/hero.webp"), alt: "Brunch and Cakes" },
         gallery: [
-          { src: asset("/images/portfolio/brunch-and-cakes/1.webp"), alt: "Brunch and Cakes — photo 1" },
-          { src: asset("/images/portfolio/brunch-and-cakes/2.webp"), alt: "Brunch and Cakes — photo 2" },
-          { src: asset("/images/portfolio/brunch-and-cakes/3.webp"), alt: "Brunch and Cakes — photo 3" },
-          { src: asset("/images/portfolio/brunch-and-cakes/4.webp"), alt: "Brunch and Cakes — photo 4" },
-          { src: asset("/images/portfolio/brunch-and-cakes/5.webp"), alt: "Brunch and Cakes — photo 5" },
+          { src: asset("/images/portfolio/brunch-and-cakes/1.webp"), alt: "Brunch and Cakes — photo 1", shape: "tall" },
+          { src: asset("/images/portfolio/brunch-and-cakes/2.webp"), alt: "Brunch and Cakes — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/brunch-and-cakes/3.webp"), alt: "Brunch and Cakes — photo 3", shape: "square" },
+          { src: asset("/images/portfolio/brunch-and-cakes/4.webp"), alt: "Brunch and Cakes — photo 4", shape: "tall" },
+          { src: asset("/images/portfolio/brunch-and-cakes/5.webp"), alt: "Brunch and Cakes — photo 5", shape: "tall" },
         ],
       },
       {
@@ -527,8 +527,8 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/angel-cakes/cover.webp"), alt: "Angel Cakes" },
         heroImage: { src: asset("/images/portfolio/angel-cakes/hero.webp"), alt: "Angel Cakes" },
         gallery: [
-          { src: asset("/images/portfolio/angel-cakes/1.webp"), alt: "Angel Cakes — photo 1" },
-          { src: asset("/images/portfolio/angel-cakes/2.webp"), alt: "Angel Cakes — photo 2" },
+          { src: asset("/images/portfolio/angel-cakes/1.webp"), alt: "Angel Cakes — photo 1", shape: "tall" },
+          { src: asset("/images/portfolio/angel-cakes/2.webp"), alt: "Angel Cakes — photo 2", shape: "tall" },
         ],
       },
       {
@@ -542,11 +542,11 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/bake-my-day/cover.webp"), alt: "Bake My Day" },
         heroImage: { src: asset("/images/portfolio/bake-my-day/hero.webp"), alt: "Bake My Day" },
         gallery: [
-          { src: asset("/images/portfolio/bake-my-day/1.webp"), alt: "Bake My Day — photo 1" },
-          { src: asset("/images/portfolio/bake-my-day/2.webp"), alt: "Bake My Day — photo 2" },
-          { src: asset("/images/portfolio/bake-my-day/3.webp"), alt: "Bake My Day — photo 3" },
-          { src: asset("/images/portfolio/bake-my-day/4.webp"), alt: "Bake My Day — photo 4" },
-          { src: asset("/images/portfolio/bake-my-day/5.webp"), alt: "Bake My Day — photo 5" },
+          { src: asset("/images/portfolio/bake-my-day/1.webp"), alt: "Bake My Day — photo 1", shape: "tall" },
+          { src: asset("/images/portfolio/bake-my-day/2.webp"), alt: "Bake My Day — photo 2", shape: "square" },
+          { src: asset("/images/portfolio/bake-my-day/3.webp"), alt: "Bake My Day — photo 3", shape: "square" },
+          { src: asset("/images/portfolio/bake-my-day/4.webp"), alt: "Bake My Day — photo 4", shape: "tall" },
+          { src: asset("/images/portfolio/bake-my-day/5.webp"), alt: "Bake My Day — photo 5", shape: "square" },
         ],
       },
       {
@@ -560,10 +560,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/saddle-house/cover.webp"), alt: "Saddle House" },
         heroImage: { src: asset("/images/portfolio/saddle-house/hero.webp"), alt: "Saddle House" },
         gallery: [
-          { src: asset("/images/portfolio/saddle-house/1.webp"), alt: "Saddle House — photo 1" },
-          { src: asset("/images/portfolio/saddle-house/2.webp"), alt: "Saddle House — photo 2" },
-          { src: asset("/images/portfolio/saddle-house/3.webp"), alt: "Saddle House — photo 3" },
-          { src: asset("/images/portfolio/saddle-house/4.webp"), alt: "Saddle House — photo 4" },
+          { src: asset("/images/portfolio/saddle-house/1.webp"), alt: "Saddle House — photo 1", shape: "square" },
+          { src: asset("/images/portfolio/saddle-house/2.webp"), alt: "Saddle House — photo 2", shape: "tall" },
+          { src: asset("/images/portfolio/saddle-house/3.webp"), alt: "Saddle House — photo 3", shape: "square" },
+          { src: asset("/images/portfolio/saddle-house/4.webp"), alt: "Saddle House — photo 4", shape: "tall" },
         ],
       },
       // QSR
@@ -582,9 +582,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/jj-chicken/cover.webp"), alt: "JJ Chicken" },
         heroImage: { src: asset("/images/portfolio/jj-chicken/hero.webp"), alt: "JJ Chicken" },
         gallery: [
-          { src: asset("/images/portfolio/jj-chicken/1.webp"), alt: "JJ Chicken — photo 1" },
-          { src: asset("/images/portfolio/jj-chicken/2.webp"), alt: "JJ Chicken — photo 2" },
-          { src: asset("/images/portfolio/jj-chicken/3.webp"), alt: "JJ Chicken — photo 3" },
+          { src: asset("/images/portfolio/jj-chicken/1.webp"), alt: "JJ Chicken — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/jj-chicken/2.webp"), alt: "JJ Chicken — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/jj-chicken/3.webp"), alt: "JJ Chicken — photo 3", shape: "landscape" },
         ],
       },
       {
@@ -598,7 +598,7 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/time-out-market-bahrain/cover.webp"), alt: "Time Out Market Bahrain" },
         heroImage: { src: asset("/images/portfolio/time-out-market-bahrain/hero.webp"), alt: "Time Out Market Bahrain" },
         gallery: [
-          { src: asset("/images/portfolio/time-out-market-bahrain/1.webp"), alt: "Time Out Market Bahrain — photo 1" },
+          { src: asset("/images/portfolio/time-out-market-bahrain/1.webp"), alt: "Time Out Market Bahrain — photo 1", shape: "landscape" },
         ],
       },
       {
@@ -612,9 +612,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/shake-shack/cover.webp"), alt: "Shake Shack" },
         heroImage: { src: asset("/images/portfolio/shake-shack/hero.webp"), alt: "Shake Shack" },
         gallery: [
-          { src: asset("/images/portfolio/shake-shack/1.webp"), alt: "Shake Shack — photo 1" },
-          { src: asset("/images/portfolio/shake-shack/2.webp"), alt: "Shake Shack — photo 2" },
-          { src: asset("/images/portfolio/shake-shack/3.webp"), alt: "Shake Shack — photo 3" },
+          { src: asset("/images/portfolio/shake-shack/1.webp"), alt: "Shake Shack — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/shake-shack/2.webp"), alt: "Shake Shack — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/shake-shack/3.webp"), alt: "Shake Shack — photo 3", shape: "portrait" },
         ],
       },
       {
@@ -637,9 +637,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/nando-s/cover.webp"), alt: "Nando's" },
         heroImage: { src: asset("/images/portfolio/nando-s/hero.webp"), alt: "Nando's" },
         gallery: [
-          { src: asset("/images/portfolio/nando-s/1.webp"), alt: "Nando's — photo 1" },
-          { src: asset("/images/portfolio/nando-s/2.webp"), alt: "Nando's — photo 2" },
-          { src: asset("/images/portfolio/nando-s/3.webp"), alt: "Nando's — photo 3" },
+          { src: asset("/images/portfolio/nando-s/1.webp"), alt: "Nando's — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/nando-s/2.webp"), alt: "Nando's — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/nando-s/3.webp"), alt: "Nando's — photo 3", shape: "landscape" },
         ],
       },
       {
@@ -662,10 +662,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/allo-beirut/cover.webp"), alt: "Allo Beirut" },
         heroImage: { src: asset("/images/portfolio/allo-beirut/hero.webp"), alt: "Allo Beirut" },
         gallery: [
-          { src: asset("/images/portfolio/allo-beirut/1.webp"), alt: "Allo Beirut — photo 1" },
-          { src: asset("/images/portfolio/allo-beirut/2.webp"), alt: "Allo Beirut — photo 2" },
-          { src: asset("/images/portfolio/allo-beirut/3.webp"), alt: "Allo Beirut — photo 3" },
-          { src: asset("/images/portfolio/allo-beirut/4.webp"), alt: "Allo Beirut — photo 4" },
+          { src: asset("/images/portfolio/allo-beirut/1.webp"), alt: "Allo Beirut — photo 1", shape: "portrait" },
+          { src: asset("/images/portfolio/allo-beirut/2.webp"), alt: "Allo Beirut — photo 2", shape: "portrait" },
+          { src: asset("/images/portfolio/allo-beirut/3.webp"), alt: "Allo Beirut — photo 3", shape: "portrait" },
+          { src: asset("/images/portfolio/allo-beirut/4.webp"), alt: "Allo Beirut — photo 4", shape: "portrait" },
         ],
       },
       {
@@ -689,8 +689,8 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/chipotle/cover.webp"), alt: "Chipotle" },
         heroImage: { src: asset("/images/portfolio/chipotle/hero.webp"), alt: "Chipotle" },
         gallery: [
-          { src: asset("/images/portfolio/chipotle/1.webp"), alt: "Chipotle — photo 1" },
-          { src: asset("/images/portfolio/chipotle/2.webp"), alt: "Chipotle — photo 2" },
+          { src: asset("/images/portfolio/chipotle/1.webp"), alt: "Chipotle — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/chipotle/2.webp"), alt: "Chipotle — photo 2", shape: "square" },
         ],
       },
       {
@@ -720,7 +720,7 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/raising-cane-s/cover.webp"), alt: "Raising Cane's" },
         heroImage: { src: asset("/images/portfolio/raising-cane-s/hero.webp"), alt: "Raising Cane's" },
         gallery: [
-          { src: asset("/images/portfolio/raising-cane-s/1.webp"), alt: "Raising Cane's — photo 1" },
+          { src: asset("/images/portfolio/raising-cane-s/1.webp"), alt: "Raising Cane's — photo 1", shape: "portrait" },
         ],
       },
       {
@@ -740,10 +740,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/salt/cover.webp"), alt: "SALT" },
         heroImage: { src: asset("/images/portfolio/salt/hero.webp"), alt: "SALT" },
         gallery: [
-          { src: asset("/images/portfolio/salt/1.webp"), alt: "SALT — photo 1" },
-          { src: asset("/images/portfolio/salt/2.webp"), alt: "SALT — photo 2" },
-          { src: asset("/images/portfolio/salt/3.webp"), alt: "SALT — photo 3" },
-          { src: asset("/images/portfolio/salt/4.webp"), alt: "SALT — photo 4" },
+          { src: asset("/images/portfolio/salt/1.webp"), alt: "SALT — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/salt/2.webp"), alt: "SALT — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/salt/3.webp"), alt: "SALT — photo 3", shape: "portrait" },
+          { src: asset("/images/portfolio/salt/4.webp"), alt: "SALT — photo 4", shape: "landscape" },
         ],
       },
       {
@@ -757,8 +757,8 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/taqado-caf/cover.webp"), alt: "Taqado Café" },
         heroImage: { src: asset("/images/portfolio/taqado-caf/hero.webp"), alt: "Taqado Café" },
         gallery: [
-          { src: asset("/images/portfolio/taqado-caf/1.webp"), alt: "Taqado Café — photo 1" },
-          { src: asset("/images/portfolio/taqado-caf/2.webp"), alt: "Taqado Café — photo 2" },
+          { src: asset("/images/portfolio/taqado-caf/1.webp"), alt: "Taqado Café — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/taqado-caf/2.webp"), alt: "Taqado Café — photo 2", shape: "landscape" },
         ],
       },
       {
@@ -772,7 +772,7 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/dave-s-hot-chicken/cover.webp"), alt: "Dave's Hot Chicken" },
         heroImage: { src: asset("/images/portfolio/dave-s-hot-chicken/hero.webp"), alt: "Dave's Hot Chicken" },
         gallery: [
-          { src: asset("/images/portfolio/dave-s-hot-chicken/1.webp"), alt: "Dave's Hot Chicken — photo 1" },
+          { src: asset("/images/portfolio/dave-s-hot-chicken/1.webp"), alt: "Dave's Hot Chicken — photo 1", shape: "landscape" },
         ],
       },
       {
@@ -789,7 +789,7 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/hardee-s/cover.webp"), alt: "Hardee's" },
         heroImage: { src: asset("/images/portfolio/hardee-s/hero.webp"), alt: "Hardee's" },
         gallery: [
-          { src: asset("/images/portfolio/hardee-s/1.webp"), alt: "Hardee's — photo 1" },
+          { src: asset("/images/portfolio/hardee-s/1.webp"), alt: "Hardee's — photo 1", shape: "portrait" },
         ],
       },
       {
@@ -803,8 +803,8 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/pizza-hut/cover.webp"), alt: "Pizza Hut" },
         heroImage: { src: asset("/images/portfolio/pizza-hut/hero.webp"), alt: "Pizza Hut" },
         gallery: [
-          { src: asset("/images/portfolio/pizza-hut/1.webp"), alt: "Pizza Hut — photo 1" },
-          { src: asset("/images/portfolio/pizza-hut/2.webp"), alt: "Pizza Hut — photo 2" },
+          { src: asset("/images/portfolio/pizza-hut/1.webp"), alt: "Pizza Hut — photo 1", shape: "square" },
+          { src: asset("/images/portfolio/pizza-hut/2.webp"), alt: "Pizza Hut — photo 2", shape: "square" },
         ],
       },
       // Experiential
@@ -819,9 +819,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/soco-at-magic-planet/cover.webp"), alt: "SOCO at Magic Planet" },
         heroImage: { src: asset("/images/portfolio/soco-at-magic-planet/hero.webp"), alt: "SOCO at Magic Planet" },
         gallery: [
-          { src: asset("/images/portfolio/soco-at-magic-planet/1.webp"), alt: "SOCO at Magic Planet — photo 1" },
-          { src: asset("/images/portfolio/soco-at-magic-planet/2.webp"), alt: "SOCO at Magic Planet — photo 2" },
-          { src: asset("/images/portfolio/soco-at-magic-planet/3.webp"), alt: "SOCO at Magic Planet — photo 3" },
+          { src: asset("/images/portfolio/soco-at-magic-planet/1.webp"), alt: "SOCO at Magic Planet — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/soco-at-magic-planet/2.webp"), alt: "SOCO at Magic Planet — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/soco-at-magic-planet/3.webp"), alt: "SOCO at Magic Planet — photo 3", shape: "square" },
         ],
       },
       {
@@ -835,9 +835,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/bright-bites-shop-in-shop/cover.webp"), alt: "Bright Bites Shop-in-Shop" },
         heroImage: { src: asset("/images/portfolio/bright-bites-shop-in-shop/hero.webp"), alt: "Bright Bites Shop-in-Shop" },
         gallery: [
-          { src: asset("/images/portfolio/bright-bites-shop-in-shop/1.webp"), alt: "Bright Bites Shop-in-Shop — photo 1" },
-          { src: asset("/images/portfolio/bright-bites-shop-in-shop/2.webp"), alt: "Bright Bites Shop-in-Shop — photo 2" },
-          { src: asset("/images/portfolio/bright-bites-shop-in-shop/3.webp"), alt: "Bright Bites Shop-in-Shop — photo 3" },
+          { src: asset("/images/portfolio/bright-bites-shop-in-shop/1.webp"), alt: "Bright Bites Shop-in-Shop — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/bright-bites-shop-in-shop/2.webp"), alt: "Bright Bites Shop-in-Shop — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/bright-bites-shop-in-shop/3.webp"), alt: "Bright Bites Shop-in-Shop — photo 3", shape: "landscape" },
         ],
       },
       {
@@ -851,9 +851,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/riverland-bowling-center/cover.webp"), alt: "Riverland Bowling Center" },
         heroImage: { src: asset("/images/portfolio/riverland-bowling-center/hero.webp"), alt: "Riverland Bowling Center" },
         gallery: [
-          { src: asset("/images/portfolio/riverland-bowling-center/1.webp"), alt: "Riverland Bowling Center — photo 1" },
-          { src: asset("/images/portfolio/riverland-bowling-center/2.webp"), alt: "Riverland Bowling Center — photo 2" },
-          { src: asset("/images/portfolio/riverland-bowling-center/3.webp"), alt: "Riverland Bowling Center — photo 3" },
+          { src: asset("/images/portfolio/riverland-bowling-center/1.webp"), alt: "Riverland Bowling Center — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/riverland-bowling-center/2.webp"), alt: "Riverland Bowling Center — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/riverland-bowling-center/3.webp"), alt: "Riverland Bowling Center — photo 3", shape: "landscape" },
         ],
       },
       {
@@ -867,9 +867,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/al-ain-zoo/cover.webp"), alt: "Al Ain Zoo" },
         heroImage: { src: asset("/images/portfolio/al-ain-zoo/hero.webp"), alt: "Al Ain Zoo" },
         gallery: [
-          { src: asset("/images/portfolio/al-ain-zoo/1.webp"), alt: "Al Ain Zoo — photo 1" },
-          { src: asset("/images/portfolio/al-ain-zoo/2.webp"), alt: "Al Ain Zoo — photo 2" },
-          { src: asset("/images/portfolio/al-ain-zoo/3.webp"), alt: "Al Ain Zoo — photo 3" },
+          { src: asset("/images/portfolio/al-ain-zoo/1.webp"), alt: "Al Ain Zoo — photo 1", shape: "portrait" },
+          { src: asset("/images/portfolio/al-ain-zoo/2.webp"), alt: "Al Ain Zoo — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/al-ain-zoo/3.webp"), alt: "Al Ain Zoo — photo 3", shape: "landscape" },
         ],
       },
       {
@@ -883,7 +883,7 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/tiktok-innovation-hub/cover.webp"), alt: "TikTok Innovation Hub" },
         heroImage: { src: asset("/images/portfolio/tiktok-innovation-hub/hero.webp"), alt: "TikTok Innovation Hub" },
         gallery: [
-          { src: asset("/images/portfolio/tiktok-innovation-hub/1.webp"), alt: "TikTok Innovation Hub — photo 1" },
+          { src: asset("/images/portfolio/tiktok-innovation-hub/1.webp"), alt: "TikTok Innovation Hub — photo 1", shape: "landscape" },
         ],
       },
       {
@@ -897,8 +897,8 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/zayed-national-museum/cover.webp"), alt: "Zayed National Museum" },
         heroImage: { src: asset("/images/portfolio/zayed-national-museum/hero.webp"), alt: "Zayed National Museum" },
         gallery: [
-          { src: asset("/images/portfolio/zayed-national-museum/1.webp"), alt: "Zayed National Museum — photo 1" },
-          { src: asset("/images/portfolio/zayed-national-museum/2.webp"), alt: "Zayed National Museum — photo 2" },
+          { src: asset("/images/portfolio/zayed-national-museum/1.webp"), alt: "Zayed National Museum — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/zayed-national-museum/2.webp"), alt: "Zayed National Museum — photo 2", shape: "landscape" },
         ],
       },
       {
@@ -912,8 +912,8 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/topgolf/cover.webp"), alt: "Topgolf" },
         heroImage: { src: asset("/images/portfolio/topgolf/hero.webp"), alt: "Topgolf" },
         gallery: [
-          { src: asset("/images/portfolio/topgolf/1.webp"), alt: "Topgolf — photo 1" },
-          { src: asset("/images/portfolio/topgolf/2.webp"), alt: "Topgolf — photo 2" },
+          { src: asset("/images/portfolio/topgolf/1.webp"), alt: "Topgolf — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/topgolf/2.webp"), alt: "Topgolf — photo 2", shape: "landscape" },
         ],
       },
       {
@@ -927,7 +927,7 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/google/cover.webp"), alt: "Google" },
         heroImage: { src: asset("/images/portfolio/google/hero.webp"), alt: "Google" },
         gallery: [
-          { src: asset("/images/portfolio/google/1.webp"), alt: "Google — photo 1" },
+          { src: asset("/images/portfolio/google/1.webp"), alt: "Google — photo 1", shape: "landscape" },
         ],
       },
       {
@@ -941,7 +941,7 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/roxy-cinemas/cover.webp"), alt: "Roxy Cinemas" },
         heroImage: { src: asset("/images/portfolio/roxy-cinemas/hero.webp"), alt: "Roxy Cinemas" },
         gallery: [
-          { src: asset("/images/portfolio/roxy-cinemas/1.webp"), alt: "Roxy Cinemas — photo 1" },
+          { src: asset("/images/portfolio/roxy-cinemas/1.webp"), alt: "Roxy Cinemas — photo 1", shape: "portrait" },
         ],
       },
       // Hotels & Resorts
@@ -956,10 +956,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/arabian-court-at-one-only-royal-mirage/cover.webp"), alt: "Arabian Court at One & Only Royal Mirage" },
         heroImage: { src: asset("/images/portfolio/arabian-court-at-one-only-royal-mirage/hero.webp"), alt: "Arabian Court at One & Only Royal Mirage" },
         gallery: [
-          { src: asset("/images/portfolio/arabian-court-at-one-only-royal-mirage/1.webp"), alt: "Arabian Court at One & Only Royal Mirage — photo 1" },
-          { src: asset("/images/portfolio/arabian-court-at-one-only-royal-mirage/2.webp"), alt: "Arabian Court at One & Only Royal Mirage — photo 2" },
-          { src: asset("/images/portfolio/arabian-court-at-one-only-royal-mirage/3.webp"), alt: "Arabian Court at One & Only Royal Mirage — photo 3" },
-          { src: asset("/images/portfolio/arabian-court-at-one-only-royal-mirage/4.webp"), alt: "Arabian Court at One & Only Royal Mirage — photo 4" },
+          { src: asset("/images/portfolio/arabian-court-at-one-only-royal-mirage/1.webp"), alt: "Arabian Court at One & Only Royal Mirage — photo 1", shape: "portrait" },
+          { src: asset("/images/portfolio/arabian-court-at-one-only-royal-mirage/2.webp"), alt: "Arabian Court at One & Only Royal Mirage — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/arabian-court-at-one-only-royal-mirage/3.webp"), alt: "Arabian Court at One & Only Royal Mirage — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/arabian-court-at-one-only-royal-mirage/4.webp"), alt: "Arabian Court at One & Only Royal Mirage — photo 4", shape: "landscape" },
         ],
       },
       {
@@ -973,9 +973,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/four-seasons-resort-dubai-at-jumeirah-beach/cover.webp"), alt: "Four Seasons Resort Dubai at Jumeirah Beach" },
         heroImage: { src: asset("/images/portfolio/four-seasons-resort-dubai-at-jumeirah-beach/hero.webp"), alt: "Four Seasons Resort Dubai at Jumeirah Beach" },
         gallery: [
-          { src: asset("/images/portfolio/four-seasons-resort-dubai-at-jumeirah-beach/1.webp"), alt: "Four Seasons Resort Dubai at Jumeirah Beach — photo 1" },
-          { src: asset("/images/portfolio/four-seasons-resort-dubai-at-jumeirah-beach/2.webp"), alt: "Four Seasons Resort Dubai at Jumeirah Beach — photo 2" },
-          { src: asset("/images/portfolio/four-seasons-resort-dubai-at-jumeirah-beach/3.webp"), alt: "Four Seasons Resort Dubai at Jumeirah Beach — photo 3" },
+          { src: asset("/images/portfolio/four-seasons-resort-dubai-at-jumeirah-beach/1.webp"), alt: "Four Seasons Resort Dubai at Jumeirah Beach — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/four-seasons-resort-dubai-at-jumeirah-beach/2.webp"), alt: "Four Seasons Resort Dubai at Jumeirah Beach — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/four-seasons-resort-dubai-at-jumeirah-beach/3.webp"), alt: "Four Seasons Resort Dubai at Jumeirah Beach — photo 3", shape: "landscape" },
         ],
       },
       {
@@ -989,10 +989,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/grand-hyatt-lounge/cover.webp"), alt: "Grand Hyatt Lounge" },
         heroImage: { src: asset("/images/portfolio/grand-hyatt-lounge/hero.webp"), alt: "Grand Hyatt Lounge" },
         gallery: [
-          { src: asset("/images/portfolio/grand-hyatt-lounge/1.webp"), alt: "Grand Hyatt Lounge — photo 1" },
-          { src: asset("/images/portfolio/grand-hyatt-lounge/2.webp"), alt: "Grand Hyatt Lounge — photo 2" },
-          { src: asset("/images/portfolio/grand-hyatt-lounge/3.webp"), alt: "Grand Hyatt Lounge — photo 3" },
-          { src: asset("/images/portfolio/grand-hyatt-lounge/4.webp"), alt: "Grand Hyatt Lounge — photo 4" },
+          { src: asset("/images/portfolio/grand-hyatt-lounge/1.webp"), alt: "Grand Hyatt Lounge — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/grand-hyatt-lounge/2.webp"), alt: "Grand Hyatt Lounge — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/grand-hyatt-lounge/3.webp"), alt: "Grand Hyatt Lounge — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/grand-hyatt-lounge/4.webp"), alt: "Grand Hyatt Lounge — photo 4", shape: "landscape" },
         ],
       },
       {
@@ -1007,9 +1007,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/hilton-garden-inn/cover.webp"), alt: "Hilton Garden Inn" },
         heroImage: { src: asset("/images/portfolio/hilton-garden-inn/hero.webp"), alt: "Hilton Garden Inn" },
         gallery: [
-          { src: asset("/images/portfolio/hilton-garden-inn/1.webp"), alt: "Hilton Garden Inn — photo 1" },
-          { src: asset("/images/portfolio/hilton-garden-inn/2.webp"), alt: "Hilton Garden Inn — photo 2" },
-          { src: asset("/images/portfolio/hilton-garden-inn/3.webp"), alt: "Hilton Garden Inn — photo 3" },
+          { src: asset("/images/portfolio/hilton-garden-inn/1.webp"), alt: "Hilton Garden Inn — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/hilton-garden-inn/2.webp"), alt: "Hilton Garden Inn — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/hilton-garden-inn/3.webp"), alt: "Hilton Garden Inn — photo 3", shape: "landscape" },
         ],
       },
       {
@@ -1023,9 +1023,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/the-chedi-hegra/cover.webp"), alt: "The Chedi Hegra" },
         heroImage: { src: asset("/images/portfolio/the-chedi-hegra/hero.webp"), alt: "The Chedi Hegra" },
         gallery: [
-          { src: asset("/images/portfolio/the-chedi-hegra/1.webp"), alt: "The Chedi Hegra — photo 1" },
-          { src: asset("/images/portfolio/the-chedi-hegra/2.webp"), alt: "The Chedi Hegra — photo 2" },
-          { src: asset("/images/portfolio/the-chedi-hegra/3.webp"), alt: "The Chedi Hegra — photo 3" },
+          { src: asset("/images/portfolio/the-chedi-hegra/1.webp"), alt: "The Chedi Hegra — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/the-chedi-hegra/2.webp"), alt: "The Chedi Hegra — photo 2", shape: "portrait" },
+          { src: asset("/images/portfolio/the-chedi-hegra/3.webp"), alt: "The Chedi Hegra — photo 3", shape: "landscape" },
         ],
       },
       {
@@ -1040,9 +1040,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/hilton-kuwait/cover.webp"), alt: "Hilton Kuwait" },
         heroImage: { src: asset("/images/portfolio/hilton-kuwait/hero.webp"), alt: "Hilton Kuwait" },
         gallery: [
-          { src: asset("/images/portfolio/hilton-kuwait/1.webp"), alt: "Hilton Kuwait — photo 1" },
-          { src: asset("/images/portfolio/hilton-kuwait/2.webp"), alt: "Hilton Kuwait — photo 2" },
-          { src: asset("/images/portfolio/hilton-kuwait/3.webp"), alt: "Hilton Kuwait — photo 3" },
+          { src: asset("/images/portfolio/hilton-kuwait/1.webp"), alt: "Hilton Kuwait — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/hilton-kuwait/2.webp"), alt: "Hilton Kuwait — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/hilton-kuwait/3.webp"), alt: "Hilton Kuwait — photo 3", shape: "landscape" },
         ],
       },
       {
@@ -1056,9 +1056,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/hyatt-palace-alula/cover.webp"), alt: "Hyatt Palace AlUla" },
         heroImage: { src: asset("/images/portfolio/hyatt-palace-alula/hero.webp"), alt: "Hyatt Palace AlUla" },
         gallery: [
-          { src: asset("/images/portfolio/hyatt-palace-alula/1.webp"), alt: "Hyatt Palace AlUla — photo 1" },
-          { src: asset("/images/portfolio/hyatt-palace-alula/2.webp"), alt: "Hyatt Palace AlUla — photo 2" },
-          { src: asset("/images/portfolio/hyatt-palace-alula/3.webp"), alt: "Hyatt Palace AlUla — photo 3" },
+          { src: asset("/images/portfolio/hyatt-palace-alula/1.webp"), alt: "Hyatt Palace AlUla — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/hyatt-palace-alula/2.webp"), alt: "Hyatt Palace AlUla — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/hyatt-palace-alula/3.webp"), alt: "Hyatt Palace AlUla — photo 3", shape: "landscape" },
         ],
       },
       {
@@ -1072,10 +1072,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/hyatt-regency-mumbai/cover.webp"), alt: "Hyatt Regency Mumbai" },
         heroImage: { src: asset("/images/portfolio/hyatt-regency-mumbai/hero.webp"), alt: "Hyatt Regency Mumbai" },
         gallery: [
-          { src: asset("/images/portfolio/hyatt-regency-mumbai/1.webp"), alt: "Hyatt Regency Mumbai — photo 1" },
-          { src: asset("/images/portfolio/hyatt-regency-mumbai/2.webp"), alt: "Hyatt Regency Mumbai — photo 2" },
-          { src: asset("/images/portfolio/hyatt-regency-mumbai/3.webp"), alt: "Hyatt Regency Mumbai — photo 3" },
-          { src: asset("/images/portfolio/hyatt-regency-mumbai/4.webp"), alt: "Hyatt Regency Mumbai — photo 4" },
+          { src: asset("/images/portfolio/hyatt-regency-mumbai/1.webp"), alt: "Hyatt Regency Mumbai — photo 1", shape: "portrait" },
+          { src: asset("/images/portfolio/hyatt-regency-mumbai/2.webp"), alt: "Hyatt Regency Mumbai — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/hyatt-regency-mumbai/3.webp"), alt: "Hyatt Regency Mumbai — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/hyatt-regency-mumbai/4.webp"), alt: "Hyatt Regency Mumbai — photo 4", shape: "landscape" },
         ],
       },
       {
@@ -1089,10 +1089,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/ibis-world-trade-centre/cover.webp"), alt: "ibis World Trade Centre" },
         heroImage: { src: asset("/images/portfolio/ibis-world-trade-centre/hero.webp"), alt: "ibis World Trade Centre" },
         gallery: [
-          { src: asset("/images/portfolio/ibis-world-trade-centre/1.webp"), alt: "ibis World Trade Centre — photo 1" },
-          { src: asset("/images/portfolio/ibis-world-trade-centre/2.webp"), alt: "ibis World Trade Centre — photo 2" },
-          { src: asset("/images/portfolio/ibis-world-trade-centre/3.webp"), alt: "ibis World Trade Centre — photo 3" },
-          { src: asset("/images/portfolio/ibis-world-trade-centre/4.webp"), alt: "ibis World Trade Centre — photo 4" },
+          { src: asset("/images/portfolio/ibis-world-trade-centre/1.webp"), alt: "ibis World Trade Centre — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/ibis-world-trade-centre/2.webp"), alt: "ibis World Trade Centre — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/ibis-world-trade-centre/3.webp"), alt: "ibis World Trade Centre — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/ibis-world-trade-centre/4.webp"), alt: "ibis World Trade Centre — photo 4", shape: "landscape" },
         ],
       },
       {
@@ -1106,9 +1106,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/jumeirah-mina-al-salam/cover.webp"), alt: "Jumeirah Mina Al Salam" },
         heroImage: { src: asset("/images/portfolio/jumeirah-mina-al-salam/hero.webp"), alt: "Jumeirah Mina Al Salam" },
         gallery: [
-          { src: asset("/images/portfolio/jumeirah-mina-al-salam/1.webp"), alt: "Jumeirah Mina Al Salam — photo 1" },
-          { src: asset("/images/portfolio/jumeirah-mina-al-salam/2.webp"), alt: "Jumeirah Mina Al Salam — photo 2" },
-          { src: asset("/images/portfolio/jumeirah-mina-al-salam/3.webp"), alt: "Jumeirah Mina Al Salam — photo 3" },
+          { src: asset("/images/portfolio/jumeirah-mina-al-salam/1.webp"), alt: "Jumeirah Mina Al Salam — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/jumeirah-mina-al-salam/2.webp"), alt: "Jumeirah Mina Al Salam — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/jumeirah-mina-al-salam/3.webp"), alt: "Jumeirah Mina Al Salam — photo 3", shape: "landscape" },
         ],
       },
       {
@@ -1122,10 +1122,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/le-m-ridien/cover.webp"), alt: "Le Méridien" },
         heroImage: { src: asset("/images/portfolio/le-m-ridien/hero.webp"), alt: "Le Méridien" },
         gallery: [
-          { src: asset("/images/portfolio/le-m-ridien/1.webp"), alt: "Le Méridien — photo 1" },
-          { src: asset("/images/portfolio/le-m-ridien/2.webp"), alt: "Le Méridien — photo 2" },
-          { src: asset("/images/portfolio/le-m-ridien/3.webp"), alt: "Le Méridien — photo 3" },
-          { src: asset("/images/portfolio/le-m-ridien/4.webp"), alt: "Le Méridien — photo 4" },
+          { src: asset("/images/portfolio/le-m-ridien/1.webp"), alt: "Le Méridien — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/le-m-ridien/2.webp"), alt: "Le Méridien — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/le-m-ridien/3.webp"), alt: "Le Méridien — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/le-m-ridien/4.webp"), alt: "Le Méridien — photo 4", shape: "landscape" },
         ],
       },
       {
@@ -1139,10 +1139,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/novotel/cover.webp"), alt: "Novotel" },
         heroImage: { src: asset("/images/portfolio/novotel/hero.webp"), alt: "Novotel" },
         gallery: [
-          { src: asset("/images/portfolio/novotel/1.webp"), alt: "Novotel — photo 1" },
-          { src: asset("/images/portfolio/novotel/2.webp"), alt: "Novotel — photo 2" },
-          { src: asset("/images/portfolio/novotel/3.webp"), alt: "Novotel — photo 3" },
-          { src: asset("/images/portfolio/novotel/4.webp"), alt: "Novotel — photo 4" },
+          { src: asset("/images/portfolio/novotel/1.webp"), alt: "Novotel — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/novotel/2.webp"), alt: "Novotel — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/novotel/3.webp"), alt: "Novotel — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/novotel/4.webp"), alt: "Novotel — photo 4", shape: "landscape" },
         ],
       },
       {
@@ -1156,8 +1156,8 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/hudayriyat-sports-hotel/cover.webp"), alt: "Hudayriyat Sports Hotel" },
         heroImage: { src: asset("/images/portfolio/hudayriyat-sports-hotel/hero.webp"), alt: "Hudayriyat Sports Hotel" },
         gallery: [
-          { src: asset("/images/portfolio/hudayriyat-sports-hotel/1.webp"), alt: "Hudayriyat Sports Hotel — photo 1" },
-          { src: asset("/images/portfolio/hudayriyat-sports-hotel/2.webp"), alt: "Hudayriyat Sports Hotel — photo 2" },
+          { src: asset("/images/portfolio/hudayriyat-sports-hotel/1.webp"), alt: "Hudayriyat Sports Hotel — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/hudayriyat-sports-hotel/2.webp"), alt: "Hudayriyat Sports Hotel — photo 2", shape: "landscape" },
         ],
       },
       {
@@ -1171,10 +1171,10 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/ciel-tower-ihg/cover.webp"), alt: "Ciel Tower (IHG)" },
         heroImage: { src: asset("/images/portfolio/ciel-tower-ihg/hero.webp"), alt: "Ciel Tower (IHG)" },
         gallery: [
-          { src: asset("/images/portfolio/ciel-tower-ihg/1.webp"), alt: "Ciel Tower (IHG) — photo 1" },
-          { src: asset("/images/portfolio/ciel-tower-ihg/2.webp"), alt: "Ciel Tower (IHG) — photo 2" },
-          { src: asset("/images/portfolio/ciel-tower-ihg/3.webp"), alt: "Ciel Tower (IHG) — photo 3" },
-          { src: asset("/images/portfolio/ciel-tower-ihg/4.webp"), alt: "Ciel Tower (IHG) — photo 4" },
+          { src: asset("/images/portfolio/ciel-tower-ihg/1.webp"), alt: "Ciel Tower (IHG) — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/ciel-tower-ihg/2.webp"), alt: "Ciel Tower (IHG) — photo 2", shape: "landscape" },
+          { src: asset("/images/portfolio/ciel-tower-ihg/3.webp"), alt: "Ciel Tower (IHG) — photo 3", shape: "landscape" },
+          { src: asset("/images/portfolio/ciel-tower-ihg/4.webp"), alt: "Ciel Tower (IHG) — photo 4", shape: "landscape" },
         ],
       },
       {
@@ -1188,9 +1188,9 @@ export const portfolio = {
         image: { src: asset("/images/portfolio/mandarin-oriental-hotel-wasl-tower/cover.webp"), alt: "Mandarin Oriental Hotel, Wasl Tower" },
         heroImage: { src: asset("/images/portfolio/mandarin-oriental-hotel-wasl-tower/hero.webp"), alt: "Mandarin Oriental Hotel, Wasl Tower" },
         gallery: [
-          { src: asset("/images/portfolio/mandarin-oriental-hotel-wasl-tower/1.webp"), alt: "Mandarin Oriental Hotel, Wasl Tower — photo 1" },
-          { src: asset("/images/portfolio/mandarin-oriental-hotel-wasl-tower/2.webp"), alt: "Mandarin Oriental Hotel, Wasl Tower — photo 2" },
-          { src: asset("/images/portfolio/mandarin-oriental-hotel-wasl-tower/3.webp"), alt: "Mandarin Oriental Hotel, Wasl Tower — photo 3" },
+          { src: asset("/images/portfolio/mandarin-oriental-hotel-wasl-tower/1.webp"), alt: "Mandarin Oriental Hotel, Wasl Tower — photo 1", shape: "landscape" },
+          { src: asset("/images/portfolio/mandarin-oriental-hotel-wasl-tower/2.webp"), alt: "Mandarin Oriental Hotel, Wasl Tower — photo 2", shape: "portrait" },
+          { src: asset("/images/portfolio/mandarin-oriental-hotel-wasl-tower/3.webp"), alt: "Mandarin Oriental Hotel, Wasl Tower — photo 3", shape: "landscape" },
         ],
       },
     ],
@@ -1231,11 +1231,24 @@ export function projectSlug(project: PortfolioProject): string {
   return project.slug ?? slugify(project.title);
 }
 
+/**
+ * The box a gallery photo is shown in, chosen from the photo's own width : height
+ * (landscape 4:3, square 1:1, portrait 3:4, tall 2:3) so it is barely cropped.
+ */
+export const GALLERY_SHAPES = ["landscape", "square", "portrait", "tall"] as const;
+export type GalleryShape = (typeof GALLERY_SHAPES)[number];
+
 // Two projects sharing a slug made one detail page unreachable and left a card
 // stuck across filter changes (duplicate React key). Fail loudly instead.
+// The data is untyped, so a mistyped `shape` would otherwise render an unsized box.
 {
   const seen = new Set<string>();
   for (const p of portfolio.gallery.projects) {
+    for (const g of p.gallery) {
+      if (!GALLERY_SHAPES.includes(g.shape as GalleryShape)) {
+        throw new Error(`Portfolio photo ${g.src} has unknown shape "${g.shape}".`);
+      }
+    }
     const slug = projectSlug(p);
     if (seen.has(slug)) {
       throw new Error(`Two portfolio projects share the slug "${slug}" — give one an explicit \`slug\`.`);

@@ -276,6 +276,7 @@
   --portfolio-gallery-aspect-rect: 4 / 3;
   --portfolio-gallery-aspect-vertical: 3 / 4;
   --portfolio-gallery-aspect-xl: 2 / 3;
+  --portfolio-gallery-aspect-square: 1 / 1;
 
   /* Why Choose Us */
   --why-grid-gap: 2rem;

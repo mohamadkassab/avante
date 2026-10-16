@@ -2,22 +2,54 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import type { PortfolioProject } from "@/content/portfolio";
+import type { GalleryShape, PortfolioProject } from "@/content/portfolio";
 import SectionShell from "@/components/SectionShell";
 import SectionBadge from "@/components/SectionBadge";
 import SectionHeading from "@/components/SectionHeading";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
-type ImageRef = { src: string; alt: string };
+type GalleryPhoto = { src: string; alt: string; shape: string };
 
-/** One masonry cell — image cropped to a fixed aspect ratio. */
-function GalleryImage({ image, aspect }: { image: ImageRef; aspect: string }) {
+const SHAPE_ASPECT: Record<GalleryShape, string> = {
+  landscape: "var(--portfolio-gallery-aspect-rect)",
+  square: "var(--portfolio-gallery-aspect-square)",
+  portrait: "var(--portfolio-gallery-aspect-vertical)",
+  tall: "var(--portfolio-gallery-aspect-xl)",
+};
+
+// Box height per unit of column width, for balancing the two columns. Must match SHAPE_ASPECT.
+const SHAPE_HEIGHT: Record<GalleryShape, number> = {
+  landscape: 3 / 4,
+  square: 1,
+  portrait: 4 / 3,
+  tall: 3 / 2,
+};
+
+/**
+ * Splits the photos, in order, into two columns: each goes to whichever column is
+ * shorter so far. Returns each photo with its original index, which sets its
+ * `order` on phones where the columns merge back into one list.
+ */
+function splitIntoColumns(photos: GalleryPhoto[]) {
+  const columns: { photo: GalleryPhoto; index: number }[][] = [[], []];
+  const heights = [0, 0];
+  photos.forEach((photo, index) => {
+    const col = heights[1] < heights[0] ? 1 : 0;
+    columns[col].push({ photo, index });
+    heights[col] += SHAPE_HEIGHT[photo.shape as GalleryShape];
+  });
+  return columns;
+}
+
+/** One masonry cell — the photo in the box closest to its own shape. */
+function GalleryImage({ image, order }: { image: GalleryPhoto; order: number }) {
   return (
     <Box
       sx={{
-        aspectRatio: aspect,
+        aspectRatio: SHAPE_ASPECT[image.shape as GalleryShape],
         borderRadius: "var(--portfolio-detail-gallery-radius)",
         overflow: "hidden",
+        order: { xs: order, sm: 0 },
       }}
     >
       <Box
@@ -36,40 +68,37 @@ function GalleryImage({ image, aspect }: { image: ImageRef; aspect: string }) {
   );
 }
 
-/** Images per masonry block — GalleryBlock's four slots. */
-const BLOCK_SIZE = 4;
-
-const galleryColumnSx = {
-  display: "flex",
-  flexDirection: "column",
-  gap: "var(--portfolio-detail-gallery-gap)",
-} as const;
-
 /**
- * One block of the fixed two-column masonry, for up to BLOCK_SIZE images.
- * Slots without an image are left out, so a short last block has no empty boxes.
+ * Two-column masonry. On phones the column wrappers become `display: contents`, so
+ * every photo is a direct child of one flex column and `order` restores 1, 2, 3…
+ * (without that, phones would show the whole left column before the right).
  */
-function GalleryBlock({ images }: { images: ImageRef[] }) {
-  const [a, b, c, d] = images;
+function Gallery({ photos }: { photos: GalleryPhoto[] }) {
   return (
     <Box
       sx={{
-        display: "grid",
-        gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
+        display: "flex",
+        flexDirection: { xs: "column", sm: "row" },
+        alignItems: "flex-start",
         gap: "var(--portfolio-detail-gallery-gap)",
-        alignItems: "start",
       }}
     >
-      {/* Left column: rectangle on top, tall vertical below */}
-      <Box sx={galleryColumnSx}>
-        {a && <GalleryImage image={a} aspect="var(--portfolio-gallery-aspect-rect)" />}
-        {c && <GalleryImage image={c} aspect="var(--portfolio-gallery-aspect-xl)" />}
-      </Box>
-      {/* Right column: two verticals stacked */}
-      <Box sx={galleryColumnSx}>
-        {b && <GalleryImage image={b} aspect="var(--portfolio-gallery-aspect-vertical)" />}
-        {d && <GalleryImage image={d} aspect="var(--portfolio-gallery-aspect-vertical)" />}
-      </Box>
+      {splitIntoColumns(photos).map((column, i) => (
+        <Box
+          key={i}
+          sx={{
+            display: { xs: "contents", sm: "flex" },
+            flexDirection: "column",
+            flex: 1,
+            minWidth: 0,
+            gap: "var(--portfolio-detail-gallery-gap)",
+          }}
+        >
+          {column.map(({ photo, index }) => (
+            <GalleryImage key={photo.src} image={photo} order={index} />
+          ))}
+        </Box>
+      ))}
     </Box>
   );
 }
@@ -131,8 +160,6 @@ export default function PortfolioDetail({
 }: {
   project: PortfolioProject;
 }) {
-  const gallery = project.gallery;
-
   return (
     <>
       {/* §1 — full-width cover */}
@@ -262,18 +289,9 @@ export default function PortfolioDetail({
           </Box>
         </Box>
 
-        {/* §4 — the four-image masonry block, repeated for every next four images */}
-        <Box
-          sx={{
-            mt: "var(--portfolio-detail-gallery-mt)",
-            display: "flex",
-            flexDirection: "column",
-            gap: "var(--portfolio-detail-gallery-gap)",
-          }}
-        >
-          {Array.from({ length: Math.ceil(gallery.length / BLOCK_SIZE) }, (_, i) => (
-            <GalleryBlock key={i} images={gallery.slice(i * BLOCK_SIZE, (i + 1) * BLOCK_SIZE)} />
-          ))}
+        {/* §4 — two-column masonry, each box shaped like its photo */}
+        <Box sx={{ mt: "var(--portfolio-detail-gallery-mt)" }}>
+          <Gallery photos={project.gallery} />
         </Box>
       </SectionShell>
     </>
