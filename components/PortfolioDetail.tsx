@@ -1,5 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Link from "next/link";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import type { PortfolioProject } from "@/content/portfolio";
 import SectionShell from "@/components/SectionShell";
 import SectionBadge from "@/components/SectionBadge";
@@ -169,6 +171,37 @@ export default function PortfolioDetail({
         >
           {/* Left — project profile */}
           <Box>
+            {/* A link, not history.back(): a visitor who arrived from a shared link
+                still lands on the portfolio. PortfolioGallery restores the filter and
+                scroll position it saved when the card was clicked.
+                Styled from the wrapper: this is a Server Component, and passing
+                `component={Link}` to MUI's client Box fails with a 500. */}
+            <Box
+              sx={{
+                mb: "var(--portfolio-back-mb)",
+                "& a": {
+                  display: "flex",
+                  width: "fit-content",
+                  alignItems: "center",
+                  gap: "var(--portfolio-back-gap)",
+                  fontSize: "var(--portfolio-back-font-size)",
+                  color: "var(--portfolio-back-color)",
+                  textDecoration: "none",
+                  transition: "color var(--duration-fast) ease",
+                },
+                "& svg": {
+                  fontSize: "var(--portfolio-back-icon-size)",
+                  transition: "transform var(--duration-fast) ease",
+                },
+                "& a:hover": { color: "var(--portfolio-back-hover-color)" },
+                "& a:hover svg": { transform: "translateX(var(--portfolio-back-hover-shift))" },
+              }}
+            >
+              <Link href="/portfolio">
+                <ArrowBackIcon />
+                Back to portfolio
+              </Link>
+            </Box>
             <SectionBadge>PROJECT PROFILE</SectionBadge>
             <SectionHeading>{project.title}</SectionHeading>
             <Typography

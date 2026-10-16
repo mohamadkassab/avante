@@ -255,6 +255,13 @@
   --portfolio-detail-col-gap: 3rem;
   --portfolio-detail-divider-color: var(--color-primary);
   --portfolio-detail-divider-width: 2px;
+  --portfolio-back-font-size: var(--font-size-nav);
+  --portfolio-back-icon-size: 1.1rem;
+  --portfolio-back-gap: 0.4rem;
+  --portfolio-back-mb: 1rem;
+  --portfolio-back-color: var(--color-text-muted);
+  --portfolio-back-hover-color: var(--color-primary);
+  --portfolio-back-hover-shift: -0.2rem;
   --portfolio-overview-bg: var(--color-section-bg-off-white);
   --portfolio-overview-p: 2rem;
   --portfolio-overview-radius: var(--radius-card);
