@@ -199,7 +199,7 @@ export default function PortfolioDetail({
             >
               <Link href="/portfolio">
                 <ArrowBackIcon />
-                Back to portfolio
+                Back to Portfolio
               </Link>
             </Box>
             <SectionBadge>PROJECT PROFILE</SectionBadge>
