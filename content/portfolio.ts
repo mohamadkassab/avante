@@ -206,7 +206,7 @@ export const portfolio = {
 
       // Restaurants — Premium
       {
-        title: "Meat Co",
+        title: "The Meat Co",
         location: ["MeatCo Kuwait Restaurant, Kuwait", "Meat Co SMJ, Dubai, UAE"],
         outsideLocation: "Multiple locations in Kuwait & UAE",
         category: "Restaurants",
@@ -1028,7 +1028,7 @@ export const portfolio = {
         ],
       },
       {
-        title: "Hilton Kuwait",
+        title: "Hilton",
         location: ["Kuwait"],
         outsideLocation: "Kuwait",
         category: "Hotels & Resorts",
