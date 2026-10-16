@@ -3,7 +3,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
-import { portfolio, slugify } from "@/content/portfolio";
+import { portfolio, projectSlug } from "@/content/portfolio";
 import PortfolioCardLocation from "@/components/PortfolioCardLocation";
 
 type Project = (typeof portfolio.gallery.projects)[number];
@@ -20,7 +20,7 @@ export default function PortfolioProjectCard({
   return (
     <Box
       component={Link}
-      href={`/portfolio/${slugify(project.title)}`}
+      href={`/portfolio/${projectSlug(project)}`}
       onClick={onNavigate}
       sx={{
         display: "block",

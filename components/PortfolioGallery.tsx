@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Box from "@mui/material/Box";
-import { portfolio } from "@/content/portfolio";
+import { portfolio, projectSlug } from "@/content/portfolio";
 import SectionShell from "@/components/SectionShell";
 import FilterItem, { type FilterVariant } from "@/components/FilterItem";
 import FilterPill from "@/components/FilterPill";
@@ -159,7 +159,7 @@ export default function PortfolioGallery() {
         }}
       >
         {projects.map((project, i) => (
-          <PortfolioProjectCard key={project.title} project={project} index={i} onNavigate={saveReturnState} />
+          <PortfolioProjectCard key={projectSlug(project)} project={project} index={i} onNavigate={saveReturnState} />
         ))}
       </Box>
     </SectionShell>

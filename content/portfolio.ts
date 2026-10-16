@@ -997,6 +997,7 @@ export const portfolio = {
       },
       {
         title: "Hilton",
+        slug: "hilton-garden-inn",
         location: ["Saudi Arabia"],
         outsideLocation: "Saudi Arabia",
         category: "Hotels & Resorts",
@@ -1029,6 +1030,7 @@ export const portfolio = {
       },
       {
         title: "Hilton",
+        slug: "hilton-kuwait",
         location: ["Kuwait"],
         outsideLocation: "Kuwait",
         category: "Hotels & Resorts",
@@ -1221,15 +1223,33 @@ export function slugify(value: string): string {
 }
 
 /**
- * Resolve a project from its URL slug. Returns null for unknown slugs so the
- * route can 404. Titles are unique across the gallery, so a slug maps to at most
- * one project (first match wins on the off chance two titles ever collide).
+ * A project's URL slug, also its React key in the gallery. Defaults to the title's
+ * slug; a project whose title repeats another's (both Hiltons are titled "Hilton")
+ * sets an explicit `slug` instead.
  */
+export function projectSlug(project: PortfolioProject): string {
+  return project.slug ?? slugify(project.title);
+}
+
+// Two projects sharing a slug made one detail page unreachable and left a card
+// stuck across filter changes (duplicate React key). Fail loudly instead.
+{
+  const seen = new Set<string>();
+  for (const p of portfolio.gallery.projects) {
+    const slug = projectSlug(p);
+    if (seen.has(slug)) {
+      throw new Error(`Two portfolio projects share the slug "${slug}" — give one an explicit \`slug\`.`);
+    }
+    seen.add(slug);
+  }
+}
+
+/** Resolve a project from its URL slug. Returns null for unknown slugs so the route can 404. */
 export function findPortfolioProject(slug: string): PortfolioProject | null {
-  return portfolio.gallery.projects.find((p) => slugify(p.title) === slug) ?? null;
+  return portfolio.gallery.projects.find((p) => projectSlug(p) === slug) ?? null;
 }
 
 /** Every project slug, for `generateStaticParams`. */
 export function portfolioProjectParams(): { project: string }[] {
-  return portfolio.gallery.projects.map((p) => ({ project: slugify(p.title) }));
+  return portfolio.gallery.projects.map((p) => ({ project: projectSlug(p) }));
 }
