@@ -169,7 +169,7 @@ export const portfolio = {
         description:
           "Avante has provided kitchen canopies and Ecology Units for several Al Beiruti locations across Dubai, including DIFC, Dubai Festival City, and Nakheel Mall. Inspired by the rich culinary traditions of Beirut, Al Beiruti is renowned for its authentic Lebanese cuisine, vibrant atmosphere, and contemporary interpretation of Middle Eastern hospitality. The ventilation and air treatment solutions were tailored to accommodate the demands of high-volume food preparation, including grilling, baking, and traditional Lebanese cooking processes. Engineered for efficiency and reliability, the systems contribute to effective extraction and treatment of kitchen emissions while supporting the smooth operation of the restaurant's busy kitchens.",
         image: { src: asset("/images/portfolio/al-beiruti/cover.webp"), alt: "Al Beiruti" },
-        heroImage: { src: asset("/images/portfolio/al-beiruti/hero.webp"), alt: "Al Beiruti" },
+        heroImage: { src: asset("/images/portfolio/al-beiruti/hero.webp"), alt: "Al Beiruti", position: "center 15%" },
         gallery: [
           { src: asset("/images/portfolio/al-beiruti/1.webp"), alt: "Al Beiruti — photo 1", shape: "portrait" },
           { src: asset("/images/portfolio/al-beiruti/2.webp"), alt: "Al Beiruti — photo 2", shape: "landscape" },
@@ -281,7 +281,7 @@ export const portfolio = {
         description:
           "Bringing the charm of the Italian Riviera to Palm Jumeirah, Loren offers an elegant dining experience inspired by the coastal flavors, lifestyle, and sophistication of Southern Italy. With its stylish interiors, waterfront setting, and menu rooted in authentic Italian cuisine, the restaurant creates an atmosphere that is both refined and effortlessly welcoming. Crafted to complement the pace and precision of a contemporary Italian kitchen, custom kitchen canopies were integrated as part of the venue's back-of-house infrastructure. The solution delivers reliable extraction performance throughout service, supporting the preparation of Loren's signature dishes while maintaining an efficient and comfortable culinary environment behind the scenes.",
         image: { src: asset("/images/portfolio/loren/cover.webp"), alt: "Loren" },
-        heroImage: { src: asset("/images/portfolio/loren/hero.webp"), alt: "Loren" },
+        heroImage: { src: asset("/images/portfolio/loren/hero.webp"), alt: "Loren", position: "center 40%" },
         gallery: [
           { src: asset("/images/portfolio/loren/1.webp"), alt: "Loren — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/loren/2.webp"), alt: "Loren — photo 2", shape: "landscape" },
@@ -348,7 +348,7 @@ export const portfolio = {
         description:
           "Originating from the French Riviera and renowned for its fusion of fine dining, entertainment, and vibrant nightlife, BAOLI has become an internationally recognized lifestyle destination. Its Dubai beach club brings together Mediterranean-inspired elegance, world-class cuisine, and a dynamic social atmosphere, creating an experience that transitions effortlessly from relaxed beachfront dining to energetic evening entertainment. Reflecting the venue's dual identity as both a premium dining destination and a lively social hotspot, custom kitchen canopies were incorporated to accommodate the demands of continuous culinary service throughout the day and night. Designed for dependable performance and operational efficiency, the system supports the seamless execution of BAOLI's hospitality experience while maintaining optimal conditions within the kitchen environment.",
         image: { src: asset("/images/portfolio/baoli-beach-club/cover.webp"), alt: "Baoli Beach Club" },
-        heroImage: { src: asset("/images/portfolio/baoli-beach-club/hero.webp"), alt: "Baoli Beach Club" },
+        heroImage: { src: asset("/images/portfolio/baoli-beach-club/hero.webp"), alt: "Baoli Beach Club", position: "center 15%" },
         gallery: [
           { src: asset("/images/portfolio/baoli-beach-club/1.webp"), alt: "Baoli Beach Club — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/baoli-beach-club/2.webp"), alt: "Baoli Beach Club — photo 2", shape: "landscape" },
@@ -391,7 +391,7 @@ export const portfolio = {
         description:
           "Inspired by the rich culinary traditions of North Africa and the Mediterranean, Berber brings together bold flavors, vibrant hospitality, and contemporary design in a unique waterfront setting on Bluewaters Island. The restaurant's warm atmosphere, open-fire cooking influences, and carefully curated dining experience create a destination that celebrates culture, craftsmanship, and shared moments around food. Drawing from a menu that embraces charcoal grilling and traditional cooking techniques, custom kitchen canopies were incorporated to accommodate the demands of an active culinary environment. Designed for dependable performance and seamless integration, the ventilation solution supports the rhythm of the kitchen while helping maintain the standards expected of a modern dining destination overlooking Dubai's iconic waterfront.",
         image: { src: asset("/images/portfolio/berber/cover.webp"), alt: "Berber" },
-        heroImage: { src: asset("/images/portfolio/berber/hero.webp"), alt: "Berber" },
+        heroImage: { src: asset("/images/portfolio/berber/hero.webp"), alt: "Berber", position: "top" },
         gallery: [
           { src: asset("/images/portfolio/berber/1.webp"), alt: "Berber — photo 1", shape: "portrait" },
           { src: asset("/images/portfolio/berber/2.webp"), alt: "Berber — photo 2", shape: "portrait" },
@@ -412,7 +412,7 @@ export const portfolio = {
         description:
           "BohoX reimagines all-day dining through a blend of Mediterranean flavors, wellness-inspired cuisine, and contemporary bohemian design. Nestled in the heart of Downtown Dubai, the venue has become known for its lush interiors, vibrant atmosphere, and thoughtfully curated menu that celebrates fresh, wholesome ingredients. An advanced Ecology Unit forms an integral part of the restaurant's kitchen exhaust system, helping treat grease, smoke, and cooking odors before air is discharged. The solution enables the venue to maintain high environmental standards while preserving the comfortable and inviting atmosphere that has become synonymous with the BohoX experience.",
         image: { src: asset("/images/portfolio/bohox/cover.webp"), alt: "BohoX" },
-        heroImage: { src: asset("/images/portfolio/bohox/hero.webp"), alt: "BohoX" },
+        heroImage: { src: asset("/images/portfolio/bohox/hero.webp"), alt: "BohoX", position: "center 30%" },
         gallery: [
           { src: asset("/images/portfolio/bohox/1.webp"), alt: "BohoX — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/bohox/2.webp"), alt: "BohoX — photo 2", shape: "square" },
@@ -429,7 +429,7 @@ export const portfolio = {
         description:
           "Originally founded in London, EL&N has grown into a globally recognized lifestyle café brand celebrated for its signature floral interiors, vibrant pink aesthetic, and indulgent all-day dining experience. Its Yas Bay Waterfront location in Abu Dhabi continues this vision, offering guests a stylish destination where contemporary cuisine, specialty coffee, and elegant surroundings come together. Custom kitchen canopies were incorporated to complement the café's fast-paced kitchen operations, providing dependable ventilation performance. Carefully integrated into the back-of-house infrastructure, the system supports the efficient preparation of EL&N's diverse menu while maintaining the high standards expected of an internationally acclaimed hospitality brand.",
         image: { src: asset("/images/portfolio/el-n/cover.webp"), alt: "EL&N" },
-        heroImage: { src: asset("/images/portfolio/el-n/hero.webp"), alt: "EL&N" },
+        heroImage: { src: asset("/images/portfolio/el-n/hero.webp"), alt: "EL&N", position: "top" },
         gallery: [
           { src: asset("/images/portfolio/el-n/1.webp"), alt: "EL&N — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/el-n/2.webp"), alt: "EL&N — photo 2", shape: "tall" },
@@ -446,7 +446,7 @@ export const portfolio = {
         description:
           "Overlooking the iconic Dubai Fountain from Dubai Mall, Armani/Caffè embodies the understated elegance and timeless sophistication synonymous with the Armani brand. Combining authentic Italian cuisine with contemporary design and impeccable hospitality, the café offers a refined dining experience where every detail reflects Giorgio Armani's signature philosophy of style and simplicity. Behind this premium dining destination, Ecology Units were integrated to enhance the treatment of kitchen exhaust emissions before discharge, while complementing the seamless, high-quality experience that defines Armani/Caffè.",
         image: { src: asset("/images/portfolio/armani-caf/cover.webp"), alt: "Armani Café" },
-        heroImage: { src: asset("/images/portfolio/armani-caf/hero.webp"), alt: "Armani Café" },
+        heroImage: { src: asset("/images/portfolio/armani-caf/hero.webp"), alt: "Armani Café", position: "center 30%" },
         gallery: [
           { src: asset("/images/portfolio/armani-caf/1.webp"), alt: "Armani Café — photo 1", shape: "square" },
           { src: asset("/images/portfolio/armani-caf/2.webp"), alt: "Armani Café — photo 2", shape: "tall" },
@@ -522,7 +522,7 @@ export const portfolio = {
         description:
           "Founded with the vision of making indulgence healthier, Angel Cakes has redefined the café experience through a menu of refined desserts, artisan pastries, and specialty coffee, all crafted without refined sugar, gluten, or artificial ingredients. At its Dubai Creek Harbour location, the café combines contemporary design with mindful dining, offering guests a bright and elegant space that celebrates wellness without compromising on flavor. The kitchen exhaust system was equipped with an Ecology Unit to efficiently treat cooking and baking emissions, promoting cleaner and more environmentally responsible operation. Carefully selected to complement the café's sustainable philosophy, the solution promotes cleaner air quality and environmentally responsible operations while supporting the smooth day-to-day functioning of this modern bakery concept.",
         image: { src: asset("/images/portfolio/angel-cakes/cover-v2.webp"), alt: "Angel Cakes" },
-        heroImage: { src: asset("/images/portfolio/angel-cakes/hero.webp"), alt: "Angel Cakes" },
+        heroImage: { src: asset("/images/portfolio/angel-cakes/hero.webp"), alt: "Angel Cakes", position: "center 30%" },
         gallery: [
           { src: asset("/images/portfolio/angel-cakes/1.webp"), alt: "Angel Cakes — photo 1", shape: "tall" },
           { src: asset("/images/portfolio/angel-cakes/2.webp"), alt: "Angel Cakes — photo 2", shape: "tall" },
@@ -537,7 +537,7 @@ export const portfolio = {
         description:
           "From handcrafted celebration cakes to artisan pastries and specialty coffee, Bake My Day has established itself as a contemporary bakery destination where creativity, quality, and craftsmanship come together. Located in Downtown Dubai, the bakery offers an inviting space dedicated to freshly prepared desserts and memorable culinary experiences. To accommodate the demands of continuous baking and dessert production, an Ecology Unit was integrated into the kitchen exhaust system. Designed to effectively treat kitchen emissions before discharge, the solution promotes cleaner and more sustainable operations while allowing the bakery to focus on delivering freshly crafted creations throughout the day.",
         image: { src: asset("/images/portfolio/bake-my-day/cover.webp"), alt: "Bake My Day" },
-        heroImage: { src: asset("/images/portfolio/bake-my-day/hero.webp"), alt: "Bake My Day" },
+        heroImage: { src: asset("/images/portfolio/bake-my-day/hero.webp"), alt: "Bake My Day", position: "top" },
         gallery: [
           { src: asset("/images/portfolio/bake-my-day/1.webp"), alt: "Bake My Day — photo 1", shape: "tall" },
           { src: asset("/images/portfolio/bake-my-day/2.webp"), alt: "Bake My Day — photo 2", shape: "square" },
@@ -607,7 +607,7 @@ export const portfolio = {
         description:
           "For Shake Shack, Avante supplied custom kitchen canopy systems for locations at Marassi Galleria in Bahrain and ADNOC Service Stations across the UAE. Designed for fast-paced food preparation environments, the canopies provide effective capture and removal of cooking emissions, helping maintain optimal air quality and thermal comfort within the kitchen. The solution delivers dependable ventilation performance while supporting the brand's commitment to operational excellence and consistent customer service.",
         image: { src: asset("/images/portfolio/shake-shack/cover.webp"), alt: "Shake Shack" },
-        heroImage: { src: asset("/images/portfolio/shake-shack/hero.webp"), alt: "Shake Shack" },
+        heroImage: { src: asset("/images/portfolio/shake-shack/hero.webp"), alt: "Shake Shack", position: "top" },
         gallery: [
           { src: asset("/images/portfolio/shake-shack/1.webp"), alt: "Shake Shack — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/shake-shack/2.webp"), alt: "Shake Shack — photo 2", shape: "landscape" },
@@ -657,7 +657,7 @@ export const portfolio = {
         description:
           "Inspired by the vibrant street food culture of Lebanon, Allo Beirut continues to expand its presence across the GCC with lively, high-capacity dining destinations. To support its operations across multiple locations in Saudi Arabia, the UAE, and Bahrain, Avante supplied custom kitchen canopies and ecology units designed for demanding commercial kitchens. The integrated ventilation and air treatment solution effectively manages cooking by-products, minimizes grease emissions, and promotes a cleaner, more efficient kitchen environment while meeting the requirements of modern food service facilities.",
         image: { src: asset("/images/portfolio/allo-beirut/cover.webp"), alt: "Allo Beirut" },
-        heroImage: { src: asset("/images/portfolio/allo-beirut/hero.webp"), alt: "Allo Beirut" },
+        heroImage: { src: asset("/images/portfolio/allo-beirut/hero.webp"), alt: "Allo Beirut", position: "center 25%" },
         gallery: [
           { src: asset("/images/portfolio/allo-beirut/1.webp"), alt: "Allo Beirut — photo 1", shape: "portrait" },
           { src: asset("/images/portfolio/allo-beirut/2.webp"), alt: "Allo Beirut — photo 2", shape: "portrait" },
@@ -715,7 +715,7 @@ export const portfolio = {
         description:
           "As Raising Cane's expanded across the UAE and Qatar, Avante partnered with the brand to deliver custom kitchen canopy systems for a wide range of restaurant locations. Developed to meet the demands of fast-paced commercial kitchens, the ventilation solutions provide efficient extraction of heat, grease, and cooking fumes, helping maintain consistent airflow and a comfortable working environment. Built for reliability and long-term performance, the systems support smooth kitchen operations while meeting the rigorous standards of modern quick-service restaurants.",
         image: { src: asset("/images/portfolio/raising-cane-s/cover.webp"), alt: "Raising Cane's" },
-        heroImage: { src: asset("/images/portfolio/raising-cane-s/hero.webp"), alt: "Raising Cane's" },
+        heroImage: { src: asset("/images/portfolio/raising-cane-s/hero.webp"), alt: "Raising Cane's", position: "center 15%" },
         gallery: [
           { src: asset("/images/portfolio/raising-cane-s/1.webp"), alt: "Raising Cane's — photo 1", shape: "portrait" },
         ],
@@ -767,7 +767,7 @@ export const portfolio = {
         description:
           "For Dave's Hot Chicken at Yas Mall in Abu Dhabi, Avante provided a high-performance ecology unit designed to enhance the restaurant's commercial kitchen ventilation system. The solution efficiently filters grease, smoke, and cooking-related emissions before air discharge, helping reduce environmental impact while supporting compliance with local air quality requirements. Engineered for reliable operation, the ecology unit enables effective air treatment without compromising kitchen productivity.",
         image: { src: asset("/images/portfolio/dave-s-hot-chicken/cover.webp"), alt: "Dave's Hot Chicken" },
-        heroImage: { src: asset("/images/portfolio/dave-s-hot-chicken/hero.webp"), alt: "Dave's Hot Chicken" },
+        heroImage: { src: asset("/images/portfolio/dave-s-hot-chicken/hero.webp"), alt: "Dave's Hot Chicken", position: "top" },
         gallery: [
           { src: asset("/images/portfolio/dave-s-hot-chicken/1.webp"), alt: "Dave's Hot Chicken — photo 1", shape: "landscape" },
         ],
@@ -784,7 +784,7 @@ export const portfolio = {
         description:
           "For Hardee's locations at ENOC 1117 in Al Qarayen, Sharjah, and ENOC 1635 in Al Khawaneej, Dubai, Avante supplied custom Kitchen Canopy systems designed to meet the operational requirements of fast-food restaurant kitchens. Engineered for efficient extraction of heat, grease, smoke, and cooking vapors, the canopies help maintain a clean, comfortable, and well-ventilated kitchen environment. The solution supports reliable day-to-day operations while accommodating the high-volume demands of quick-service food preparation.",
         image: { src: asset("/images/portfolio/hardee-s/cover.webp"), alt: "Hardee's" },
-        heroImage: { src: asset("/images/portfolio/hardee-s/hero.webp"), alt: "Hardee's" },
+        heroImage: { src: asset("/images/portfolio/hardee-s/hero.webp"), alt: "Hardee's", position: "center 30%" },
         gallery: [
           { src: asset("/images/portfolio/hardee-s/1.webp"), alt: "Hardee's — photo 1", shape: "portrait" },
         ],
@@ -814,7 +814,7 @@ export const portfolio = {
         description:
           "Located within Magic Planet at Mirdif City Centre, Dubai, SOCO required a ventilation solution capable of supporting a vibrant, high-traffic dining environment. Avante supplied custom kitchen canopies engineered to provide efficient capture and extraction of cooking heat, grease, and airborne contaminants, ensuring optimal kitchen conditions throughout daily operations. Designed for reliability and seamless integration, the system supports efficient food service while meeting the performance standards of a modern entertainment and leisure destination.",
         image: { src: asset("/images/portfolio/soco-at-magic-planet/cover.webp"), alt: "SOCO at Magic Planet" },
-        heroImage: { src: asset("/images/portfolio/soco-at-magic-planet/hero.webp"), alt: "SOCO at Magic Planet" },
+        heroImage: { src: asset("/images/portfolio/soco-at-magic-planet/hero.webp"), alt: "SOCO at Magic Planet", position: "top" },
         gallery: [
           { src: asset("/images/portfolio/soco-at-magic-planet/1.webp"), alt: "SOCO at Magic Planet — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/soco-at-magic-planet/2.webp"), alt: "SOCO at Magic Planet — photo 2", shape: "landscape" },
@@ -830,7 +830,7 @@ export const portfolio = {
         description:
           "For Bright Bites Shop-in-Shop at Carrefour, Mall of the Emirates, Dubai, Avante delivered an integrated kitchen ventilation solution comprising custom kitchen canopies and an ecology unit. Developed to suit the compact footprint of a retail food outlet, the system provides efficient extraction and advanced air treatment to control grease, smoke, and cooking odours. The solution supports clean, efficient operation while ensuring high ventilation performance within a busy supermarket environment.",
         image: { src: asset("/images/portfolio/bright-bites-shop-in-shop/cover.webp"), alt: "Bright Bites Shop-in-Shop" },
-        heroImage: { src: asset("/images/portfolio/bright-bites-shop-in-shop/hero.webp"), alt: "Bright Bites Shop-in-Shop" },
+        heroImage: { src: asset("/images/portfolio/bright-bites-shop-in-shop/hero.webp"), alt: "Bright Bites Shop-in-Shop", position: "top" },
         gallery: [
           { src: asset("/images/portfolio/bright-bites-shop-in-shop/1.webp"), alt: "Bright Bites Shop-in-Shop — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/bright-bites-shop-in-shop/2.webp"), alt: "Bright Bites Shop-in-Shop — photo 2", shape: "landscape" },
@@ -846,7 +846,7 @@ export const portfolio = {
         description:
           "At the Riverland Bowling Center in Dubai Parks and Resorts, Avante supplied high-efficiency ecology units to support the facility's commercial food service operations. Designed to effectively filter grease, smoke, and cooking emissions before air discharge, the system enhances environmental performance while maintaining excellent indoor air quality. The solution provides reliable air treatment for a leisure and entertainment venue, supporting efficient operation and compliance with modern ventilation standards.",
         image: { src: asset("/images/portfolio/riverland-bowling-center/cover.webp"), alt: "Riverland Bowling Center" },
-        heroImage: { src: asset("/images/portfolio/riverland-bowling-center/hero.webp"), alt: "Riverland Bowling Center" },
+        heroImage: { src: asset("/images/portfolio/riverland-bowling-center/hero.webp"), alt: "Riverland Bowling Center", position: "center 32%" },
         gallery: [
           { src: asset("/images/portfolio/riverland-bowling-center/1.webp"), alt: "Riverland Bowling Center — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/riverland-bowling-center/2.webp"), alt: "Riverland Bowling Center — photo 2", shape: "landscape" },
@@ -878,7 +878,7 @@ export const portfolio = {
         description:
           "At the TikTok Innovation Hub in Dubai, Avante supplied custom kitchen canopy systems to support the facility's modern staff dining and food preparation areas. Designed for efficient extraction of heat, grease, and cooking fumes, the solution helps maintain a clean, comfortable, and well-ventilated kitchen environment. Combining high-performance engineering with seamless integration, the canopy system complements the innovation hub's contemporary workspace while ensuring reliable day-to-day operation.",
         image: { src: asset("/images/portfolio/tiktok-innovation-hub/cover.webp"), alt: "TikTok Innovation Hub" },
-        heroImage: { src: asset("/images/portfolio/tiktok-innovation-hub/hero.webp"), alt: "TikTok Innovation Hub" },
+        heroImage: { src: asset("/images/portfolio/tiktok-innovation-hub/hero.webp"), alt: "TikTok Innovation Hub", position: "center 40%" },
         gallery: [
           { src: asset("/images/portfolio/tiktok-innovation-hub/1.webp"), alt: "TikTok Innovation Hub — photo 1", shape: "landscape" },
         ],
@@ -907,7 +907,7 @@ export const portfolio = {
         description:
           "At Topgolf Yas Island in Abu Dhabi, Avante supplied custom kitchen canopy systems designed to support the venue's extensive food and beverage operations. Engineered to provide effective extraction of heat, grease, and cooking emissions, the solution helps maintain a comfortable and efficient kitchen environment throughout daily service. The canopy system delivers dependable ventilation performance, supporting smooth operations within a high-energy entertainment and hospitality setting.",
         image: { src: asset("/images/portfolio/topgolf/cover.webp"), alt: "Topgolf" },
-        heroImage: { src: asset("/images/portfolio/topgolf/hero.webp"), alt: "Topgolf" },
+        heroImage: { src: asset("/images/portfolio/topgolf/hero.webp"), alt: "Topgolf", position: "center 90%" },
         gallery: [
           { src: asset("/images/portfolio/topgolf/1.webp"), alt: "Topgolf — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/topgolf/2.webp"), alt: "Topgolf — photo 2", shape: "landscape" },
@@ -922,7 +922,7 @@ export const portfolio = {
         description:
           "For Google in Hyderabad, India, Avante supplied custom kitchen canopy systems designed to support the facility's workplace dining operations. Developed to meet the requirements of a modern commercial kitchen, the solution provides efficient extraction of heat, grease, and cooking emissions while maintaining a comfortable and hygienic food preparation environment. The system combines reliable ventilation performance with seamless integration, supporting the high standards expected within a global technology workplace.",
         image: { src: asset("/images/portfolio/google/cover.webp"), alt: "Google" },
-        heroImage: { src: asset("/images/portfolio/google/hero.webp"), alt: "Google" },
+        heroImage: { src: asset("/images/portfolio/google/hero.webp"), alt: "Google", position: "center 30%" },
         gallery: [
           { src: asset("/images/portfolio/google/1.webp"), alt: "Google — photo 1", shape: "landscape" },
         ],
@@ -984,7 +984,7 @@ export const portfolio = {
         description:
           "For the Grand Hyatt Lounge in Dubai, Avante delivered a bespoke kitchen canopy system designed to support the efficient operation of the lounge's food preparation facilities. Engineered to provide effective capture and extraction of cooking by-products, the solution helps maintain optimal air quality and a well-regulated kitchen environment. Combining functionality with dependable performance, the canopy system supports the high service standards expected within a premium hospitality destination.",
         image: { src: asset("/images/portfolio/grand-hyatt-lounge/cover.webp"), alt: "Grand Hyatt Lounge" },
-        heroImage: { src: asset("/images/portfolio/grand-hyatt-lounge/hero.webp"), alt: "Grand Hyatt Lounge" },
+        heroImage: { src: asset("/images/portfolio/grand-hyatt-lounge/hero.webp"), alt: "Grand Hyatt Lounge", position: "center 15%" },
         gallery: [
           { src: asset("/images/portfolio/grand-hyatt-lounge/1.webp"), alt: "Grand Hyatt Lounge — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/grand-hyatt-lounge/2.webp"), alt: "Grand Hyatt Lounge — photo 2", shape: "landscape" },
@@ -1002,7 +1002,7 @@ export const portfolio = {
         description:
           "At Hilton Garden Inn in Saudi Arabia, Avante provided custom kitchen canopy systems designed to meet the ventilation requirements of a modern hotel food service operation. The solution ensures efficient removal of heat, grease, and cooking fumes, helping to maintain a clean, safe, and productive kitchen environment. Engineered for long-term reliability, the canopy system supports the hotel's commitment to delivering consistent hospitality and dining experiences.",
         image: { src: asset("/images/portfolio/hilton-garden-inn/cover.webp"), alt: "Hilton Garden Inn" },
-        heroImage: { src: asset("/images/portfolio/hilton-garden-inn/hero.webp"), alt: "Hilton Garden Inn" },
+        heroImage: { src: asset("/images/portfolio/hilton-garden-inn/hero.webp"), alt: "Hilton Garden Inn", position: "top" },
         gallery: [
           { src: asset("/images/portfolio/hilton-garden-inn/1.webp"), alt: "Hilton Garden Inn — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/hilton-garden-inn/2.webp"), alt: "Hilton Garden Inn — photo 2", shape: "landscape" },
@@ -1051,7 +1051,7 @@ export const portfolio = {
         description:
           "For Hyatt Place AlUla, Avante provided an advanced kitchen ventilation solution comprising custom kitchen canopies integrated with a Demand Control Kitchen Ventilation (DCKV) system. Designed to automatically adjust airflow based on real-time cooking activity, the system enhances energy efficiency while maintaining effective capture of heat, smoke, and grease. This intelligent ventilation solution delivers optimal kitchen performance, reduces operating costs, and supports the hotel's commitment to sustainable and efficient building operations.",
         image: { src: asset("/images/portfolio/hyatt-palace-alula/cover.webp"), alt: "Hyatt Palace AlUla" },
-        heroImage: { src: asset("/images/portfolio/hyatt-palace-alula/hero.webp"), alt: "Hyatt Palace AlUla" },
+        heroImage: { src: asset("/images/portfolio/hyatt-palace-alula/hero.webp"), alt: "Hyatt Palace AlUla", position: "center 15%" },
         gallery: [
           { src: asset("/images/portfolio/hyatt-palace-alula/1.webp"), alt: "Hyatt Palace AlUla — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/hyatt-palace-alula/2.webp"), alt: "Hyatt Palace AlUla — photo 2", shape: "landscape" },
@@ -1084,7 +1084,7 @@ export const portfolio = {
         description:
           "Serving one of Dubai's busiest business and exhibition districts, ibis World Trade Centre required a dependable ventilation solution for its commercial kitchen facilities. Avante supplied custom kitchen canopies designed to efficiently extract heat, smoke, and grease at the source, promoting a safe and hygienic food preparation environment. Built for continuous operation, the system provides reliable performance while supporting the hotel's daily hospitality and catering requirements.",
         image: { src: asset("/images/portfolio/ibis-world-trade-centre/cover.webp"), alt: "ibis World Trade Centre" },
-        heroImage: { src: asset("/images/portfolio/ibis-world-trade-centre/hero.webp"), alt: "ibis World Trade Centre" },
+        heroImage: { src: asset("/images/portfolio/ibis-world-trade-centre/hero.webp"), alt: "ibis World Trade Centre", position: "center 15%" },
         gallery: [
           { src: asset("/images/portfolio/ibis-world-trade-centre/1.webp"), alt: "ibis World Trade Centre — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/ibis-world-trade-centre/2.webp"), alt: "ibis World Trade Centre — photo 2", shape: "landscape" },
