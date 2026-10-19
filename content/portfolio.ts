@@ -90,8 +90,6 @@ export const portfolio = {
         gallery: [
           { src: asset("/images/portfolio/fenix/1.webp"), alt: "Fenix — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/fenix/2.webp"), alt: "Fenix — photo 2", shape: "landscape" },
-          { src: asset("/images/portfolio/fenix/3.webp"), alt: "Fenix — photo 3", shape: "landscape" },
-          { src: asset("/images/portfolio/fenix/4.webp"), alt: "Fenix — photo 4", shape: "landscape" },
         ],
       },
       {
