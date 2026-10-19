@@ -521,7 +521,7 @@ export const portfolio = {
         scope: "Ecology Unit",
         description:
           "Founded with the vision of making indulgence healthier, Angel Cakes has redefined the café experience through a menu of refined desserts, artisan pastries, and specialty coffee, all crafted without refined sugar, gluten, or artificial ingredients. At its Dubai Creek Harbour location, the café combines contemporary design with mindful dining, offering guests a bright and elegant space that celebrates wellness without compromising on flavor. The kitchen exhaust system was equipped with an Ecology Unit to efficiently treat cooking and baking emissions, promoting cleaner and more environmentally responsible operation. Carefully selected to complement the café's sustainable philosophy, the solution promotes cleaner air quality and environmentally responsible operations while supporting the smooth day-to-day functioning of this modern bakery concept.",
-        image: { src: asset("/images/portfolio/angel-cakes/cover.webp"), alt: "Angel Cakes" },
+        image: { src: asset("/images/portfolio/angel-cakes/cover-v2.webp"), alt: "Angel Cakes" },
         heroImage: { src: asset("/images/portfolio/angel-cakes/hero.webp"), alt: "Angel Cakes" },
         gallery: [
           { src: asset("/images/portfolio/angel-cakes/1.webp"), alt: "Angel Cakes — photo 1", shape: "tall" },
@@ -555,7 +555,7 @@ export const portfolio = {
         description:
           "Born from Dubai's vibrant café culture, Saddle House has evolved from the iconic Saddle concept into a contemporary dining destination where refined comfort food, specialty coffee, and stylish interiors come together. Its locations at Al Qana, Abu Dhabi, and Al Jimi Mall, Al Ain, reflect the brand's signature blend of modern design, relaxed luxury, and memorable hospitality. To complement the dynamic kitchen operations across both venues, Ecology Units were incorporated into the exhaust air treatment system to effectively manage grease, smoke, and cooking odors before discharge. Carefully integrated into the kitchen infrastructure, the solution enhances air quality while supporting the seamless operation of a brand known for its elevated café and dining experience.",
         image: { src: asset("/images/portfolio/saddle-house/cover.webp"), alt: "Saddle House" },
-        heroImage: { src: asset("/images/portfolio/saddle-house/hero.webp"), alt: "Saddle House" },
+        heroImage: { src: asset("/images/portfolio/saddle-house/hero.webp"), alt: "Saddle House", position: "center 15%" },
         gallery: [
           { src: asset("/images/portfolio/saddle-house/1.webp"), alt: "Saddle House — photo 1", shape: "square" },
           { src: asset("/images/portfolio/saddle-house/2.webp"), alt: "Saddle House — photo 2", shape: "tall" },
