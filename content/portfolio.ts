@@ -246,7 +246,6 @@ export const portfolio = {
           { src: asset("/images/portfolio/cipriani/2.webp"), alt: "Cipriani — photo 2", shape: "portrait" },
           { src: asset("/images/portfolio/cipriani/3.webp"), alt: "Cipriani — photo 3", shape: "portrait" },
           { src: asset("/images/portfolio/cipriani/4.webp"), alt: "Cipriani — photo 4", shape: "portrait" },
-          { src: asset("/images/portfolio/cipriani/5.webp"), alt: "Cipriani — photo 5", shape: "tall" },
         ],
       },
       {
