@@ -178,6 +178,8 @@ export default function PortfolioDetail({
             width: "100%",
             height: "100%",
             objectFit: "cover",
+            // Which edge survives the crop; a hero with its logo near the top sets "top".
+            objectPosition: project.heroImage.position ?? "center",
             display: "block",
           }}
         />

@@ -258,7 +258,7 @@ export const portfolio = {
         description:
           "Set against the backdrop of Dubai's coastline, SAN Beach has established itself as one of the city's most sought-after beachfront destinations, combining Mediterranean-inspired dining, laid-back luxury, and breathtaking sea views. With its elegant design, vibrant atmosphere, and seamless blend of dining and leisure experiences, the venue offers guests a sophisticated escape by the water. Tailored to the demands of a high-energy beachfront hospitality concept, custom kitchen canopies were incorporated to accommodate the diverse culinary activities taking place throughout the venue. Delivering dependable extraction performance and efficient airflow management, the system contributes to smooth kitchen operations while supporting the elevated guest experience that defines SAN Beach.",
         image: { src: asset("/images/portfolio/san-beach/cover.webp"), alt: "San Beach" },
-        heroImage: { src: asset("/images/portfolio/san-beach/hero.webp"), alt: "San Beach" },
+        heroImage: { src: asset("/images/portfolio/san-beach/hero.webp"), alt: "San Beach", position: "top" },
         gallery: [
           { src: asset("/images/portfolio/san-beach/1.webp"), alt: "San Beach — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/san-beach/2.webp"), alt: "San Beach — photo 2", shape: "landscape" },
@@ -323,7 +323,7 @@ export const portfolio = {
         description:
           "Inspired by the laid-back spirit of tropical island living, Kaimana Beach offers a distinctive beachfront experience where ocean views, vibrant dining, and relaxed luxury come together along Dubai's coastline. Drawing influence from the Polynesian word \"Kaimana,\" meaning the power of the ocean, the venue creates an atmosphere that blends coastal elegance with a welcoming social energy. Designed for a destination where dining and leisure seamlessly intertwine, custom kitchen canopies were incorporated to accommodate the demands of the venue's culinary operations. Delivering dependable extraction performance and efficient airflow management, the system supports a comfortable kitchen environment while enabling the smooth execution of service expected from one of Dubai's sought-after beachfront destinations.",
         image: { src: asset("/images/portfolio/kaimana-beach/cover.webp"), alt: "Kaimana Beach" },
-        heroImage: { src: asset("/images/portfolio/kaimana-beach/hero.webp"), alt: "Kaimana Beach" },
+        heroImage: { src: asset("/images/portfolio/kaimana-beach/hero.webp"), alt: "Kaimana Beach", position: "top" },
         gallery: [
           { src: asset("/images/portfolio/kaimana-beach/1.webp"), alt: "Kaimana Beach — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/kaimana-beach/2.webp"), alt: "Kaimana Beach — photo 2", shape: "landscape" },
