@@ -846,7 +846,7 @@ export const portfolio = {
         description:
           "At the Riverland Bowling Center in Dubai Parks and Resorts, Avante supplied high-efficiency ecology units to support the facility's commercial food service operations. Designed to effectively filter grease, smoke, and cooking emissions before air discharge, the system enhances environmental performance while maintaining excellent indoor air quality. The solution provides reliable air treatment for a leisure and entertainment venue, supporting efficient operation and compliance with modern ventilation standards.",
         image: { src: asset("/images/portfolio/riverland-bowling-center/cover.webp"), alt: "Riverland Bowling Center" },
-        heroImage: { src: asset("/images/portfolio/riverland-bowling-center/hero.webp"), alt: "Riverland Bowling Center", position: "center 32%" },
+        heroImage: { src: asset("/images/portfolio/riverland-bowling-center/hero.webp"), alt: "Riverland Bowling Center", position: "center 15%" },
         gallery: [
           { src: asset("/images/portfolio/riverland-bowling-center/1.webp"), alt: "Riverland Bowling Center — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/riverland-bowling-center/2.webp"), alt: "Riverland Bowling Center — photo 2", shape: "landscape" },
