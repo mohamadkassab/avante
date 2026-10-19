@@ -258,7 +258,7 @@ export const portfolio = {
         description:
           "Set against the backdrop of Dubai's coastline, SAN Beach has established itself as one of the city's most sought-after beachfront destinations, combining Mediterranean-inspired dining, laid-back luxury, and breathtaking sea views. With its elegant design, vibrant atmosphere, and seamless blend of dining and leisure experiences, the venue offers guests a sophisticated escape by the water. Tailored to the demands of a high-energy beachfront hospitality concept, custom kitchen canopies were incorporated to accommodate the diverse culinary activities taking place throughout the venue. Delivering dependable extraction performance and efficient airflow management, the system contributes to smooth kitchen operations while supporting the elevated guest experience that defines SAN Beach.",
         image: { src: asset("/images/portfolio/san-beach/cover.webp"), alt: "San Beach" },
-        heroImage: { src: asset("/images/portfolio/san-beach/hero.webp"), alt: "San Beach", position: "center 25%" },
+        heroImage: { src: asset("/images/portfolio/san-beach/hero.webp"), alt: "San Beach", position: "center 33%" },
         gallery: [
           { src: asset("/images/portfolio/san-beach/1.webp"), alt: "San Beach — photo 1", shape: "landscape" },
           { src: asset("/images/portfolio/san-beach/2.webp"), alt: "San Beach — photo 2", shape: "landscape" },
