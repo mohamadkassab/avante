@@ -23,32 +23,8 @@ const socialIcons: Record<string, ReactNode> = {
   ),
 };
 
-function FooterContactRow({ item }: { item: { display?: string; href: string } }) {
-  const text = item.display ?? item.href.replace(/^tel:|^mailto:/, "");
-  return (
-    <Box
-      component={Link}
-      href={item.href}
-      sx={{
-        display: "block",
-        fontSize: "var(--font-size-nav)",
-        color: "var(--footer-muted-color)",
-        textDecoration: "none",
-        transition: "color var(--duration-fast)",
-        "&:hover": { color: "var(--color-text-white)" },
-      }}
-    >
-      {text}
-    </Box>
-  );
-}
-
 function FooterSocial() {
-  const contactOrder = ["email", "phone"];
-  const contacts = footer.social
-    .filter((item) => item.icon === "phone" || item.icon === "email")
-    .sort((a, b) => contactOrder.indexOf(a.icon) - contactOrder.indexOf(b.icon));
-  const socials = footer.social.filter((item) => item.icon === "instagram" || item.icon === "linkedin");
+  const socials = footer.social;
 
   return (
     <Box>
@@ -70,9 +46,6 @@ function FooterSocial() {
         >
           Dubai Investment Park – 2, UAE
         </Box>
-        {contacts.map((item) => (
-          <FooterContactRow key={item.label} item={item} />
-        ))}
       </Box>
       <Box sx={{ display: "flex", gap: "var(--footer-social-gap)" }}>
         {socials.map((item) => {
