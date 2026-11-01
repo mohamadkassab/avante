@@ -1,5 +1,15 @@
 import { clientLogos } from "@/content/clients";
 import { asset } from "@/content/asset";
+import { portfolio } from "@/content/portfolio";
+
+// Home "Projects that inspire" cards are real projects, looked up by their exact
+// title in content/portfolio.ts — a renamed project fails the build here instead
+// of silently dropping its card.
+function portfolioHighlight(title: string) {
+  const project = portfolio.gallery.projects.find((p) => p.title === title);
+  if (!project) throw new Error(`Home portfolio highlight "${title}" is not a project in content/portfolio.ts`);
+  return { title: project.title, location: project.outsideLocation, image: project.image };
+}
 
 export const home = {
   hero: {
@@ -60,23 +70,7 @@ export const home = {
     heading: "Projects that inspire",
     subtitle: "Explore our portfolio of successful installations across diverse industries",
     cta: { label: "VIEW ALL PROJECTS", href: "/portfolio" },
-    items: [
-      {
-        title: "Luxury Hotel Kitchen",
-        location: "Dubai Marina",
-        image: { src: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80", alt: "Luxury Hotel Kitchen" },
-      },
-      {
-        title: "Premium Restaurant Complex",
-        location: "Business Bay",
-        image: { src: "https://images.unsplash.com/photo-1577308856961-8e9ec50d0c67?w=800&q=80", alt: "Premium Restaurant Complex" },
-      },
-      {
-        title: "Fine Dining Restaurant",
-        location: "Palm Jumeirah",
-        image: { src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80", alt: "Fine Dining Restaurant" },
-      },
-    ],
+    items: ["Bâoli", "Gloria Osteria, Big Mamma", "SĀN Beach"].map(portfolioHighlight),
   },
   cta: {
     headingLine1: "Ready to elevate your",
