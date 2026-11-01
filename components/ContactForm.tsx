@@ -6,6 +6,7 @@ import emailjs from "@emailjs/browser";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
+import MenuItem from "@mui/material/MenuItem";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -40,6 +41,9 @@ type FormState = {
   email: string;
   phone: string;
   company: string;
+  location: string;
+  region: string;
+  inquiry_type: string;
   message: string;
 };
 
@@ -50,6 +54,9 @@ const EMPTY_FORM: FormState = {
   email: "",
   phone: "",
   company: "",
+  location: "",
+  region: "",
+  inquiry_type: "",
   message: "",
 };
 
@@ -179,6 +186,63 @@ export default function ContactForm() {
               disabled={isSending}
               sx={fieldSx}
             />
+          </Box>
+
+          <Box>
+            <Typography component="label" htmlFor="location" sx={labelSx}>
+              Your Location
+            </Typography>
+            <TextField
+              id="location"
+              name="location"
+              fullWidth
+              size="small"
+              placeholder="e.g. United Arab Emirates"
+              value={formState.location}
+              onChange={handleChange}
+              disabled={isSending}
+              sx={fieldSx}
+            />
+          </Box>
+
+          <Box>
+            <Typography component="label" htmlFor="region" sx={labelSx}>
+              State / Region
+            </Typography>
+            <TextField
+              id="region"
+              name="region"
+              fullWidth
+              size="small"
+              placeholder="e.g. Dubai"
+              value={formState.region}
+              onChange={handleChange}
+              disabled={isSending}
+              sx={fieldSx}
+            />
+          </Box>
+
+          <Box>
+            <Typography component="label" htmlFor="inquiry_type" sx={labelSx}>
+              Inquiry Type
+            </Typography>
+            <TextField
+              id="inquiry_type"
+              name="inquiry_type"
+              select
+              fullWidth
+              size="small"
+              value={formState.inquiry_type}
+              onChange={handleChange}
+              disabled={isSending}
+              sx={fieldSx}
+            >
+              {form.inquiryTypes.map((type) => (
+                <MenuItem key={type} value={type}>
+                  {type}
+                </MenuItem>
+              ))}
+            </TextField>
           </Box>
 
           <Box>
