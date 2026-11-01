@@ -79,7 +79,7 @@ export default function PortfolioGallery() {
 
   return (
     <SectionShell variant="offWhite">
-      <Box onMouseLeave={scheduleCloseSub} sx={{ mb: 4}}>
+      <Box sx={{ mb: 4}}>
         <Box
           sx={{
             display: "flex",
@@ -100,7 +100,12 @@ export default function PortfolioGallery() {
             return (
               <Box
                 key={filter.label}
+                // Hover is tracked on this wrapper only: the flyout is its child, so
+                // moving pill -> flyout -> pill never leaves it. Separate leave
+                // handlers on the flyout used to start the close timer on the way back
+                // to the pill, with no enter event left to cancel it.
                 onMouseEnter={() => openSub(filter.label)}
+                onMouseLeave={scheduleCloseSub}
                 sx={{ position: "relative", display: "inline-flex", flexDirection: "column", alignItems: "center" }}
               >
                 <FilterItem
@@ -113,8 +118,6 @@ export default function PortfolioGallery() {
                 {FILTER_VARIANT === "subrow" && filter.children && (
                   <Box
                     aria-hidden={!subVisible}
-                    onMouseEnter={() => openSub(filter.label)}
-                    onMouseLeave={scheduleCloseSub}
                     sx={{
                       position: "absolute",
                       top: "100%",
