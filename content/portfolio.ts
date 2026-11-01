@@ -6,7 +6,7 @@ export const portfolio = {
     headingGradient: "Portfolio",
     subtitle: "Delivering excellence across diverse industries",
     image: {
-      src: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1600&q=80",
+      src: asset("/images/portfolio-hero.webp"),
       alt: "Avante Portfolio",
     },
   },

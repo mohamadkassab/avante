@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useInView } from "@/hooks/useInView";
 import { home } from "@/content/home";
+import { productCategories, type ProductCategory } from "@/content/products";
 import { productIcons } from "@/components/icons";
 import AppButton from "@/components/AppButton";
 import SectionBadge from "@/components/SectionBadge";
@@ -14,9 +15,7 @@ import Carousel from "@/components/Carousel";
 
 const { products } = home;
 
-type ProductItem = (typeof products.items)[number];
-
-function ProductCard({ item, index }: { item: ProductItem; index: number }) {
+function ProductCard({ item, index }: { item: ProductCategory; index: number }) {
   const { ref, visible } = useInView();
   return (
     <Box
@@ -122,7 +121,7 @@ export default function ProductsSection() {
 
       <Box sx={{ mb: 6 }}>
         <Carousel>
-          {products.items.map((item, i) => (
+          {productCategories.map((item, i) => (
             <ProductCard key={item.title} item={item} index={i} />
           ))}
         </Carousel>

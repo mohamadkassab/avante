@@ -37,7 +37,7 @@ export const home = {
     ],
     cta: { label: "LEARN MORE ABOUT US", href: "/about" },
     images: [
-      { src: asset("/images/home-about-1.jpeg"), alt: "Avante Kitchen" },
+      { src: asset("/images/home-about-1-v2.webp"), alt: "Avante Kitchen" },
       { src: asset("/images/home-about-2.jpg"), alt: "Avante Kitchen" },
       { src: asset("/images/home-about-3.jpeg"), alt: "Avante Kitchen" },
     ],
@@ -47,38 +47,6 @@ export const home = {
     heading: "Engineered for excellence",
     subtitle: "Comprehensive solutions designed and manufactured in the UAE",
     cta: { label: "VIEW ALL PRODUCTS", href: "/products" },
-    items: [
-      {
-        icon: "building",
-        title: "Kitchen Canopies",
-        description: "Custom-designed extraction systems for optimal performance",
-        image: { src: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&q=80", alt: "Kitchen Canopies" },
-      },
-      {
-        icon: "air",
-        title: "HVAC Systems",
-        description: "Advanced climate control for commercial spaces",
-        image: { src: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600&q=80", alt: "HVAC Systems" },
-      },
-      {
-        icon: "fire",
-        title: "Fire Suppression",
-        description: "Cutting-edge safety systems for kitchen environments",
-        image: { src: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80", alt: "Fire Suppression" },
-      },
-      {
-        icon: "grid",
-        title: "Ventilated Ceiling",
-        description: "Innovative ceiling ventilation solutions",
-        image: { src: "https://images.unsplash.com/photo-1504204267155-aaad8e81290d?w=600&q=80", alt: "Ventilated Ceiling" },
-      },
-      {
-        icon: "bolt",
-        title: "Demand Control Ventilation",
-        description: "Smart ventilation that adapts to kitchen activity",
-        image: { src: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80", alt: "Demand Control Ventilation" },
-      },
-    ],
   },
   clients: {
     badge: "OUR CLIENTS",

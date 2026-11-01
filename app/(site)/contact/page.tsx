@@ -9,7 +9,7 @@ export default function Contact() {
         heading="Get in"
         headingGradient="Touch"
         subtitle="Let's discuss your project requirements"
-        image={{ src: asset("/images/contactus.avif"), alt: "Contact Avante" }}
+        image={{ src: asset("/images/contactus-v2.webp"), alt: "Contact Avante" }}
         align="center"
         inlineGradient
         cta={null}
