@@ -315,15 +315,8 @@
   --footer-social-border-width: 1px;
 
   /* CTA */
-  --cta-contact-card-p: 1.2rem;
-  --cta-contact-card-radius: 12px;
-  --cta-contact-value-color: var(--color-text-muted);
-  --cta-contact-card-bg: var(--color-section-bg-white);
-  --cta-contact-card-border: rgba(255, 255, 255, 0.1);
-  --cta-contact-icon-size: 1.5rem;
   --cta-subtitle-max-width: 42rem;
   --cta-btn-gap: 1rem;
-  --cta-contact-max-width: 36rem;
 
   /* Certifications */
   --cert-grid-gap: 1.5rem;

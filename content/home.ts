@@ -76,12 +76,6 @@ export const home = {
     headingLine1: "Ready to elevate your",
     headingLine2: "commercial kitchen?",
     subtitle: "Contact our team of experts and get a customised solution tailored to your project needs.",
-    buttons: [
-      { label: "CALL US NOW", href: "tel:+97142345678", variant: "glass" },
-    ],
-    contact: [
-      { icon: "phone", value: "+971 4 239 2882" },
-      { icon: "email", value: "sales@avanteuae.com" },
-    ],
+    button: { label: "GET IN TOUCH", href: "/contact" },
   },
 };
