@@ -3,6 +3,11 @@ import { asset } from "@/content/asset";
 export const about = {
   whyChooseUs: {
     heading: "Why Choose Avante",
+    // PLACEHOLDER: the home hero video, until the real "Why Choose Avante" video is shared.
+    video: {
+      webm: asset("/Videos/hero-video.webm"),
+      mp4: asset("/Videos/hero-video.mp4"),
+    },
     items: [
       {
         icon: "cpu",

@@ -285,6 +285,8 @@
   --why-card-icon-size: 1.75rem;
   --why-card-hover-bg: #F5F0EB;
   --why-card-title-size: 1.25rem;
+  --why-video-opacity: 0.25;
+  --why-video-tint-opacity: 0.12;
 
   /* Hero */
   --hero-overlay: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));

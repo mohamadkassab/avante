@@ -19,13 +19,28 @@ interface SectionShellProps {
   children: ReactNode;
   variant: Variant;
   padding?: Padding;
+  /** Full-bleed layer (e.g. a video) drawn behind the content, clipped to the section. */
+  background?: ReactNode;
 }
 
-export default function SectionShell({ children, variant, padding = "default" }: SectionShellProps) {
+export default function SectionShell({ children, variant, padding = "default", background }: SectionShellProps) {
   return (
-    <Box component="section" sx={{ py: pyMap[padding], bgcolor: bgMap[variant] }}>
+    <Box
+      component="section"
+      sx={{
+        py: pyMap[padding],
+        bgcolor: bgMap[variant],
+        ...(background && { position: "relative", overflow: "hidden" }),
+      }}
+    >
+      {background && (
+        <Box aria-hidden sx={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
+          {background}
+        </Box>
+      )}
       <Box
         sx={{
+          position: "relative",
           maxWidth: "var(--container-max-width)",
           mx: "auto",
           px: { xs: "var(--section-px)", lg: "var(--section-px-lg)" },

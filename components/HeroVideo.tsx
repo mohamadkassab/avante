@@ -5,7 +5,7 @@ import { useRef, useEffect } from "react";
 interface HeroVideoProps {
   webm?: string;
   mp4: string;
-  poster: string;
+  poster?: string;
 }
 
 export default function HeroVideo({ webm, mp4, poster }: HeroVideoProps) {
