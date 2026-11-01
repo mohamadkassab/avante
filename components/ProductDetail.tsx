@@ -70,7 +70,7 @@ export default function ProductDetail({ product }: { product: ResolvedProduct })
 
             <Box sx={{ mt: "var(--product-page-actions-mt)" }}>
 
-              {/* Model selector — one button per model, each revealing its docs */}
+              {/* Model names — static labels until spec sheets and catalogues exist */}
               <Box sx={{ mb: "var(--product-page-doclinks-mb)" }}>
                 <ProductModelSelector models={product.models} />
               </Box>
