@@ -17,7 +17,7 @@ export default function Products() {
         align="center"
         imagePosition="top"
         imageFit="contain"
-        imageOffsetTop="-30%"
+        imageOffsetTop="-20%"
         inlineGradient
         cta={null}
         showScrollIndicator={false}
