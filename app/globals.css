@@ -338,6 +338,7 @@
   --contact-grid-gap: 3rem;
   --contact-form-p: 2rem;
   --contact-label-size: 0.875rem;
+  --contact-video-aspect: 16 / 9;
 
   /* Clients */
   --clients-card-width: 11rem;

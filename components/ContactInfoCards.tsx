@@ -5,8 +5,9 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useInView } from "@/hooks/useInView";
 import { contact } from "@/content/contact";
+import HeroVideo from "@/components/HeroVideo";
 
-const { info } = contact;
+const { info, video } = contact;
 
 const contactIcons: Record<string, ReactNode> = {
   phone: (
@@ -94,6 +95,24 @@ export default function ContactInfoCards() {
         {info.items.map((item) => (
           <ContactInfoCard key={item.title} item={item} />
         ))}
+
+        <Box
+          component="a"
+          href={video.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={video.label}
+          sx={{
+            position: "relative",
+            display: "block",
+            aspectRatio: "var(--contact-video-aspect)",
+            borderRadius: "var(--radius-card)",
+            overflow: "hidden",
+            boxShadow: "var(--shadow-sm)",
+          }}
+        >
+          <HeroVideo webm={video.webm} mp4={video.mp4} startWhenVisible />
+        </Box>
       </Box>
     </Box>
   );

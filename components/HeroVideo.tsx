@@ -6,9 +6,11 @@ interface HeroVideoProps {
   webm?: string;
   mp4: string;
   poster?: string;
+  /** Wait until the video scrolls into view, then keep playing even once it leaves. */
+  startWhenVisible?: boolean;
 }
 
-export default function HeroVideo({ webm, mp4, poster }: HeroVideoProps) {
+export default function HeroVideo({ webm, mp4, poster, startWhenVisible = false }: HeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -18,12 +20,13 @@ export default function HeroVideo({ webm, mp4, poster }: HeroVideoProps) {
     // React sets `muted` as an attribute but not reliably as the DOM property;
     // browsers block autoplay unless the property is true. Set it imperatively.
     video.muted = true;
-    video.play().catch(() => {});
+    if (!startWhenVisible) video.play().catch(() => {});
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           video.play().catch(() => {});
+          if (startWhenVisible) observer.disconnect();
         } else {
           video.pause();
         }
@@ -33,12 +36,12 @@ export default function HeroVideo({ webm, mp4, poster }: HeroVideoProps) {
 
     observer.observe(video);
     return () => observer.disconnect();
-  }, []);
+  }, [startWhenVisible]);
 
   return (
     <video
       ref={videoRef}
-      autoPlay
+      autoPlay={!startWhenVisible}
       muted
       loop
       playsInline
