@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Link from "next/link";
 import { useInView } from "@/hooks/useInView";
 import { home } from "@/content/home";
 import AppButton from "@/components/AppButton";
@@ -20,12 +21,15 @@ function PortfolioCard({ item, index }: { item: PortfolioItem; index: number }) 
   return (
     <Box
       ref={ref}
+      component={Link}
+      href={item.href}
       sx={{
+        display: "block",
+        textDecoration: "none",
         position: "relative",
         height: "var(--portfolio-card-height)",
         borderRadius: "var(--portfolio-card-radius)",
         overflow: "hidden",
-        cursor: "pointer",
         transition: `opacity var(--duration-scroll) ease-out ${index * 0.15}s, transform var(--duration-scroll) ease-out ${index * 0.15}s`,
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : "translateY(30px)",

@@ -3,9 +3,10 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Link from "next/link";
 import { useInView } from "@/hooks/useInView";
 import { home } from "@/content/home";
-import { productCategories, type ProductCategory } from "@/content/products";
+import { productCategories, slugify, type ProductCategory } from "@/content/products";
 import { productIcons } from "@/components/icons";
 import AppButton from "@/components/AppButton";
 import SectionBadge from "@/components/SectionBadge";
@@ -20,14 +21,17 @@ function ProductCard({ item, index }: { item: ProductCategory; index: number }) 
   return (
     <Box
       ref={ref}
+      component={Link}
+      href={`/products#${slugify(item.title)}`}
       sx={{
+        display: "block",
+        textDecoration: "none",
         flexShrink: 0,
         width: "var(--products-card-width)",
         bgcolor: "var(--color-section-bg-white)",
         borderRadius: "var(--radius-card)",
         overflow: "hidden",
         boxShadow: "var(--shadow-sm)",
-        cursor: "pointer",
         transition: `opacity var(--duration-scroll) ease-out ${index * 0.1}s, transform var(--duration-scroll) ease-out ${index * 0.1}s, box-shadow var(--duration-base) ease`,
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : "translateY(30px)",

@@ -1,6 +1,6 @@
 import { clientLogos } from "@/content/clients";
 import { asset } from "@/content/asset";
-import { portfolio } from "@/content/portfolio";
+import { portfolio, projectSlug } from "@/content/portfolio";
 
 // Home "Projects that inspire" cards are real projects, looked up by their exact
 // title in content/portfolio.ts — a renamed project fails the build here instead
@@ -8,7 +8,12 @@ import { portfolio } from "@/content/portfolio";
 function portfolioHighlight(title: string) {
   const project = portfolio.gallery.projects.find((p) => p.title === title);
   if (!project) throw new Error(`Home portfolio highlight "${title}" is not a project in content/portfolio.ts`);
-  return { title: project.title, location: project.outsideLocation, image: project.image };
+  return {
+    title: project.title,
+    location: project.outsideLocation,
+    image: project.image,
+    href: `/portfolio/${projectSlug(project)}`,
+  };
 }
 
 export const home = {
@@ -48,8 +53,6 @@ export const home = {
     cta: { label: "LEARN MORE ABOUT US", href: "/about" },
     images: [
       { src: asset("/images/home-about-1-v2.webp"), alt: "Avante Kitchen" },
-      { src: asset("/images/home-about-2.jpg"), alt: "Avante Kitchen" },
-      { src: asset("/images/home-about-3.jpeg"), alt: "Avante Kitchen" },
     ],
   },
   products: {
