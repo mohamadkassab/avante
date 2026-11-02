@@ -15,9 +15,8 @@ export default function Products() {
         subtitle={hero.subtitle}
         image={{ src: asset("/images/about-us-cover.webp"), alt: "About Avante" }}
         align="center"
-        imagePosition="top"
-        imageFit="contain"
-        imageOffsetTop="-20%"
+        // The canopy is the top 35% of this photo; below it is the kitchen.
+        imageTopFraction={0.35}
         inlineGradient
         cta={null}
         showScrollIndicator={false}

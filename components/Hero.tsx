@@ -21,8 +21,12 @@ interface HeroProps {
   video?: { webm?: string; mp4: string } | null;
   align?: "left" | "center";
   imagePosition?: "center" | "top";
-  imageFit?: "cover" | "contain";
-  imageOffsetTop?: string;
+  /**
+   * Show only the top part of the image — this fraction (0–1) of its height —
+   * zoomed until that part fills the hero at every width. Plain `cover` can't
+   * do this: on a wide hero it shows half the photo, on a narrow one all of it.
+   */
+  imageTopFraction?: number;
   cta?: HeroCta | null;
   showScrollIndicator?: boolean;
   height?: string;
@@ -48,8 +52,7 @@ export default function Hero({
   video,
   align = "left",
   imagePosition = "center",
-  imageFit = "cover",
-  imageOffsetTop = "0",
+  imageTopFraction,
   cta,
   showScrollIndicator = true,
   height = "100vh",
@@ -102,15 +105,20 @@ export default function Hero({
             src={resolvedImage.src}
             alt={resolvedImage.alt}
             sx={
-              imageFit === "contain"
+              imageTopFraction
                 ? {
+                    // Box is 1/fraction of the hero tall, so the kept band is
+                    // exactly hero height; min-width covers wide screens, and
+                    // cover + top then crops the extra off the bottom.
                     position: "absolute",
-                    top: imageOffsetTop,
-                    left: 0,
-                    width: "100%",
-                    height: "auto",
-                    objectFit: "contain",
-                    objectPosition: imagePosition,
+                    top: 0,
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    height: `calc(100% / ${imageTopFraction})`,
+                    minWidth: "100%",
+                    maxWidth: "none",
+                    objectFit: "cover",
+                    objectPosition: "top",
                   }
                 : {
                     position: "absolute",
