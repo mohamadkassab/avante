@@ -152,11 +152,10 @@ export default function AboutSection() {
           </Box>
         </Box>
 
-        {/* Right column — image + decorative block */}
+        {/* Right column — image */}
         <Box
           ref={right.ref}
           sx={{
-            position: "relative",
             opacity: right.visible ? 1 : 0,
             transform: right.visible ? "none" : "translateX(40px)",
             transition: "opacity var(--duration-scroll) ease-out 0.2s, transform var(--duration-scroll) ease-out 0.2s",
@@ -172,19 +171,6 @@ export default function AboutSection() {
           >
             <ImageSlider images={about.images} />
           </Box>
-
-          <Box
-            sx={{
-              position: "absolute",
-              bottom: "var(--about-deco-offset)",
-              left: "var(--about-deco-offset)",
-              width: "var(--about-deco-size)",
-              height: "var(--about-deco-size)",
-              background: "var(--gradient-brand-diagonal)",
-              borderRadius: "var(--radius-card)",
-              zIndex: -1,
-            }}
-          />
         </Box>
       </Box>
     </SectionShell>
