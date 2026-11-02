@@ -13,10 +13,11 @@ export default function Products() {
         heading={hero.heading}
         headingGradient={hero.headingGradient}
         subtitle={hero.subtitle}
-        image={{ src: asset("/images/about-us-cover.webp"), alt: "About Avante" }}
+        image={{ src: asset("/images/about-us-cover-new.webp"), alt: "About Avante" }}
         align="center"
-        // The canopy is the top 35% of this photo; below it is the kitchen.
-        imageTopFraction={0.35}
+        // The canopy's rim ends at 34.7% of this photo; below it the kitchen
+        // shows in its mirrored underside. Measured from the file's pixel rows.
+        imageTopFraction={0.345}
         inlineGradient
         cta={null}
         showScrollIndicator={false}
